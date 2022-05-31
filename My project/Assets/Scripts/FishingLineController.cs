@@ -10,7 +10,7 @@ public class FishingLineController : MonoBehaviour
     public int lineLength = 35;
     public float lineWidth = 0.1f;
     public Transform origin;
-    public Transform target;
+    public GameObject target;
     public Vector2 gravity = new Vector2(0f, -1f);
 
     public struct LineSegment {
@@ -94,9 +94,8 @@ public class FishingLineController : MonoBehaviour
         }
 
         LineSegment lastSegment = this.lineSegments[lineLength - 1];
-        lastSegment.posNow = target.position;
+        lastSegment.posNow = target.transform.position;
         this.lineSegments[lineLength - 1] = lastSegment;
-
     }
 
     void Update() {
