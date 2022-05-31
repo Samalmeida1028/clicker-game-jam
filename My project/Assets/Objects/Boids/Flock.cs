@@ -11,7 +11,7 @@ public class Flock : MonoBehaviour
     public FlockBehavior behavior;
     [Range(10,1000)]
     public int startingCount = 250;
-    const float AgentDensity = 0.08f;
+    public float AgentDensity = 0.08f;
     [Range(1f,100f)]
     public float driveFactor = 10;
     [Range(1f,100f)]
@@ -29,7 +29,7 @@ public class Flock : MonoBehaviour
 
     public float respawnTime = 10;
 
-    public int value = 0;
+    public int flockvalue = 0;
 
     public int minAgentVal;
     public int maxAgentVal;
@@ -49,13 +49,13 @@ public class Flock : MonoBehaviour
     }
 
     public void createByValue(int maxvalue){
-        while(value < maxvalue){
+        while(flockvalue < maxvalue){
             FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
             newagent.Initialize(this);
             newagent.setValue(minAgentVal,maxAgentVal);
-            newagent.name= "Agent " + value;
+            newagent.name= "Agent " + flockvalue;
             agents.Add(newagent);
-            value+= newagent.value;
+            flockvalue+= newagent.value;
         }
         startingCount = agents.Count;
 
@@ -70,29 +70,32 @@ public class Flock : MonoBehaviour
         driveFactor = driveFactor;
         count+=Time.fixedDeltaTime;
         int i = 0;
-        if(!agents[i].isClicked){
         while(i < agents.Count){
-            List<Transform> context = GetNearbyObjects(agents[i]);
-            Vector3 view = mainCam.WorldToViewportPoint(agents[i].gameObject.transform.position);
-            if(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0&&!agents[i].passed){
-                agents[i].passed = true;
-                agents[i].addPass();
+            if(!agents[i].isClicked){
+                List<Transform> context = GetNearbyObjects(agents[i]);
+                Vector3 view = mainCam.WorldToViewportPoint(agents[i].gameObject.transform.position);
+                if(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0&&!agents[i].passed){
+                    agents[i].passed = true;
+                    agents[i].addPass();
+                }
+                else if(!(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0)){
+                    agents[i].passed = false;
+                }
+                Vector2 move = behavior.calculateMove(agents[i],context,this) + centerOffset(agents[i]);
+                move *= driveFactor;
+                if(move.sqrMagnitude>squareMaxSpeed){
+                    move = move.normalized*maximumSpeed;
+                }
+                agents[i].Move(move);
+                if(agents[i].passnum > agents[i].maxPasses&&!agents[i].passed){
+                    agents[i].Desty();
+                    agents.RemoveAt(i);
             }
-            else if(!(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0)){
-                agents[i].passed = false;
             }
-            Vector2 move = behavior.calculateMove(agents[i],context,this) + centerOffset(agents[i]);
-            move *= driveFactor;
-            if(move.sqrMagnitude>squareMaxSpeed){
-                move = move.normalized*maximumSpeed;
-            }
-            agents[i].Move(move);
-            if(agents[i].passnum > agents[i].maxPasses&&!agents[i].passed){
-                agents[i].Desty();
-                agents.RemoveAt(i);
+            else{
+                Vector2 move = new Vector2(0,0);
             }
             i++;
-        }
         }
             if(agents.Count < startingCount && count > respawnTime){
                 count = 0;

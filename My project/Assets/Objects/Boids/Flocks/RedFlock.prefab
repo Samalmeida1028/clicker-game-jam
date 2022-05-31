@@ -57,5 +57,8 @@ MonoBehaviour:
   count: 0
   radius: 100
   respawnTime: 1
+  flockvalue: 0
+  minAgentVal: 10
+  maxAgentVal: 25
   center: {x: 0, y: 0}
   mainCam: {fileID: 0}
