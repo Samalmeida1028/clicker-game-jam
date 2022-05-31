@@ -30,4 +30,5 @@ public class CompositeBehavior : FlockBehavior
         }
         return move;
     }
+    
 }

@@ -13,9 +13,14 @@ public class FlockAgent : MonoBehaviour
     public int size;
     public int speed;
 
+    public bool passed;
+    public int maxPasses = 2;
+    public int passnum = 0;
+
     void Start()
     {
         agentCollider = GetComponent<Collider2D>();
+        passed = false;
     }
     public void Initialize(Flock flock){
         agentFlock = flock;
@@ -25,5 +30,11 @@ public class FlockAgent : MonoBehaviour
         if (float.IsNaN(velocity.x) || float.IsNaN(velocity.y)) velocity = Vector2.zero;
         transform.up = velocity;
         transform.position += (Vector3)velocity*Time.fixedDeltaTime;
+    }
+    public void addPass(){
+        passnum++;
+    }
+    public void Desty(){
+        GameObject.Destroy(gameObject);
     }
 }
