@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
             Flock p = Instantiate(f);
             activePool.Add(p);
             p.mainCam = mainCam;
-            p.createByValue(value, 10,25);
+            p.createByValue(value);
         }
         
     }

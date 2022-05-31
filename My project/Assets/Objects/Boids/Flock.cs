@@ -31,6 +31,9 @@ public class Flock : MonoBehaviour
 
     public int value = 0;
 
+    public int minAgentVal;
+    public int maxAgentVal;
+
     float squareMaxSpeed;
     float squareNeighborRadius;
     float squareAvoidanceRadius;
@@ -45,11 +48,11 @@ public class Flock : MonoBehaviour
         squareAvoidanceRadius = squareNeighborRadius * avoidRangeMult * avoidRangeMult;
     }
 
-    public void createByValue(int maxvalue, int min, int max){
+    public void createByValue(int maxvalue){
         while(value < maxvalue){
             FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
             newagent.Initialize(this);
-            newagent.setValue(min,max);
+            newagent.setValue(minAgentVal,maxAgentVal);
             newagent.name= "Agent " + value;
             agents.Add(newagent);
             value+= newagent.value;
@@ -67,8 +70,8 @@ public class Flock : MonoBehaviour
         driveFactor = driveFactor;
         count+=Time.fixedDeltaTime;
         int i = 0;
+        if(!agents[i].isClicked){
         while(i < agents.Count){
-            if(!agents[i].isClicked){
             List<Transform> context = GetNearbyObjects(agents[i]);
             Vector3 view = mainCam.WorldToViewportPoint(agents[i].gameObject.transform.position);
             if(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0&&!agents[i].passed){
