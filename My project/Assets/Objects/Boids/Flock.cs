@@ -24,10 +24,12 @@ public class Flock : MonoBehaviour
     public float maxNeighbors = 200;
     [Range(1,1000)]
     public int updateNeighbors;
-    float count = 0;
+    public float count = 0;
     public float radius = 100f;
 
-    public float respawnTime = 1;
+    public float respawnTime = 10;
+
+    public int value = 0;
 
     float squareMaxSpeed;
     float squareNeighborRadius;
@@ -41,12 +43,19 @@ public class Flock : MonoBehaviour
         squareMaxSpeed = maximumSpeed*maximumSpeed;
         squareNeighborRadius = neighbourRadius*neighbourRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidRangeMult * avoidRangeMult;
-        for( int i = 0; i < startingCount; i++){
+    }
+
+    public void createByValue(int maxvalue, int min, int max){
+        while(value < maxvalue){
             FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
             newagent.Initialize(this);
-            newagent.name= "Agent " + i;
+            newagent.setValue(min,max);
+            newagent.name= "Agent " + value;
             agents.Add(newagent);
+            value+= newagent.value;
         }
+        startingCount = agents.Count;
+
     }
 
     void FixedUpdate()
@@ -75,20 +84,20 @@ public class Flock : MonoBehaviour
                 move = move.normalized*maximumSpeed;
             }
             agents[i].Move(move);
-            count = 0;  
             if(agents[i].passnum > agents[i].maxPasses&&!agents[i].passed){
                 agents[i].Desty();
                 agents.RemoveAt(i);
             }
+            i++;
+        }
             if(agents.Count < startingCount && count > respawnTime){
                 count = 0;
                 FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
                 newagent.Initialize(this);
-                newagent.name= "Agent " + i;
+                newagent.name= "Agent " + i + count;
                 agents.Add(newagent);
+                Debug.Log("hi");
             }
-            i++;
-    }
 }
 
     List<Transform> GetNearbyObjects(FlockAgent agent){
@@ -119,9 +128,12 @@ public class Flock : MonoBehaviour
     }
 
     public void DestroyAll(){
-        while(agents.Count<0){
+        int i = 0;
+        while(i<agents.Count){
             agents[0].Desty();
             agents.RemoveAt(0);
+            i++;
         }
+        GameObject.Destroy(gameObject);
     }
 }

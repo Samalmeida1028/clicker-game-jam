@@ -37,4 +37,8 @@ public class FlockAgent : MonoBehaviour
     public void Desty(){
         GameObject.Destroy(gameObject);
     }
+
+    public void setValue(int min, int max){
+        value = Random.Range(min,max);
+    }
 }
