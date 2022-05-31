@@ -68,7 +68,7 @@ public class Flock : MonoBehaviour
         count+=Time.fixedDeltaTime;
         int i = 0;
         while(i < agents.Count){
-
+            if(!agents[i].isClicked){
             List<Transform> context = GetNearbyObjects(agents[i]);
             Vector3 view = mainCam.WorldToViewportPoint(agents[i].gameObject.transform.position);
             if(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0&&!agents[i].passed){
@@ -89,6 +89,7 @@ public class Flock : MonoBehaviour
                 agents.RemoveAt(i);
             }
             i++;
+        }
         }
             if(agents.Count < startingCount && count > respawnTime){
                 count = 0;

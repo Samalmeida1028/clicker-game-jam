@@ -16,6 +16,7 @@ public class FlockAgent : MonoBehaviour
     public bool passed;
     public int maxPasses = 2;
     public int passnum = 0;
+    public bool isClicked;
 
     void Start()
     {
