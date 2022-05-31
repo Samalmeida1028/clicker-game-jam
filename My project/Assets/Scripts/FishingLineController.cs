@@ -7,7 +7,7 @@ public class FishingLineController : MonoBehaviour
     public LineRenderer lineRenderer;
     public List<LineSegment> lineSegments = new List<LineSegment>();
     public float lineSegmentLength = 0.25f;
-    public int lineLength = 35;
+    public int lineLength = 0;
     public float lineWidth = 0.1f;
     public Transform origin;
     public GameObject target;
@@ -98,11 +98,17 @@ public class FishingLineController : MonoBehaviour
         this.lineSegments[lineLength - 1] = lastSegment;
     }
 
+    private void DestroyLine() {
+        lineRenderer.positionCount = 0;
+    }
+ 
     void Update() {
+        if (this.target == null) { DestroyLine(); return; }
        this.DrawLine();
     }
 
     void FixedUpdate() {
+        if (this.target == null) { return; }
         this.Simulate();
     }
 }

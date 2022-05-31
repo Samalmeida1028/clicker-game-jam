@@ -12,8 +12,7 @@ public class Click : MonoBehaviour
         // Check if the object hit is a fish
         if (hitObject.transform == null) { return false; }
         if (hitObject.transform.GetComponent<FishBehavior>() == null) { return false; }
-        if (hitObject.transform.name != "Fish") { return false; }
-        
+
         return true;
     }
 
@@ -27,6 +26,7 @@ public class Click : MonoBehaviour
                 // We hit a fish
                 Transform fish = hit.transform;
                 fish.GetComponent<FishBehavior>().Catch();
+                fish.GetComponent<FlockAgent>().isClicked = true;
                 HasFish = true;
             }
         }
