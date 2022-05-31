@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 316792364242456143}
   - component: {fileID: 316792364242456140}
   - component: {fileID: 7680106345895047392}
+  - component: {fileID: -9203482220566248939}
   m_Layer: 0
   m_Name: Minnow
   m_TagString: Untagged
@@ -66,7 +67,7 @@ MonoBehaviour:
   size: 0
   speed: 0
   passed: 0
-  maxPasses: 2
+  maxPasses: 10
   passnum: 0
   isClicked: 0
 --- !u!212 &7680106345895047392
@@ -121,3 +122,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-9203482220566248939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316792364242456141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3e7549fe014fa44a48db98df2238c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishScriptableObject: {fileID: 0}

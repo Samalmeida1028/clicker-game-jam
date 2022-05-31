@@ -5,8 +5,6 @@ using UnityEngine;
 public class FishBehavior : MonoBehaviour
 {
 
-    [SerializeField]
-    private FishScriptableObject fishScriptableObject;
 
     // Start is called before the first frame update
     void Start()
