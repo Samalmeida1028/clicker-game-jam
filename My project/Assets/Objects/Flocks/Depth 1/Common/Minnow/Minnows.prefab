@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3833465995389190529
+--- !u!1 &9121381212832020075
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,57 +8,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3833465995389190531}
-  - component: {fileID: 3833465995389190530}
+  - component: {fileID: 6209885453843062877}
+  - component: {fileID: 8023016007559314530}
   m_Layer: 0
-  m_Name: RedFlock
+  m_Name: Minnows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3833465995389190531
+--- !u!4 &6209885453843062877
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3833465995389190529}
+  m_GameObject: {fileID: 9121381212832020075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.871624, y: -16.70701, z: -0.8969743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3833465995389190530
+--- !u!114 &8023016007559314530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3833465995389190529}
+  m_GameObject: {fileID: 9121381212832020075}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7052808d8ffb05f4a8eb44f4ca196c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 7268718218033923855, guid: 895c7100ad4d4c940b8ce83c2bc5e863, type: 3}
+  agentPrefab: {fileID: 316792364242456140, guid: 66f6b74ebaa90fb4abefad70bd8619f8, type: 3}
   agents: []
-  behavior: {fileID: 11400000, guid: a5b1c9678ca9a5a49a069a2e382a7d9c, type: 2}
-  startingCount: 61
-  driveFactor: 9.4
-  maximumSpeed: 13.6
-  neighbourRadius: 1.71
-  avoidRangeMult: 1
-  maxNeighbors: 145
-  updateNeighbors: 2
+  behavior: {fileID: 11400000, guid: e05130841c247fd4c9e6b17825b18598, type: 2}
+  startingCount: 250
+  AgentDensity: 0.01
+  driveFactor: 10
+  maximumSpeed: 5
+  neighbourRadius: 5.22
+  avoidRangeMult: 0.235
+  maxNeighbors: 70
+  updateNeighbors: 1
   count: 0
   radius: 100
-  respawnTime: 1
+  respawnTime: 10
   flockvalue: 0
-  minAgentVal: 10
-  maxAgentVal: 25
+  minAgentVal: 1
+  maxAgentVal: 10
   center: {x: 0, y: 0}
   mainCam: {fileID: 0}

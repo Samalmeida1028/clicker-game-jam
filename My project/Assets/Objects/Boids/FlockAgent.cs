@@ -41,5 +41,9 @@ public class FlockAgent : MonoBehaviour
 
     public void setValue(int min, int max){
         value = Random.Range(min,max);
+        speed = value/2;
+        size = value;
     }
+
+
 }
