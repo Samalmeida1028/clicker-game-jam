@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3e7549fe014fa44a48db98df2238c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishScriptableObject: {fileID: 0}
+  fishType: {fileID: 11400000, guid: ab6a4a26f75e12b4db8dcf529123a80f, type: 2}

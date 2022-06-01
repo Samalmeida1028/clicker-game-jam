@@ -8,6 +8,8 @@ public class Click : MonoBehaviour
     
     private Transform currentFish;
 
+    private float cps = 1.0f;
+
     private bool IsFish(RaycastHit2D hitObject) {
         // Check if the object hit is a fish
         if (hitObject.transform == null) { return false; }
@@ -18,7 +20,7 @@ public class Click : MonoBehaviour
 
     void Update() {   
         // Begin checking for mouse clicks on fishies
-        if(Input.GetMouseButtonDown(0)) {
+        if(Input.GetMouseButtonDown(0) && !currentFish) {
             Ray ray = Camera.ScreenPointToRay( Input.mousePosition ); // Create a ray from the camera to the mouse pos
             RaycastHit2D hit = Physics2D.Raycast( ray.origin, ray.direction, Mathf.Infinity ); // Look at this later but casts the ray
             
@@ -29,18 +31,23 @@ public class Click : MonoBehaviour
                     this.GetComponent<FishingLineController>().target = null;
                 }
 
-
                 Transform fish = hit.transform;
 
                 if (currentFish == fish) { currentFish = null; return; }
 
-                fish.GetComponent<FishBehavior>().Catch();
                 fish.GetComponent<FlockAgent>().isClicked = true;
 
                 this.GetComponent<FishingLineController>().target = fish;
 
                 currentFish = fish;
             }
+        } else if(Input.GetMouseButtonDown(0) && currentFish) {
+            FishBehavior fish = currentFish.GetComponent<FishBehavior>();
+            float clicksRequired = fish.fishType.weight;
+            
+            fish.Pulled(this.GetComponent<FishingLineController>().origin.position, cps);
         }
+
+
     }
 }
