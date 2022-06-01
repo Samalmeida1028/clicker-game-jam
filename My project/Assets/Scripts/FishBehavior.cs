@@ -70,7 +70,7 @@ public class FishBehavior : MonoBehaviour
 
             // If the fish gets to its goal target begin moving away again
             if (magnitudeTowardsGoal <= 0.1) { 
-                //velocity = new Vector3(0, 0, 0);
+                velocity = new Vector3(0, 0, 0);
                 this.currentGoalPosition = new Vector3(0, 0, 0);
                 return;
             }
@@ -83,14 +83,14 @@ public class FishBehavior : MonoBehaviour
 
     public void Pulled(Vector3 pulledTowardsPos, float amount) {
         Vector3 a = this.transform.position;
+        
         Vector3 b = (pulledTowardsPos - a).normalized;
-
         Vector3 pulledTowards = a + (amount * b);
 
         Vector3 dirTowardsGoal = (pulledTowards - this.transform.position).normalized;
 
         this.currentGoalPosition = pulledTowards;
-        this.velocity = dirTowardsGoal * 2.0f; // Rod Pull Amount with force
+        this.velocity = dirTowardsGoal * 6.0f; // Rod Pull Amount with force
         this.lastPos = this.transform.position;
     }   
 
