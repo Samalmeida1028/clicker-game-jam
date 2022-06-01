@@ -66,7 +66,7 @@ MonoBehaviour:
   size: 0
   speed: 0
   passed: 0
-  maxPasses: 2
+  maxPasses: 10
   passnum: 0
   isClicked: 0
 --- !u!212 &7680106345895047392

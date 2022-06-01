@@ -167,10 +167,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c952fc756f19a804882432fd903c21d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlockPool:
+  CommonFlockPool:
   - {fileID: 8023016007559314530, guid: 46e0ec73e9ba2744f8a7da92a0b4ecbe, type: 3}
+  UncommonFlockPool:
+  - {fileID: 7505777519853720605, guid: 8b9c165915391a4458f6ae8c3af36711, type: 3}
+  - {fileID: 4235184504196286584, guid: b2f215e14c28c3f49ac9263fb2e94e40, type: 3}
+  RareFlockPool:
+  - {fileID: 3833465995389190530, guid: 16bd5124679bf754fbdb6ef00e347120, type: 3}
   activePool: []
+  minFlockVal: 1
+  maxFlockVal: 200
+  maxFlocks: 10
+  maxFlockSize: 70
   mainCam: {fileID: 0}
+  commonChance: 0.5
+  uncommonChance: 0.8
+  rareChance: 0.2
 --- !u!1 &1221564186
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +237,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

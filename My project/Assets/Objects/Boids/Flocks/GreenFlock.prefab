@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,11 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agentPrefab: {fileID: 6066879696924231015, guid: a6efdc321c60c1748a554573a183d475, type: 3}
+  agents: []
   behavior: {fileID: 11400000, guid: 9ee2942c4f2dcc04a97ea6d40cc5d41d, type: 2}
   startingCount: 73
+  AgentDensity: 0.1
   driveFactor: 30.3
   maximumSpeed: 36.3
   neighbourRadius: 1.75
   avoidRangeMult: 0.468
   maxNeighbors: 85
   updateNeighbors: 1
+  count: 0
+  radius: 60
+  respawnTime: 1
+  flockvalue: 0
+  minAgentVal: 5
+  maxAgentVal: 15
+  center: {x: 0, y: 0}
+  mainCam: {fileID: 0}

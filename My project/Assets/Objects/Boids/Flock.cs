@@ -48,8 +48,8 @@ public class Flock : MonoBehaviour
         squareAvoidanceRadius = squareNeighborRadius * avoidRangeMult * avoidRangeMult;
     }
 
-    public void createByValue(int maxvalue){
-        while(flockvalue < maxvalue){
+    public void createByValue(int maxvalue, int maxFlockSize){
+        while(flockvalue < maxvalue&&agents.Count<maxFlockSize){
             FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
             newagent.Initialize(this);
             newagent.setValue(minAgentVal,maxAgentVal);
@@ -81,7 +81,7 @@ public class Flock : MonoBehaviour
                 else if(!(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0)){
                     agents[i].passed = false;
                 }
-                Vector2 move = behavior.calculateMove(agents[i],context,this) + centerOffset(agents[i]);
+                Vector2 move = (Vector2)agents[i].transform.forward+behavior.calculateMove(agents[i],context,this) + centerOffset(agents[i]);
                 move *= driveFactor;
                 if(move.sqrMagnitude>squareMaxSpeed){
                     move = move.normalized*maximumSpeed;
@@ -90,20 +90,24 @@ public class Flock : MonoBehaviour
                 if(agents[i].passnum > agents[i].maxPasses&&!agents[i].passed){
                     agents[i].Desty();
                     agents.RemoveAt(i);
+                    if(move.magnitude < .1){
+                        move.x = Random.Range(-1,2);
+                        move.y = Random.Range(-1,2);
+
+                    }
             }
             }
-            else{
+            else if (agents[i].isClicked){
                 Vector2 move = new Vector2(0,0);
             }
             i++;
         }
             if(agents.Count < startingCount && count > respawnTime){
                 count = 0;
-                FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
+                FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*10*AgentDensity, Quaternion.Euler(Vector3.forward*5*Random.Range(0f,360f)),transform);
                 newagent.Initialize(this);
                 newagent.name= "Agent " + i + count;
                 agents.Add(newagent);
-                Debug.Log("hi");
             }
 }
 
@@ -122,11 +126,11 @@ public class Flock : MonoBehaviour
     {
         Vector2 centerOffset = center - (Vector2)agent.transform.position;
         float t = centerOffset.magnitude/radius;
-        if(t<=0.5){
+        if(t<=0.8){
             return Vector2.zero;
         }
         else{
-            return centerOffset*t;
+            return centerOffset*t*agent.transform.position.magnitude;
         }
     }
 

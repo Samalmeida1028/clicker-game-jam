@@ -50,16 +50,16 @@ MonoBehaviour:
   startingCount: 250
   AgentDensity: 0.01
   driveFactor: 10
-  maximumSpeed: 5
-  neighbourRadius: 5.22
-  avoidRangeMult: 0.235
-  maxNeighbors: 70
+  maximumSpeed: 7.3
+  neighbourRadius: 1.8
+  avoidRangeMult: 0.289
+  maxNeighbors: 135
   updateNeighbors: 1
   count: 0
-  radius: 100
+  radius: 25
   respawnTime: 10
   flockvalue: 0
-  minAgentVal: 1
-  maxAgentVal: 10
+  minAgentVal: 5
+  maxAgentVal: 12
   center: {x: 0, y: 0}
   mainCam: {fileID: 0}

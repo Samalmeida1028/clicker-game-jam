@@ -116,7 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 0
   size: 0
-  speed: 0
+  speed: 1
   passed: 0
   maxPasses: 10
   passnum: 0
+  isClicked: 0

@@ -48,17 +48,18 @@ MonoBehaviour:
   agents: []
   behavior: {fileID: 11400000, guid: a5b1c9678ca9a5a49a069a2e382a7d9c, type: 2}
   startingCount: 61
-  driveFactor: 9.4
+  AgentDensity: 0.2
+  driveFactor: 23.3
   maximumSpeed: 13.6
-  neighbourRadius: 1.71
-  avoidRangeMult: 1
+  neighbourRadius: 8.11
+  avoidRangeMult: 0.479
   maxNeighbors: 145
-  updateNeighbors: 2
+  updateNeighbors: 1
   count: 0
-  radius: 100
+  radius: 70
   respawnTime: 1
   flockvalue: 0
-  minAgentVal: 10
-  maxAgentVal: 25
+  minAgentVal: 30
+  maxAgentVal: 50
   center: {x: 0, y: 0}
   mainCam: {fileID: 0}
