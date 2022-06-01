@@ -70,7 +70,7 @@ public class Spawner : MonoBehaviour
         float outerRadius = mainCam.orthographicSize*screenAspect*2;
         Vector2 cameraPos = mainCam.transform.position;
         Vector2 cameraCenter = cameraPos + new Vector2(innerRadius,outerRadius/2);
-        if(isInside){
+        if(isInside){//this makes a random target outside of the range of the camera view
             float x = Random.Range(innerRadius*2,outerRadius*2);
             target = prevTarget + new Vector2(x,x)*Random.insideUnitCircle;
             return target;
