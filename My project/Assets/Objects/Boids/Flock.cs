@@ -93,7 +93,7 @@ public class Flock : MonoBehaviour
                     agents[i].passed = false;
                 }
 
-                Vector2 move = (Vector2)agent.forward+behavior.calculateMove(agents[i],context,this) + targetOff(agents[i])+new Vector2(.1f,.1f)*Random.insideUnitCircle;
+                Vector2 move = (Vector2)agent.forward+behavior.calculateMove(agents[i],context,this) + targetOff(agents[i]);
                 move *= driveFactor;
                 if(move.sqrMagnitude>squareMaxSpeed){
                     move = move.normalized*maximumSpeed;
@@ -141,10 +141,12 @@ public class Flock : MonoBehaviour
         if(t<=0.1){
         Debug.DrawLine(pos,target,Color.red,.1f,true);
         flockIsClose = true;
-        return Vector2.zero;
+        return Vector2.zero; 
         }
         else{
-            return targetOffset*t;
+            Vector2 currentVel = agent.transform.up;
+            if (float.IsNaN(currentVel.x) || float.IsNaN(currentVel.y)) currentVel = Vector2.zero;
+            return  Vector2.SmoothDamp(agent.transform.up,targetOffset*t, ref currentVel,.5f);
         }
     }
 
