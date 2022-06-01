@@ -260,9 +260,9 @@ MonoBehaviour:
   - {fileID: 3833465995389190530, guid: 16bd5124679bf754fbdb6ef00e347120, type: 3}
   activePool: []
   minFlockVal: 1
-  maxFlockVal: 200
-  maxFlocks: 10
-  maxFlockSize: 70
+  maxFlockVal: 300
+  maxFlocks: 20
+  maxFlockSize: 20
   mainCam: {fileID: 0}
   commonChance: 0.5
   uncommonChance: 0.8

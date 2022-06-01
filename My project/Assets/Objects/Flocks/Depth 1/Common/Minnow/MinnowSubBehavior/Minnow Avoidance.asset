@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cb717d27c819f408f3e002b6e8fa99, type: 3}
   m_Name: Minnow Avoidance
   m_EditorClassIdentifier: 
-  filter: {fileID: 0}
+  filter: {fileID: 11400000, guid: 9e61acb235fe3f44192fb8b1dca254fa, type: 2}

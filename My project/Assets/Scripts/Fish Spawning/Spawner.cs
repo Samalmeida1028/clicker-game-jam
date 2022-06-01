@@ -50,7 +50,10 @@ public class Spawner : MonoBehaviour
     {
         int i = 0;
         while(i < activePool.Count){
-            activePool[i].setCenter(mainCam.transform.position);
+            if(activePool[i].isClose()){
+            Vector2 target = createTarget(activePool[i].wasInside(), activePool[i].target);
+            activePool[i].setTarget(target);
+            }
             if(activePool[i].agents.Count == 0){
                 activePool[i].DestroyAll();
                 activePool.RemoveAt(i);
@@ -58,5 +61,26 @@ public class Spawner : MonoBehaviour
             i++;
         }
         
+    }
+
+    public Vector2 createTarget(bool isInside, Vector2 prevTarget){
+        Vector2 target;
+        float screenAspect = (float)Screen.width/(float)Screen.height;
+        float innerRadius = mainCam.orthographicSize;
+        float outerRadius = mainCam.orthographicSize*screenAspect*2;
+        Vector2 cameraPos = mainCam.transform.position;
+        Vector2 cameraCenter = cameraPos + new Vector2(innerRadius,outerRadius/2);
+        if(isInside){
+            float x = Random.Range(innerRadius*2,outerRadius*2);
+            target = prevTarget + new Vector2(x,x)*Random.insideUnitCircle;
+            return target;
+        }
+        else{
+            float x = Random.Range(0,innerRadius);
+            target = new Vector2(x,x)*Random.insideUnitCircle;
+            
+            return target;
+
+        }
     }
 }
