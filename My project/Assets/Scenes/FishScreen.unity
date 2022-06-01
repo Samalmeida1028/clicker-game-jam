@@ -253,11 +253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CommonFlockPool:
   - {fileID: 8023016007559314530, guid: 46e0ec73e9ba2744f8a7da92a0b4ecbe, type: 3}
-  UncommonFlockPool:
-  - {fileID: 7505777519853720605, guid: 8b9c165915391a4458f6ae8c3af36711, type: 3}
-  - {fileID: 4235184504196286584, guid: b2f215e14c28c3f49ac9263fb2e94e40, type: 3}
-  RareFlockPool:
-  - {fileID: 3833465995389190530, guid: 16bd5124679bf754fbdb6ef00e347120, type: 3}
+  UncommonFlockPool: []
+  RareFlockPool: []
   activePool: []
   minFlockVal: 1
   maxFlockVal: 300
@@ -324,7 +321,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 01679faadf3cd14408d6da331ef68037, type: 3}
   m_Color: {r: 0.0492613, g: 0.24066429, b: 0.254717, a: 1}
   m_FlipX: 0
@@ -401,7 +398,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -10
   far clip plane: 1000
   field of view: 60
   orthographic: 1

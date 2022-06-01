@@ -36,6 +36,9 @@ public class FlockAgent : MonoBehaviour
         passnum++;
     }
     public void Desty(){
+        if(gameObject.transform.GetChild(0)!=null){
+        GameObject.Destroy(gameObject.transform.GetChild(0).gameObject);
+        }
         GameObject.Destroy(gameObject);
     }
 
@@ -43,6 +46,7 @@ public class FlockAgent : MonoBehaviour
         value = Random.Range(min,max);
         speed = value/2;
         size = value;
+        gameObject.transform.localScale *=(float)(value)/(max);
     }
 
 

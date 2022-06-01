@@ -114,6 +114,7 @@ public class Flock : MonoBehaviour
                 count = 0;
                 FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*10*AgentDensity, Quaternion.Euler(Vector3.forward*5*Random.Range(0f,360f)),transform);
                 newagent.Initialize(this);
+                newagent.setValue(minAgentVal,maxAgentVal);
                 newagent.name= "Agent " + i + count;
                 agents.Add(newagent);
             }
@@ -166,9 +167,7 @@ public class Flock : MonoBehaviour
     }
 
     public bool wasInside(){
-        Debug.Log(flockHasPassed);
         if(flockHasPassed>.5){
-            Debug.Log("was inside!");
             flockHasPassed = 0;
             return true;
         }
