@@ -47,7 +47,11 @@ public class Click : MonoBehaviour
             
             fish.Pulled(this.GetComponent<FishingLineController>().origin.position, cps);
         }
-
-
+        
+        if (currentFish != null) {
+            if (currentFish.GetComponent<FlockAgent>().isClicked == false) {
+                currentFish = null;
+            }
+        }
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FishBehavior : MonoBehaviour
 {
+
+    private Camera camera;
+
     private Vector3 targetPos;
     private Vector3 currentGoalPosition;
     private Vector3 velocity;
@@ -23,17 +26,32 @@ public class FishBehavior : MonoBehaviour
             this.targetPos = FishingLine.transform.position;
             Debug.Log("Found");
         }
+
+        camera = Camera.main;
+    }
+
+    void Update() {
+
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
         if (!this.GetComponent<FlockAgent>().isClicked) { return; }
+
+        // Check if fish is within camera view
+        Vector3 view = this.camera.WorldToViewportPoint(this.transform.position);
+        if (view.x > 1.1 || view.y > 1.1 || view.y < -0.1 || view.x < -0.1) {
+           this.Escape();
+        }
 
         // Get the direction towards the getting caught area
         Vector3 dirTowardsRod = (this.targetPos - this.transform.position).normalized;
-        
-        //
-        transform.position += velocity * Time.deltaTime;
+
+        // Apply Velocity
+        this.transform.position += this.velocity * Time.deltaTime;
+
+        // Apply Rotation
+        this.transform.up = this.velocity;
 
         // If the fish has made it to the rod location(Where it is caught) catch it
         if ((this.targetPos - this.transform.position).magnitude < 1) {
@@ -45,19 +63,21 @@ public class FishBehavior : MonoBehaviour
         if (currentGoalPosition != new Vector3(0, 0, 0)) {
             float magnitudeTowardsGoal = (this.currentGoalPosition - this.transform.position).magnitude;
 
+            // decelerate as we approach our goal
             if (magnitudeTowardsGoal <= 0.5) {
-                velocity -= (4 * dirTowardsRod) * Time.deltaTime; 
+                this.velocity -= (4 * dirTowardsRod) * Time.deltaTime; 
             }
 
-            if (magnitudeTowardsGoal <= 0.1) { // If the fish gets to its goal target begin moving away again
+            // If the fish gets to its goal target begin moving away again
+            if (magnitudeTowardsGoal <= 0.1) { 
                 //velocity = new Vector3(0, 0, 0);
-                currentGoalPosition = new Vector3(0, 0, 0);
+                this.currentGoalPosition = new Vector3(0, 0, 0);
                 return;
             }
         } else {
             if (velocity.magnitude >= maxSpeed) { return; }
             
-            velocity += (10 * -dirTowardsRod) * Time.deltaTime;
+            this.velocity += (10 * -dirTowardsRod) * Time.deltaTime;
         }
     }
 
@@ -74,6 +94,12 @@ public class FishBehavior : MonoBehaviour
         this.lastPos = this.transform.position;
     }   
 
+    public void Escape() {
+        this.GetComponent<FlockAgent>().isClicked = false;
+        GameObject FishingLine = GameObject.Find("FishingLine");
+        FishingLine.GetComponent<FishingLineController>().target = null;
+        Debug.Log("Fish Escaped!");
+    }
 
     public void Catch() {
         Debug.Log("Caught fish!");
