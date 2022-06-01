@@ -253,8 +253,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CommonFlockPool:
   - {fileID: 8023016007559314530, guid: 46e0ec73e9ba2744f8a7da92a0b4ecbe, type: 3}
-  UncommonFlockPool: []
-  RareFlockPool: []
+  - {fileID: 3767399533695396708, guid: c267bb8af633bef4494cc595f1eb1ec3, type: 3}
+  UncommonFlockPool:
+  - {fileID: 3767399533695396708, guid: c267bb8af633bef4494cc595f1eb1ec3, type: 3}
+  RareFlockPool:
+  - {fileID: 3767399533695396708, guid: c267bb8af633bef4494cc595f1eb1ec3, type: 3}
   activePool: []
   minFlockVal: 1
   maxFlockVal: 300
