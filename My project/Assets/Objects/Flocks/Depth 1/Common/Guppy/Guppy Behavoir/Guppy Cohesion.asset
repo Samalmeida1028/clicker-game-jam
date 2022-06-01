@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Guppy Cohesion
   m_EditorClassIdentifier: 
   filter: {fileID: 0}
-  agentSmoothTime: 0.5
+  agentSmoothTime: 1
