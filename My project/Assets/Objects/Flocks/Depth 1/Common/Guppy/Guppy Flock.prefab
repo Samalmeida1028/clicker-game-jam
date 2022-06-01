@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9121381212832020075
+--- !u!1 &2705151021612310893
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6209885453843062877}
-  - component: {fileID: 8023016007559314530}
+  - component: {fileID: 951093554582976347}
+  - component: {fileID: 3767399533695396708}
   m_Layer: 0
-  m_Name: Minnows
+  m_Name: Guppy Flock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6209885453843062877
+--- !u!4 &951093554582976347
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9121381212832020075}
+  m_GameObject: {fileID: 2705151021612310893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.871624, y: -16.70701, z: -0.8969743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4844090348493339968}
+  - {fileID: 1740269511542401606}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8023016007559314530
+--- !u!114 &3767399533695396708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9121381212832020075}
+  m_GameObject: {fileID: 2705151021612310893}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7052808d8ffb05f4a8eb44f4ca196c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlockName: Minnows
-  agentPrefab: {fileID: 316792364242456140, guid: 66f6b74ebaa90fb4abefad70bd8619f8, type: 3}
+  FlockName: Guppy
+  agentPrefab: {fileID: 5703575005381698299, guid: d03bcbda285575c4ea35c452bd78e778, type: 3}
   agents: []
-  behavior: {fileID: 11400000, guid: e05130841c247fd4c9e6b17825b18598, type: 2}
+  behavior: {fileID: 11400000, guid: be3371b2cc8f63b429142ab3ce965a2d, type: 2}
   startingCount: 250
   AgentDensity: 0.08
   driveFactor: 10
@@ -67,12 +67,12 @@ MonoBehaviour:
   center: {x: 0, y: 0}
   mainCam: {fileID: 0}
   target: {x: 0, y: 0}
---- !u!1001 &5142216303828644622
+--- !u!1001 &2036705775200969736
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 6209885453843062877}
+    m_TransformParent: {fileID: 951093554582976347}
     m_Modifications:
     - target: {fileID: 316792364242456141, guid: 66f6b74ebaa90fb4abefad70bd8619f8, type: 3}
       propertyPath: m_Name
@@ -124,8 +124,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f6b74ebaa90fb4abefad70bd8619f8, type: 3}
---- !u!4 &4844090348493339968 stripped
+--- !u!4 &1740269511542401606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 316792364242456142, guid: 66f6b74ebaa90fb4abefad70bd8619f8, type: 3}
-  m_PrefabInstance: {fileID: 5142216303828644622}
+  m_PrefabInstance: {fileID: 2036705775200969736}
   m_PrefabAsset: {fileID: 0}

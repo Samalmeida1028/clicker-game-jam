@@ -44,21 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7052808d8ffb05f4a8eb44f4ca196c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlockName: 
   agentPrefab: {fileID: 7268718218033923855, guid: 895c7100ad4d4c940b8ce83c2bc5e863, type: 3}
   agents: []
   behavior: {fileID: 11400000, guid: a5b1c9678ca9a5a49a069a2e382a7d9c, type: 2}
   startingCount: 61
-  driveFactor: 9.4
+  AgentDensity: 0.2
+  driveFactor: 23.3
   maximumSpeed: 13.6
-  neighbourRadius: 1.71
-  avoidRangeMult: 1
-  maxNeighbors: 145
-  updateNeighbors: 2
+  neighbourRadius: 2.64
+  avoidRangeMult: 0.479
+  maxNeighbors: 35
+  updateNeighbors: 1
   count: 0
-  radius: 100
+  radius: 70
   respawnTime: 1
   flockvalue: 0
-  minAgentVal: 10
-  maxAgentVal: 25
+  minAgentVal: 30
+  maxAgentVal: 50
+  threshold: 0.2
   center: {x: 0, y: 0}
   mainCam: {fileID: 0}
+  target: {x: 0, y: 0}

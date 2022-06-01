@@ -16,9 +16,7 @@ public class SteeredCohesion : FilteredFlockBehavior
             Vector2 cohesionMove = Vector2.zero;
             List<Transform> filteredContext = (filter == null) ? context : filter.Filter(agent,context);
             foreach(Transform i in filteredContext){
-                float randX = Random.Range(-.8f, .8f);
-                float randY = Random.Range(-.8f, .8f);
-                cohesionMove += (Vector2)i.position+ new Vector2(randX,randY);
+                cohesionMove += (Vector2)i.position;
             }
             cohesionMove /= filteredContext.Count;
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
 
-
+    [SerializeField]public string FlockName;
     public FlockAgent agentPrefab;
     public List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
@@ -25,7 +25,7 @@ public class Flock : MonoBehaviour
     [Range(1,1000)]
     public int updateNeighbors;
     public float count = 0;
-    public float radius = 100f;
+    public float radius = 10f;
 
     public float respawnTime = 10;
 
@@ -33,6 +33,10 @@ public class Flock : MonoBehaviour
 
     public int minAgentVal;
     public int maxAgentVal;
+    public float threshold = .2f;
+
+    float flockHasPassed = 0;
+
 
     float squareMaxSpeed;
     float squareNeighborRadius;
@@ -40,6 +44,9 @@ public class Flock : MonoBehaviour
     public Vector2 center = new Vector2(0,0);
     public float SquareAvoidanceRadius {get{return squareAvoidanceRadius;}}
     public Camera mainCam;
+    public Vector2 target = new Vector2(0,0);
+    Vector2 targetOffset = new Vector2(0,0);
+    bool flockIsClose = true;
 
     void Start()
     {
@@ -48,8 +55,8 @@ public class Flock : MonoBehaviour
         squareAvoidanceRadius = squareNeighborRadius * avoidRangeMult * avoidRangeMult;
     }
 
-    public void createByValue(int maxvalue){
-        while(flockvalue < maxvalue){
+    public void createByValue(int maxvalue, int maxFlockSize){
+        while(flockvalue < maxvalue&&agents.Count<maxFlockSize){
             FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
             newagent.Initialize(this);
             newagent.setValue(minAgentVal,maxAgentVal);
@@ -71,17 +78,22 @@ public class Flock : MonoBehaviour
         count+=Time.fixedDeltaTime;
         int i = 0;
         while(i < agents.Count){
+            Transform agent = agents[i].transform;
             if(!agents[i].isClicked){
                 List<Transform> context = GetNearbyObjects(agents[i]);
-                Vector3 view = mainCam.WorldToViewportPoint(agents[i].gameObject.transform.position);
-                if(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0&&!agents[i].passed){
+                Vector3 view = mainCam.WorldToViewportPoint(agent.position);
+                if(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0){
+                    if(!agents[i].passed){
                     agents[i].passed = true;
                     agents[i].addPass();
+                    }
+                    flockHasPassed +=1;
                 }
                 else if(!(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0)){
                     agents[i].passed = false;
                 }
-                Vector2 move = behavior.calculateMove(agents[i],context,this) + centerOffset(agents[i]);
+
+                Vector2 move = (Vector2)agent.forward+behavior.calculateMove(agents[i],context,this) + targetOff(agents[i])+new Vector2(.1f,.1f)*Random.insideUnitCircle;
                 move *= driveFactor;
                 if(move.sqrMagnitude>squareMaxSpeed){
                     move = move.normalized*maximumSpeed;
@@ -92,18 +104,19 @@ public class Flock : MonoBehaviour
                     agents.RemoveAt(i);
             }
             }
-            else{
+            else if (agents[i].isClicked){
                 Vector2 move = new Vector2(0,0);
             }
             i++;
         }
+        flockHasPassed/= agents.Count;
             if(agents.Count < startingCount && count > respawnTime){
                 count = 0;
-                FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
+                FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*10*AgentDensity, Quaternion.Euler(Vector3.forward*5*Random.Range(0f,360f)),transform);
                 newagent.Initialize(this);
+                newagent.setValue(minAgentVal,maxAgentVal);
                 newagent.name= "Agent " + i + count;
                 agents.Add(newagent);
-                Debug.Log("hi");
             }
 }
 
@@ -118,21 +131,51 @@ public class Flock : MonoBehaviour
         return context;
     }
 
-    public Vector2 centerOffset(FlockAgent agent)
+    public Vector2 targetOff(FlockAgent agent)
     {
-        Vector2 centerOffset = center - (Vector2)agent.transform.position;
-        float t = centerOffset.magnitude/radius;
-        if(t<=0.5){
-            return Vector2.zero;
+        Vector2 pos = (Vector2)agent.transform.position;
+        targetOffset = target - pos;
+        Debug.DrawLine(pos,target,Color.green,.1f,true);
+        float t = targetOffset.magnitude/radius;
+
+        if(t<=0.1){
+        Debug.DrawLine(pos,target,Color.red,.1f,true);
+        flockIsClose = true;
+        return Vector2.zero;
         }
         else{
-            return centerOffset*t;
+            return targetOffset*t;
         }
     }
 
     public void setCenter(Vector2 center1){
         center = center1;
     }
+
+    public void setTarget(Vector2 targetSet){
+        target = targetSet;
+    }
+
+    public bool isClose(){
+        if(flockIsClose){
+            flockIsClose = false;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public bool wasInside(){
+        if(flockHasPassed>.5){
+            flockHasPassed = 0;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 
     public void DestroyAll(){
         int i = 0;
