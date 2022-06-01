@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10a12888657f1f4aa83da2c5d66fa9a, type: 3}
   m_Name: Minnow
   m_EditorClassIdentifier: 
-  weight: 0
+  weight: 5

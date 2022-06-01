@@ -431,8 +431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 1416281880}
-  lineSegmentLength: 0.25
-  lineLength: 20
+  lineSegmentLength: 0.5
+  lineLength: 3
   lineWidth: 0.05
   origin: {fileID: 1811639710}
   target: {fileID: 0}
