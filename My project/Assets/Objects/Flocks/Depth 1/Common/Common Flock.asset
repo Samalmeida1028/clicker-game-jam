@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ff3c6a47d8cf34da635d5ba371918d, type: 3}
+  m_Name: Common Flock
+  m_EditorClassIdentifier: 
+  spawnChance: 0.65
+  valueMult: 1
+  flockList:
+  - {fileID: 4544784019373206182, guid: 0f4d5d8cfe8c2354babe4a297df45d64, type: 3}
+  - {fileID: 3471415891555824658, guid: 4c5ce39081d848c4bb963ff8bf00fa05, type: 3}
+  - {fileID: 8023016007559314530, guid: 01eeafd0a91b1744ca18057b57fc89fb, type: 3}

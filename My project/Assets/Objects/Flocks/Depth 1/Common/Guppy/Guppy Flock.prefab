@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2705151021612310893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951093554582976347}
+  - component: {fileID: 3767399533695396708}
+  m_Layer: 0
+  m_Name: Guppy Flock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &951093554582976347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705151021612310893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.871624, y: -16.70701, z: -0.8969743}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3767399533695396708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705151021612310893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7052808d8ffb05f4a8eb44f4ca196c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlockName: Guppy
+  agentPrefab: {fileID: 5703575005381698299, guid: d03bcbda285575c4ea35c452bd78e778, type: 3}
+  agents: []
+  behavior: {fileID: 11400000, guid: be3371b2cc8f63b429142ab3ce965a2d, type: 2}
+  startingCount: 250
+  AgentDensity: 0.08
+  driveFactor: 10
+  maximumSpeed: 7.3
+  neighbourRadius: 1.58
+  avoidRangeMult: 0.784
+  maxNeighbors: 8
+  updateNeighbors: 1
+  count: 0
+  radius: 25
+  respawnTime: 10
+  flockvalue: 0
+  minAgentVal: 5
+  maxAgentVal: 12
+  threshold: 0.2
+  center: {x: 0, y: 0}
+  mainCam: {fileID: 0}
+  target: {x: 0, y: 0}
