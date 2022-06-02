@@ -167,26 +167,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c952fc756f19a804882432fd903c21d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CommonFlockPool:
-  - {fileID: 8023016007559314530, guid: 46e0ec73e9ba2744f8a7da92a0b4ecbe, type: 3}
-  - {fileID: 3767399533695396708, guid: c267bb8af633bef4494cc595f1eb1ec3, type: 3}
-  - {fileID: 3471415891555824658, guid: 4c5ce39081d848c4bb963ff8bf00fa05, type: 3}
-  - {fileID: 4544784019373206182, guid: 0f4d5d8cfe8c2354babe4a297df45d64, type: 3}
-  UncommonFlockPool:
-  - {fileID: 8177413681800379062, guid: 826eb1c946e372e4db9b7943d4fb49f9, type: 3}
-  - {fileID: 3444467989424762359, guid: 8699fa86b3efda5479b15919ede84969, type: 3}
-  - {fileID: 8712589239713089035, guid: e3ef31e573eb2a64ca5fbf2269b34661, type: 3}
-  RareFlockPool:
-  - {fileID: 5859590071188473983, guid: 8b0c477f16adf044e914b355be27b693, type: 3}
+  FlockPool:
+  - {fileID: 11400000, guid: f3cf03b0c2fca1748a771b94ba7b1fbe, type: 2}
+  - {fileID: 11400000, guid: 2443e1c5385261349941ad02a69990b6, type: 2}
+  - {fileID: 11400000, guid: 3485554daa0d9ed4a9e2389c4f37d95c, type: 2}
   activePool: []
   minFlockVal: 1
-  maxFlockVal: 300
-  maxFlocks: 30
+  maxFlockVal: 100
+  maxFlocks: 20
   maxFlockSize: 20
   mainCam: {fileID: 0}
-  commonChance: 1
-  uncommonChance: 0.1
-  rareChance: 0.05
 --- !u!1 &831343759
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +399,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 7.3645835
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -535,9 +525,9 @@ LineRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416281877}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 0
   m_LightProbeUsage: 0
@@ -547,7 +537,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 602b038c84951804fae4b64d467c2737, type: 2}
+  - {fileID: 2100000, guid: 83a7bdfe1d1f22b44aca3c750698d264, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -578,7 +568,7 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 0.033519745
         value: 1
         inSlope: 0
         outSlope: 0
@@ -621,7 +611,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
@@ -639,6 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 1221564188}
+  radius: 1
 --- !u!1 &1811639708
 GameObject:
   m_ObjectHideFlags: 0

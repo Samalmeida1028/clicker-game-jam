@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 316792364242456142}
   - component: {fileID: 316792364242456143}
   - component: {fileID: 316792364242456140}
-  - component: {fileID: 245070319677860409}
+  - component: {fileID: 3681323582289536613}
   m_Layer: 0
   m_Name: Minnow
   m_TagString: Untagged
@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50828b18c8539a4a990a9a38c0406e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFlipped: 0
   value: 0
   size: 0
   speed: 0
@@ -71,7 +72,7 @@ MonoBehaviour:
   maxPasses: 3
   passnum: 0
   isClicked: 0
---- !u!114 &245070319677860409
+--- !u!114 &3681323582289536613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3e7549fe014fa44a48db98df2238c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishType: {fileID: 11400000, guid: ab6a4a26f75e12b4db8dcf529123a80f, type: 2}
+  fishType: {fileID: 0}
 --- !u!1 &963419697407383378
 GameObject:
   m_ObjectHideFlags: 0

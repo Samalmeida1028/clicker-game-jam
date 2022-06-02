@@ -53,9 +53,11 @@ public class Flock : MonoBehaviour
         squareMaxSpeed = maximumSpeed*maximumSpeed;
         squareNeighborRadius = neighbourRadius*neighbourRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidRangeMult * avoidRangeMult;
+        mainCam = Camera.main;
     }
 
     public void createByValue(int maxvalue, int maxFlockSize){
+        Debug.Log("FISHIES!!");
         while(flockvalue < maxvalue&&agents.Count<maxFlockSize){
             FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity*10, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
             newagent.Initialize(this);
@@ -205,12 +207,6 @@ public class Flock : MonoBehaviour
     }
 
     public void removeAgent(FlockAgent agent){
-        for(int i = 0; i < agents.Count; i++){
-            if(agents[i] = agent){
-                agents[i].Desty();
-                agents.RemoveAt(i);
-                break;
-            }
-        }
+        agents.Remove(agent);
     }
 }

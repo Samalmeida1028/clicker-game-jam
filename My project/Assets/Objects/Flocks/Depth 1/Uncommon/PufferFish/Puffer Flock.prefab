@@ -52,9 +52,9 @@ MonoBehaviour:
   AgentDensity: 0.08
   driveFactor: 28
   maximumSpeed: 4
-  neighbourRadius: 2.7
+  neighbourRadius: 2
   avoidRangeMult: 1
-  maxNeighbors: 16
+  maxNeighbors: 8
   updateNeighbors: 1
   count: 0
   radius: 10
