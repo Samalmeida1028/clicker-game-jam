@@ -205,13 +205,12 @@ public class Flock : MonoBehaviour
     }
 
     public void removeAgent(FlockAgent agent){
-        while(for int i = 0; i < agents.Count; i++){
+        for(int i = 0; i < agents.Count; i++){
             if(agents[i] = agent){
                 agents[i].Desty();
                 agents.RemoveAt(i);
                 break;
             }
-            i++;
         }
     }
 }
