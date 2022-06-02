@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8130616f32cdee418153574cd1d9399, type: 3}
-  m_Name: Guppy FINAL
+  m_Name: SWORD FINAL
   m_EditorClassIdentifier: 
   behaviors:
-  - {fileID: 11400000, guid: 78c09c83742aad3409579d1ecc33481d, type: 2}
-  - {fileID: 11400000, guid: 8876995721fa803449ce086b55f86544, type: 2}
-  - {fileID: 11400000, guid: c6446294406cf424581dd94643170948, type: 2}
+  - {fileID: 11400000, guid: 4be99967ab24bab45a2432c3f54c08d0, type: 2}
+  - {fileID: 11400000, guid: c3304f2154564ce4898c5f44a002bac5, type: 2}
+  - {fileID: 11400000, guid: f767e4515ccdc1b488f0c1b564db4b24, type: 2}
   weights:
   - 0.3
-  - 0.1
   - 0.5
+  - 0.1

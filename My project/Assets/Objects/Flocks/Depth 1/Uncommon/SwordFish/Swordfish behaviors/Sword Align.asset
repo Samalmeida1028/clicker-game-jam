@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91cb717d27c819f408f3e002b6e8fa99, type: 3}
-  m_Name: Minnow Avoidance
+  m_Script: {fileID: 11500000, guid: e8bcc7f694978524f9c10fe8e588b219, type: 3}
+  m_Name: Sword Align
   m_EditorClassIdentifier: 
   filter: {fileID: 0}
