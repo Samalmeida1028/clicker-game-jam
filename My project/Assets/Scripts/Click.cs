@@ -5,11 +5,8 @@ using UnityEngine;
 public class Click : MonoBehaviour
 {
     public Camera Camera;
-    
     private Transform currentFish;
-
     public float radius;
-
     private float cps = 1.0f;
 
     private bool IsFish(Collider2D hitObject) {
@@ -38,13 +35,14 @@ public class Click : MonoBehaviour
                 if (currentFish == fish) { currentFish = null; return; }
 
                 fish.GetComponent<FlockAgent>().isClicked = true;
+                fish.GetComponent<FlockAgent>().Caught();
 
                 this.GetComponent<FishingLineController>().target = fish;
 
                 currentFish = fish;
             }
         } else if(Input.GetMouseButtonDown(0) && currentFish) {
-            FishBehavior fish = currentFish.GetComponent<FishBehavior>();
+            FlockAgent fish = currentFish.GetComponent<FlockAgent>();
 
             fish.Pulled(this.GetComponent<FishingLineController>().origin.position, cps);
         }

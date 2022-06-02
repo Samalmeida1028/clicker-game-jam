@@ -19,6 +19,12 @@ public class FlockAgent : MonoBehaviour
     public int passnum = 0;
     public bool isClicked;
 
+    public float attackSpeed = 0.4f;
+
+    private float lastPulled;
+
+    Rigidbody2D rb;
+
     private Camera camera;
 
     private Vector3 targetPos;
@@ -72,10 +78,15 @@ public class FlockAgent : MonoBehaviour
      // Update is called once per frame
     void FixedUpdate() {
         Vector3 pos = gameObject.transform.position;
+
         if (!isClicked) { return; }
 
         // Check if fish is within camera view
         Vector3 view = camera.WorldToViewportPoint(pos);
+
+        // Pull force minus fish force add to fish velocity
+        // velocity += 1;
+
         if (view.x > 1.1 || view.y > 1.1 || view.y < -0.1 || view.x < -0.1) {
             Debug.Log("escaping!");
             Escape();
@@ -85,53 +96,38 @@ public class FlockAgent : MonoBehaviour
         Vector3 dirTowardsRod = (targetPos - pos).normalized;
 
         // Apply Velocity
-        pos += velocity * Time.deltaTime;
+        gameObject.transform.position += velocity * Time.deltaTime;
 
         // Apply Rotation
         transform.up = velocity;
 
-        // If the fish has made it to the rod location(Where it is caught) catch it
-        if ((targetPos - pos).magnitude < 1) {
-            Catch();
-            return;
-        }
-
-        // If the fish is moving towards a goal position, check when they reach that position then reset their velocity to fight
-        if (currentGoalPosition != new Vector3(0, 0, 0)) {
-            float magnitudeTowardsGoal = (currentGoalPosition - pos).magnitude;
-
-            // decelerate as we approach our goal
-            if (magnitudeTowardsGoal <= 0.5) {
-                velocity -= (4 * dirTowardsRod) * Time.deltaTime; 
-            }
-
-            // If the fish gets to its goal target begin moving away again
-            if (magnitudeTowardsGoal <= 0.1) { 
-                velocity = new Vector3(0, 0, 0);
-                currentGoalPosition = new Vector3(0, 0, 0);
-                return;
-            }
-        } else {
-            if (velocity.magnitude >= maxSpeed) { return; }
-            
-            velocity += (10 * -dirTowardsRod) * Time.deltaTime;
+        if (Time.fixedTime - lastPulled > attackSpeed) {
+            velocity += -dirTowardsRod * 2.0f;
+            lastPulled = Time.fixedTime;
         }
     }
 
     public void Pulled(Vector3 pulledTowardsPos, float amount) {
-        Debug.Log("Pulling!");
         Vector3 a = gameObject.transform.position;
         Vector3 b = (pulledTowardsPos - a).normalized;
 
         Vector3 pulledTowards = a + (amount * b);
-        Debug.Log(pulledTowards);
+
 
         Vector3 dirTowardsGoal = (pulledTowards - transform.position).normalized;
 
+        Vector3 dirTowardsRod = (targetPos - transform.position).normalized;
+
         currentGoalPosition = pulledTowards;
-        velocity = dirTowardsGoal * 6.0f; // Rod Pull Amount with force
+
+        velocity += (dirTowardsGoal * 1.6f);
+  
         lastPos = transform.position;
-    }   
+    }  
+
+    public void Caught() {
+        lastPulled = Time.fixedTime;
+    }
 
     public void Escape() {
         isClicked = false;
