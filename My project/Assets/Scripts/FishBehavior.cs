@@ -103,5 +103,6 @@ public class FishBehavior : MonoBehaviour
 
         FlockAgent agent = gameObject.GetComponent<FlockAgent>();
         agent.AgentFlock.removeAgent(agent);
+        agent.Desty();
     }
 }
