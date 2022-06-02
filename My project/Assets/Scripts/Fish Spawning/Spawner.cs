@@ -17,31 +17,8 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        int i = 0;
-        while(i<maxFlocks){
-        Flock p;
-        int value = Random.Range(minFlockVal, maxFlockVal);
-        float pick = Random.Range(0.0f,1.0f);
-        if(0<pick&&pick<commonChance){
-            int flock = Random.Range(0,CommonFlockPool.Count);
-            p = Instantiate(CommonFlockPool[flock]);
-            p.createByValue(value,maxFlockSize);            
-        }
-        else if(commonChance<pick&&pick<uncommonChance){
-            int flock = Random.Range(0,UncommonFlockPool.Count);
-            p = Instantiate(UncommonFlockPool[flock]);
-            p.createByValue(value*2,maxFlockSize);            
-        }
-        else{
-            int flock = Random.Range(0,RareFlockPool.Count);
-            p = Instantiate(RareFlockPool[flock]);
-            p.createByValue(value*5,maxFlockSize);            
-        }
         mainCam = Camera.main;
-        activePool.Add(p);
-        p.mainCam = mainCam;
-        i++;
-        }
+        randomFlock();
         
     }
 
@@ -59,6 +36,10 @@ public class Spawner : MonoBehaviour
                 activePool.RemoveAt(i);
             }
             i++;
+        }
+        if(activePool.Count < maxFlocks){
+            randomFlock();
+
         }
         
     }
@@ -82,5 +63,36 @@ public class Spawner : MonoBehaviour
             return target;
 
         }
+    }
+
+    public void randomFlock(){
+        int i = 0;
+
+        while(i<maxFlocks){
+        Flock p;
+        int value = Random.Range(minFlockVal, maxFlockVal);
+        float pick = Random.Range(0.0f,1.0f);
+        if(pick<rareChance){
+            int flock = Random.Range(0,RareFlockPool.Count);
+            p = Instantiate(RareFlockPool[flock]);
+            p.createByValue(value,maxFlockSize);            
+        }
+        else if(pick<uncommonChance){
+            int flock = Random.Range(0,UncommonFlockPool.Count);
+            p = Instantiate(UncommonFlockPool[flock]);
+            p.createByValue(value*2,maxFlockSize);            
+        }
+        else{
+            int flock = Random.Range(0,CommonFlockPool.Count);
+            p = Instantiate(CommonFlockPool[flock]);
+            p.createByValue(value*5,maxFlockSize);            
+        }
+        activePool.Add(p);
+        p.mainCam = mainCam;
+        i++;
+        }
+
+
+
     }
 }
