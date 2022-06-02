@@ -167,26 +167,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c952fc756f19a804882432fd903c21d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CommonFlockPool:
-  - {fileID: 8023016007559314530, guid: 01eeafd0a91b1744ca18057b57fc89fb, type: 3}
-  - {fileID: 3767399533695396708, guid: c267bb8af633bef4494cc595f1eb1ec3, type: 3}
-  - {fileID: 3471415891555824658, guid: 4c5ce39081d848c4bb963ff8bf00fa05, type: 3}
-  - {fileID: 4544784019373206182, guid: 0f4d5d8cfe8c2354babe4a297df45d64, type: 3}
-  UncommonFlockPool:
-  - {fileID: 8177413681800379062, guid: 826eb1c946e372e4db9b7943d4fb49f9, type: 3}
-  - {fileID: 3444467989424762359, guid: 8699fa86b3efda5479b15919ede84969, type: 3}
-  - {fileID: 8712589239713089035, guid: e3ef31e573eb2a64ca5fbf2269b34661, type: 3}
-  RareFlockPool:
-  - {fileID: 5859590071188473983, guid: 8b0c477f16adf044e914b355be27b693, type: 3}
+  FlockPool:
+  - {fileID: 11400000, guid: f3cf03b0c2fca1748a771b94ba7b1fbe, type: 2}
+  - {fileID: 11400000, guid: 2443e1c5385261349941ad02a69990b6, type: 2}
+  - {fileID: 11400000, guid: 3485554daa0d9ed4a9e2389c4f37d95c, type: 2}
   activePool: []
   minFlockVal: 1
-  maxFlockVal: 300
+  maxFlockVal: 100
   maxFlocks: 20
   maxFlockSize: 20
   mainCam: {fileID: 0}
-  commonChance: 1
-  uncommonChance: 0.3
-  rareChance: 0.05
 --- !u!1 &831343759
 GameObject:
   m_ObjectHideFlags: 0

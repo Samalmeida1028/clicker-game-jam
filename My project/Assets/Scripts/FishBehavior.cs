@@ -14,8 +14,6 @@ public class FishBehavior : MonoBehaviour
     private float maxSpeed = 4.0f;
     
 
-    [SerializeField]
-    public FishScriptableObject fishType;
 
     // Start is called before the first frame update
     void Start()

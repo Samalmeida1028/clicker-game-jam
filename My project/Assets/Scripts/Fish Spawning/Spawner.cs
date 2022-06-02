@@ -5,40 +5,38 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 
-    public List<Flock> CommonFlockPool;
-    public List<Flock> UncommonFlockPool;
-    public List<Flock> RareFlockPool;
+    public List<FlockList> FlockPool;
     public List <Flock> activePool;
     public int minFlockVal, maxFlockVal;
-    public int maxFlocks;
+    public int maxFlocks = 20;
     public int maxFlockSize = 70;
     public Camera mainCam;
-    public float commonChance, uncommonChance, rareChance;
 
     void Start()
     {
         mainCam = Camera.main;
-        randomFlock();
+        int i = 0;
+        activePool = randomFlock(maxFlocks);
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         int i = 0;
         while(i < activePool.Count){
-            if(activePool[i].isClose()){
-            Vector2 target = createTarget(activePool[i].wasInside(), activePool[i].target);
-            activePool[i].setTarget(target);
+            if(activePool[i].isClose()){    // Checks each flock to see if it reached it's target
+            Vector2 target = createTarget(activePool[i].wasInside(), activePool[i].target); //created a new target using createTarget();
+            activePool[i].setTarget(target); //sets that target to be the flocks new target
             }
-            if(activePool[i].agents.Count == 0){
-                activePool[i].DestroyAll();
+            if(activePool[i].agents.Count == 0){ //checks to see if a flock is empty, and destroys it if it is
+                activePool[i].DestroyAll(); //In case at the same time the flock creates an agent, destroys all agents in the flock and the flock itself, then removes the flock
                 activePool.RemoveAt(i);
             }
             i++;
         }
         if(activePool.Count < maxFlocks){
-            randomFlock();
+            List<Flock> newFlocks = randomFlock(maxFlocks - activePool.Count);
+            activePool.AddRange(newFlocks);
 
         }
         
@@ -65,34 +63,25 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    public void randomFlock(){
-        int i = 0;
-
-        while(i<maxFlocks){
+    public List<Flock> randomFlock(int numflocks){
+        Debug.Log("Accessed" + numflocks);
+        List <Flock> flocks = new List<Flock>();
+        int b = 0;
+        while(b < numflocks){
+        Debug.Log("Trying!");
+        int i = Random.Range(0,FlockPool.Count);
         Flock p;
         int value = Random.Range(minFlockVal, maxFlockVal);
         float pick = Random.Range(0.0f,1.0f);
-        if(pick<rareChance){
-            int flock = Random.Range(0,RareFlockPool.Count);
-            p = Instantiate(RareFlockPool[flock]);
-            p.createByValue(value,maxFlockSize);            
+        if(pick<FlockPool[i].spawnChance){
+            b++;
+            Debug.Log("CREATION");
+            int j = Random.Range(0,FlockPool[i].flockList.Count);
+            p = Instantiate(FlockPool[i].flockList[j]);
+            p.createByValue(value*FlockPool[i].valueMult,maxFlockSize);
+            flocks.Add(p);
         }
-        else if(pick<uncommonChance){
-            int flock = Random.Range(0,UncommonFlockPool.Count);
-            p = Instantiate(UncommonFlockPool[flock]);
-            p.createByValue(value*2,maxFlockSize);            
         }
-        else{
-            int flock = Random.Range(0,CommonFlockPool.Count);
-            p = Instantiate(CommonFlockPool[flock]);
-            p.createByValue(value*5,maxFlockSize);            
-        }
-        activePool.Add(p);
-        p.mainCam = mainCam;
-        i++;
-        }
-
-
-
+        return flocks;
     }
 }
