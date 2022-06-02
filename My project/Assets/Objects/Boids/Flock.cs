@@ -203,6 +203,7 @@ public class Flock : MonoBehaviour
         }
         GameObject.Destroy(gameObject);
     }
+    
     public void removeAgent(FlockAgent agent){
         int i = 0;
         while(i<agents.Count){
