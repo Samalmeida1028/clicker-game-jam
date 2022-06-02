@@ -58,7 +58,7 @@ MonoBehaviour:
   updateNeighbors: 1
   count: 0
   radius: 10
-  respawnTime: 10
+  respawnTime: 12
   flockvalue: 0
   minAgentVal: 3
   maxAgentVal: 13

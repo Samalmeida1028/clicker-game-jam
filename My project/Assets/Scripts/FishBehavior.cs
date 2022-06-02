@@ -21,7 +21,6 @@ public class FishBehavior : MonoBehaviour
         GameObject FishingLine = GameObject.Find("Weight");
         if (FishingLine != null) {
             this.targetPos = FishingLine.transform.position;
-            Debug.Log("Found");
         }
 
         camera = Camera.main;

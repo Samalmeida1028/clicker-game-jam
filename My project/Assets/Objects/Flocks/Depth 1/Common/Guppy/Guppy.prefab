@@ -152,7 +152,7 @@ MonoBehaviour:
   size: 0
   speed: 0
   passed: 0
-  maxPasses: 10
+  maxPasses: 5
   passnum: 0
   isClicked: 0
 --- !u!114 &-8069023550926747048
@@ -167,4 +167,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3e7549fe014fa44a48db98df2238c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishType: {fileID: 11400000, guid: f7b9fac019934db478109a8667639648, type: 2}
