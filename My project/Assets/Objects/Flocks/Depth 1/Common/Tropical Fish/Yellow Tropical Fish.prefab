@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4214130153863385859}
   - component: {fileID: 8342865189876482470}
   - component: {fileID: 8456081292242640513}
+  - component: {fileID: 3455671525806354808}
   m_Layer: 0
   m_Name: Yellow Tropical Fish
   m_TagString: Untagged
@@ -70,6 +71,19 @@ MonoBehaviour:
   maxPasses: 12
   passnum: 0
   isClicked: 0
+--- !u!114 &3455671525806354808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377677916527560790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3e7549fe014fa44a48db98df2238c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishType: {fileID: 0}
 --- !u!1 &4793284110526103815
 GameObject:
   m_ObjectHideFlags: 0
