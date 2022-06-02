@@ -43,8 +43,7 @@ public class Click : MonoBehaviour
             }
         } else if(Input.GetMouseButtonDown(0) && currentFish) {
             FishBehavior fish = currentFish.GetComponent<FishBehavior>();
-            float clicksRequired = fish.fishType.weight;
-            
+
             fish.Pulled(this.GetComponent<FishingLineController>().origin.position, cps);
         }
         

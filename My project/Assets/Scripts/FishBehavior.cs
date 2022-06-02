@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FishBehavior : MonoBehaviour
 {
-
     private Camera camera;
 
     private Vector3 targetPos;
@@ -28,10 +27,6 @@ public class FishBehavior : MonoBehaviour
         }
 
         camera = Camera.main;
-    }
-
-    void Update() {
-
     }
 
     // Update is called once per frame
@@ -83,8 +78,8 @@ public class FishBehavior : MonoBehaviour
 
     public void Pulled(Vector3 pulledTowardsPos, float amount) {
         Vector3 a = this.transform.position;
-        
         Vector3 b = (pulledTowardsPos - a).normalized;
+
         Vector3 pulledTowards = a + (amount * b);
 
         Vector3 dirTowardsGoal = (pulledTowards - this.transform.position).normalized;
@@ -96,13 +91,17 @@ public class FishBehavior : MonoBehaviour
 
     public void Escape() {
         this.GetComponent<FlockAgent>().isClicked = false;
+
         GameObject FishingLine = GameObject.Find("FishingLine");
         FishingLine.GetComponent<FishingLineController>().target = null;
+
         Debug.Log("Fish Escaped!");
     }
 
     public void Catch() {
         Debug.Log("Caught fish!");
-        Destroy(gameObject);
+
+        FlockAgent agent = gameObject.GetComponent<FlockAgent>();
+        agent.AgentFlock.removeAgent(agent);
     }
 }
