@@ -170,14 +170,18 @@ MonoBehaviour:
   CommonFlockPool:
   - {fileID: 8023016007559314530, guid: 46e0ec73e9ba2744f8a7da92a0b4ecbe, type: 3}
   - {fileID: 3767399533695396708, guid: c267bb8af633bef4494cc595f1eb1ec3, type: 3}
+  - {fileID: 3471415891555824658, guid: 4c5ce39081d848c4bb963ff8bf00fa05, type: 3}
+  - {fileID: 4544784019373206182, guid: 0f4d5d8cfe8c2354babe4a297df45d64, type: 3}
   UncommonFlockPool:
   - {fileID: 8177413681800379062, guid: 826eb1c946e372e4db9b7943d4fb49f9, type: 3}
+  - {fileID: 3444467989424762359, guid: 8699fa86b3efda5479b15919ede84969, type: 3}
+  - {fileID: 8712589239713089035, guid: e3ef31e573eb2a64ca5fbf2269b34661, type: 3}
   RareFlockPool:
   - {fileID: 5859590071188473983, guid: 8b0c477f16adf044e914b355be27b693, type: 3}
   activePool: []
   minFlockVal: 1
   maxFlockVal: 300
-  maxFlocks: 20
+  maxFlocks: 30
   maxFlockSize: 20
   mainCam: {fileID: 0}
   commonChance: 1
@@ -220,7 +224,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7ed61b99be924464e88ee73705803603, type: 2}
+  - {fileID: 2100000, guid: 223a646cfd2592249910fcc9bcfe8378, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -240,7 +244,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 31a84a53404a73c40acf332326eda5f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

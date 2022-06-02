@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PixelShader
+  m_Name: Pixel
   m_Shader: {fileID: -6465566751694194690, guid: fb41a069f34d94b44b01ff867f82c0db, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -55,7 +55,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _Pixelation: {r: 19.2, g: 10.8, b: 0, a: 0}
+    - _Pixelation: {r: 8, g: 4.5, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _Resolution: {r: 1920, g: 1080, b: 0, a: 0}
   m_BuildTextureStacks: []

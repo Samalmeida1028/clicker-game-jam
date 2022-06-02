@@ -49,7 +49,7 @@ MonoBehaviour:
   agents: []
   behavior: {fileID: 11400000, guid: cafd927ddc6ac2743ba8b241793aed27, type: 2}
   startingCount: 250
-  AgentDensity: 0.9
+  AgentDensity: 0.5
   driveFactor: 7.1
   maximumSpeed: 1.6
   neighbourRadius: 10
@@ -57,7 +57,7 @@ MonoBehaviour:
   maxNeighbors: 3
   updateNeighbors: 1
   count: 0
-  radius: 10
+  radius: 30
   respawnTime: 90
   flockvalue: 0
   minAgentVal: 100

@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class FlockAgent : MonoBehaviour
 {
+    public bool isFlipped;
     Flock agentFlock;
     public Flock AgentFlock {get{return agentFlock;}}
     Collider2D agentCollider;
@@ -46,7 +47,7 @@ public class FlockAgent : MonoBehaviour
         value = Random.Range(min,max);
         speed = value/2;
         size = value;
-        gameObject.transform.localScale *=(float)(value)/(max);
+        gameObject.transform.localScale *=Mathf.Sqrt((float)(value))/Mathf.Sqrt((max));
     }
 
 

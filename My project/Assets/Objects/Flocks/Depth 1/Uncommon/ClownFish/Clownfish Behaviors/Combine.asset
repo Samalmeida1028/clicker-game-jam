@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8130616f32cdee418153574cd1d9399, type: 3}
-  m_Name: Orca FInal
+  m_Name: Combine
   m_EditorClassIdentifier: 
   behaviors:
-  - {fileID: 11400000, guid: 619e89040da75854eb16c233b9c7271b, type: 2}
-  - {fileID: 11400000, guid: 2f35c031075e53a4a9dfe470c0a69793, type: 2}
+  - {fileID: 11400000, guid: 30f68835ed6568340848b82b081fe6f5, type: 2}
+  - {fileID: 11400000, guid: 683320f081f1c964893f853fd69beb89, type: 2}
+  - {fileID: 11400000, guid: eaf9b5155a9f2c242a7e5662503f9336, type: 2}
   weights:
-  - 0.001
-  - 0.001
+  - 0.1
+  - 0.3
+  - 0.1
