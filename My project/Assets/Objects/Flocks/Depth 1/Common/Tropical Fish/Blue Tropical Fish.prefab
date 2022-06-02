@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 95963566864515936}
   - component: {fileID: 6748828855713191577}
   - component: {fileID: 4949678791778716823}
-  - component: {fileID: 84077416047723749}
   m_Layer: 0
   m_Name: Blue Tropical Fish
   m_TagString: Untagged
@@ -152,18 +151,6 @@ MonoBehaviour:
   size: 0
   speed: 0
   passed: 0
-  maxPasses: 4
+  maxPasses: 12
   passnum: 0
   isClicked: 0
---- !u!114 &84077416047723749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383154608202584680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd3e7549fe014fa44a48db98df2238c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
