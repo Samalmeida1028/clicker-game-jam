@@ -5,7 +5,7 @@ using UnityEngine;
 public class Click : MonoBehaviour
 {
     public Camera Camera;
-    private Transform currentFish;
+    private FlockAgent currentFish;
     public float radius;
     private float cps = 1.0f;
 
@@ -26,27 +26,25 @@ public class Click : MonoBehaviour
             if (hit!= null && IsFish(hit)) {
                 // We hit a fish
                 if (currentFish != null) {
-                    this.GetComponent<FishingLineController>().target = null;
+                    GetComponent<FishingLineController>().target = null;
                 }
 
-                Transform fish = hit.transform;
+                Transform fishTransform = hit.transform;
 
-                if (currentFish == fish) { currentFish = null; return; }
+                if (currentFish == fishTransform.GetComponent<FlockAgent>()) { currentFish = null; return; }
                 
-                fish.GetComponent<FlockAgent>().Hook();
+                fishTransform.GetComponent<FlockAgent>().Hook();
+                GetComponent<FishingLineController>().target = fishTransform;
 
-                this.GetComponent<FishingLineController>().target = fish;
-
-                currentFish = fish;
+                currentFish = fishTransform.GetComponent<FlockAgent>();
             }
         } else if(Input.GetMouseButtonDown(0) && currentFish) {
-            FlockAgent fish = currentFish.GetComponent<FlockAgent>();
-
-            fish.Pulled(this.GetComponent<FishingLineController>().origin.position, cps);
+            currentFish.Pulled(cps);
         }
         
         if (currentFish != null) {
-            if (currentFish.GetComponent<FlockAgent>().isHooked == false) {
+            if (currentFish.isCaught) {
+                currentFish.Catch();
                 currentFish = null;
             }
         }

@@ -17,26 +17,23 @@ public class FlockAgent : MonoBehaviour
     public bool passed;
     public int maxPasses = 2;
     public int passnum = 0;
+
     public bool isHooked;
-
-    public float attackSpeed = 0.4f;
-
+    public bool isCaught;
+    
     private float lastPulled;
 
-    Rigidbody2D rb;
-
     private Camera camera;
-
     private Vector2 polePosition;
-    private Vector3 currentGoalPosition;
     private Vector2 fishVelocity;
     private Vector2 fishForce;
     private Vector2 directionTowardsPole;
     private Vector2 targetAwayFromPole;
     private Vector2 directionTowardsTarget;
 
-    private float fishStrength = 1.0f;
-    private float maxSpeed = 4.0f;
+    public float fishStrength = 1.0f;
+    public float maxSpeed = 4.0f;
+    public float attackSpeed = 0.4f;
 
     void Start()
     {
@@ -82,7 +79,7 @@ public class FlockAgent : MonoBehaviour
      // Update is called once per frame
     void FixedUpdate() {
         // If the fish isnt caught then jus reutrn
-        if (!isHooked) { return; }
+        if (!isHooked && !isCaught) { return; }
 
         // Position of fish at this frame
         Vector2 fishCurrentPosition = gameObject.transform.position;
@@ -90,16 +87,22 @@ public class FlockAgent : MonoBehaviour
         // Check if fish is within camera view, if it isnt it escaped
         Vector2 view = camera.WorldToViewportPoint(fishCurrentPosition);
         if (view.x > 1.1 || view.y > 1.1 || view.y < -0.1 || view.x < -0.1) {
-            Debug.Log("escaping!");
-            Escape();
-            return;
+            //Escape();
+            //return;
         }
 
+        // Check if fish is caught
+        if ((polePosition - fishCurrentPosition).magnitude < 0.1) {
+            isCaught = true;
+            return;
+        }
+        
         // Actual movement stuff
-
+        Debug.DrawLine(fishCurrentPosition, polePosition, Color.red);
+        Debug.DrawLine(fishCurrentPosition, targetAwayFromPole, Color.green);
         // The opposite direction of the pole (Direction opposite of getting caught zone so fish swims away)
-        fishForce = -directionTowardsPole * fishStrength;
-        Debug.DrawLine(fishCurrentPosition, targetAwayFromPole, Color.red);
+        fishForce = directionTowardsTarget * fishStrength;
+
         // Apply Velocity
         gameObject.transform.position += (Vector3)fishVelocity * Time.deltaTime;
         
@@ -116,7 +119,7 @@ public class FlockAgent : MonoBehaviour
         }
     }
 
-    public void Pulled(Vector3 pulledTowardsPos, float onClickAmount) {
+    public void Pulled(float onClickAmount) {
         Vector2 fishCurrentPosition = gameObject.transform.position;
 
         // Direction from fish towards rod
@@ -135,7 +138,7 @@ public class FlockAgent : MonoBehaviour
 
         // Gets target outside of camera area (hard coded magnitude in, get radius around camera view after)
         targetAwayFromPole = -directionTowardsPole * (25);
-
+        
         // Direction towards target
         directionTowardsTarget = (targetAwayFromPole - fishCurrentPosition).normalized;
 
