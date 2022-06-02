@@ -5,11 +5,8 @@ using UnityEngine;
 public class Click : MonoBehaviour
 {
     public Camera Camera;
-    
-    private Transform currentFish;
-
+    private FlockAgent currentFish;
     public float radius;
-
     private float cps = 1.0f;
 
     private bool IsFish(Collider2D hitObject) {
@@ -29,28 +26,25 @@ public class Click : MonoBehaviour
             if (hit!= null && IsFish(hit)) {
                 // We hit a fish
                 if (currentFish != null) {
-                    currentFish.GetComponent<FlockAgent>().isClicked = false;
-                    this.GetComponent<FishingLineController>().target = null;
+                    GetComponent<FishingLineController>().target = null;
                 }
 
-                Transform fish = hit.transform;
+                Transform fishTransform = hit.transform;
 
-                if (currentFish == fish) { currentFish = null; return; }
+                if (currentFish == fishTransform.GetComponent<FlockAgent>()) { currentFish = null; return; }
+                
+                fishTransform.GetComponent<FlockAgent>().Hook();
+                GetComponent<FishingLineController>().target = fishTransform;
 
-                fish.GetComponent<FlockAgent>().isClicked = true;
-
-                this.GetComponent<FishingLineController>().target = fish;
-
-                currentFish = fish;
+                currentFish = fishTransform.GetComponent<FlockAgent>();
             }
         } else if(Input.GetMouseButtonDown(0) && currentFish) {
-            FishBehavior fish = currentFish.GetComponent<FishBehavior>();
-
-            fish.Pulled(this.GetComponent<FishingLineController>().origin.position, cps);
+            currentFish.Pulled(cps);
         }
         
         if (currentFish != null) {
-            if (currentFish.GetComponent<FlockAgent>().isClicked == false) {
+            if (currentFish.isCaught) {
+                currentFish.Catch();
                 currentFish = null;
             }
         }

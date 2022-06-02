@@ -78,7 +78,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8, y: 1.96}
+  m_Size: {x: 10, y: 24.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 3407180931418565556}
   - component: {fileID: 5742607853746474826}
   - component: {fileID: 4334503687365144984}
-  - component: {fileID: 6981246941234287625}
   m_Layer: 0
   m_Name: Orca
   m_TagString: Untagged
@@ -165,15 +164,3 @@ MonoBehaviour:
   maxPasses: 4
   passnum: 0
   isClicked: 0
---- !u!114 &6981246941234287625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6731647229102478354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd3e7549fe014fa44a48db98df2238c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
