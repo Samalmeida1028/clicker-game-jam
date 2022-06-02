@@ -69,82 +69,82 @@ public class FlockAgent : MonoBehaviour
 
 //+++++++++++++++FISHING BEHAVIOR++++++++++++++++++++++
 
-    //  // Update is called once per frame
-    // void FixedUpdate() {
-    //     Vector3 pos = gameObject.transform.position;
-    //     if (!isClicked) { return; }
+     // Update is called once per frame
+    void FixedUpdate() {
+        Vector3 pos = gameObject.transform.position;
+        if (!isClicked) { return; }
 
-    //     // Check if fish is within camera view
-    //     Vector3 view = camera.WorldToViewportPoint(pos);
-    //     if (view.x > 1.1 || view.y > 1.1 || view.y < -0.1 || view.x < -0.1) {
-    //         Debug.Log("escaping!");
-    //        Escape();
-    //     }
+        // Check if fish is within camera view
+        Vector3 view = camera.WorldToViewportPoint(pos);
+        if (view.x > 1.1 || view.y > 1.1 || view.y < -0.1 || view.x < -0.1) {
+            Debug.Log("escaping!");
+            Escape();
+        }
 
-    //     // Get the direction towards the getting caught area
-    //     Vector3 dirTowardsRod = (targetPos - pos).normalized;
+        // Get the direction towards the getting caught area
+        Vector3 dirTowardsRod = (targetPos - pos).normalized;
 
-    //     // Apply Velocity
-    //     pos += velocity * Time.deltaTime;
+        // Apply Velocity
+        pos += velocity * Time.deltaTime;
 
-    //     // Apply Rotation
-    //     transform.up = velocity;
+        // Apply Rotation
+        transform.up = velocity;
 
-    //     // If the fish has made it to the rod location(Where it is caught) catch it
-    //     if ((targetPos - pos).magnitude < 1) {
-    //         Catch();
-    //         return;
-    //     }
+        // If the fish has made it to the rod location(Where it is caught) catch it
+        if ((targetPos - pos).magnitude < 1) {
+            Catch();
+            return;
+        }
 
-    //     // If the fish is moving towards a goal position, check when they reach that position then reset their velocity to fight
-    //     if (currentGoalPosition != new Vector3(0, 0, 0)) {
-    //         float magnitudeTowardsGoal = (currentGoalPosition - pos).magnitude;
+        // If the fish is moving towards a goal position, check when they reach that position then reset their velocity to fight
+        if (currentGoalPosition != new Vector3(0, 0, 0)) {
+            float magnitudeTowardsGoal = (currentGoalPosition - pos).magnitude;
 
-    //         // decelerate as we approach our goal
-    //         if (magnitudeTowardsGoal <= 0.5) {
-    //             velocity -= (4 * dirTowardsRod) * Time.deltaTime; 
-    //         }
+            // decelerate as we approach our goal
+            if (magnitudeTowardsGoal <= 0.5) {
+                velocity -= (4 * dirTowardsRod) * Time.deltaTime; 
+            }
 
-    //         // If the fish gets to its goal target begin moving away again
-    //         if (magnitudeTowardsGoal <= 0.1) { 
-    //             velocity = new Vector3(0, 0, 0);
-    //             currentGoalPosition = new Vector3(0, 0, 0);
-    //             return;
-    //         }
-    //     } else {
-    //         if (velocity.magnitude >= maxSpeed) { return; }
+            // If the fish gets to its goal target begin moving away again
+            if (magnitudeTowardsGoal <= 0.1) { 
+                velocity = new Vector3(0, 0, 0);
+                currentGoalPosition = new Vector3(0, 0, 0);
+                return;
+            }
+        } else {
+            if (velocity.magnitude >= maxSpeed) { return; }
             
-    //         velocity += (10 * -dirTowardsRod) * Time.deltaTime;
-    //     }
-    // }
+            velocity += (10 * -dirTowardsRod) * Time.deltaTime;
+        }
+    }
 
-    // public void Pulled(Vector3 pulledTowardsPos, float amount) {
-    //     Debug.Log("Pulling!");
-    //     Vector3 a = gameObject.transform.position;
-    //     Vector3 b = (pulledTowardsPos - a).normalized;
+    public void Pulled(Vector3 pulledTowardsPos, float amount) {
+        Debug.Log("Pulling!");
+        Vector3 a = gameObject.transform.position;
+        Vector3 b = (pulledTowardsPos - a).normalized;
 
-    //     Vector3 pulledTowards = a + (amount * b);
-    //     Debug.Log(pulledTowards);
+        Vector3 pulledTowards = a + (amount * b);
+        Debug.Log(pulledTowards);
 
-    //     Vector3 dirTowardsGoal = (pulledTowards - transform.position).normalized;
+        Vector3 dirTowardsGoal = (pulledTowards - transform.position).normalized;
 
-    //     currentGoalPosition = pulledTowards;
-    //     velocity = dirTowardsGoal * 6.0f; // Rod Pull Amount with force
-    //     lastPos = transform.position;
-    // }   
+        currentGoalPosition = pulledTowards;
+        velocity = dirTowardsGoal * 6.0f; // Rod Pull Amount with force
+        lastPos = transform.position;
+    }   
 
-    // public void Escape() {
-    //     isClicked = false;
+    public void Escape() {
+        isClicked = false;
 
-    //     GameObject FishingLine = GameObject.Find("FishingLine");
-    //     FishingLine.GetComponent<FishingLineController>().target = null;
+        GameObject FishingLine = GameObject.Find("FishingLine");
+        FishingLine.GetComponent<FishingLineController>().target = null;
 
-    //     Debug.Log("Fish Escaped!");
-    // }
+        Debug.Log("Fish Escaped!");
+    }
 
-    // public void Catch() {
-    //     Debug.Log("Caught fish!");
-    //     AgentFlock.removeAgent(this);
-    //     Desty();
-    // }
+    public void Catch() {
+        Debug.Log("Caught fish!");
+        AgentFlock.removeAgent(this);
+        Desty();
+    }
 }
