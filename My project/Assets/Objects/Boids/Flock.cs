@@ -26,21 +26,17 @@ public class Flock : MonoBehaviour
     public int updateNeighbors;
     public float count = 0;
     public float radius = 10f;
-
     public float respawnTime = 10;
-
     public int flockvalue = 0;
-
     public int minAgentVal;
     public int maxAgentVal;
     public float threshold = .2f;
 
     float flockHasPassed = 0;
-
-
     float squareMaxSpeed;
     float squareNeighborRadius;
     float squareAvoidanceRadius;
+
     public Vector2 center = new Vector2(0,0);
     public float SquareAvoidanceRadius {get{return squareAvoidanceRadius;}}
     public Camera mainCam;
@@ -57,7 +53,6 @@ public class Flock : MonoBehaviour
     }
 
     public void createByValue(int maxvalue, int maxFlockSize){
-        Debug.Log("FISHIES!!");
         while(flockvalue < maxvalue&&agents.Count<maxFlockSize){
             FlockAgent newagent = Instantiate(agentPrefab,Random.insideUnitCircle*startingCount*AgentDensity*10, Quaternion.Euler(Vector3.forward*Random.Range(0f,360f)),transform);
             newagent.Initialize(this);
@@ -152,11 +147,11 @@ public class Flock : MonoBehaviour
             agent.GetComponentInChildren<SpriteRenderer>().flipX = false;
             agent.isFlipped = false;
         }
-        Debug.DrawLine(pos,target,Color.green,.1f,true);
+        //Debug.DrawLine(pos,target,Color.green);
         float t = targetOffset.magnitude/radius;
 
         if(t<=0.1){
-        Debug.DrawLine(pos,target,Color.red,.1f,true);
+        Debug.DrawLine(pos,target,Color.red);
         flockIsClose = true;
         return Vector2.zero; 
         }
