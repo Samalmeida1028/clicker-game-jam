@@ -17,7 +17,7 @@ public class FlockAgent : MonoBehaviour
     public bool passed;
     public int maxPasses = 2;
     public int passnum = 0;
-    public bool isClicked;
+    public bool isHooked;
 
     public float attackSpeed = 0.4f;
 
@@ -27,11 +27,15 @@ public class FlockAgent : MonoBehaviour
 
     private Camera camera;
 
-    private Vector3 targetPos;
+    private Vector2 polePosition;
     private Vector3 currentGoalPosition;
-    private Vector3 velocity;
-    private Vector3 lastPos;
+    private Vector2 fishVelocity;
+    private Vector2 fishForce;
+    private Vector2 directionTowardsPole;
+    private Vector2 targetAwayFromPole;
+    private Vector2 directionTowardsTarget;
 
+    private float fishStrength = 1.0f;
     private float maxSpeed = 4.0f;
 
     void Start()
@@ -41,7 +45,7 @@ public class FlockAgent : MonoBehaviour
 
          GameObject FishingLine = GameObject.Find("Weight");
         if (FishingLine != null) {
-            targetPos = FishingLine.transform.position;
+            polePosition = FishingLine.transform.position;
             Debug.Log("Found");
         }
 
@@ -77,60 +81,69 @@ public class FlockAgent : MonoBehaviour
 
      // Update is called once per frame
     void FixedUpdate() {
-        Vector3 pos = gameObject.transform.position;
+        // If the fish isnt caught then jus reutrn
+        if (!isHooked) { return; }
 
-        if (!isClicked) { return; }
+        // Position of fish at this frame
+        Vector2 fishCurrentPosition = gameObject.transform.position;
 
-        // Check if fish is within camera view
-        Vector3 view = camera.WorldToViewportPoint(pos);
-
-        // Pull force minus fish force add to fish velocity
-        // velocity += 1;
-
+        // Check if fish is within camera view, if it isnt it escaped
+        Vector2 view = camera.WorldToViewportPoint(fishCurrentPosition);
         if (view.x > 1.1 || view.y > 1.1 || view.y < -0.1 || view.x < -0.1) {
             Debug.Log("escaping!");
             Escape();
+            return;
         }
 
-        // Get the direction towards the getting caught area
-        Vector3 dirTowardsRod = (targetPos - pos).normalized;
+        // Actual movement stuff
 
+        // The opposite direction of the pole (Direction opposite of getting caught zone so fish swims away)
+        fishForce = -directionTowardsPole * fishStrength;
+        Debug.DrawLine(fishCurrentPosition, targetAwayFromPole, Color.red);
         // Apply Velocity
-        gameObject.transform.position += velocity * Time.deltaTime;
+        gameObject.transform.position += (Vector3)fishVelocity * Time.deltaTime;
+        
+        if (lastPulled == null || Time.fixedTime - lastPulled > attackSpeed) {
+            // Pull
+            fishVelocity += fishForce;
+            
+            if (fishVelocity.magnitude > maxSpeed) {
+                Vector2 maxVelocityVector = fishVelocity.normalized * maxSpeed;
+                fishVelocity = maxVelocityVector;
+            }
 
-        // Apply Rotation
-        transform.up = velocity;
-
-        if (Time.fixedTime - lastPulled > attackSpeed) {
-            velocity += -dirTowardsRod * 2.0f;
             lastPulled = Time.fixedTime;
         }
     }
 
-    public void Pulled(Vector3 pulledTowardsPos, float amount) {
-        Vector3 a = gameObject.transform.position;
-        Vector3 b = (pulledTowardsPos - a).normalized;
+    public void Pulled(Vector3 pulledTowardsPos, float onClickAmount) {
+        Vector2 fishCurrentPosition = gameObject.transform.position;
 
-        Vector3 pulledTowards = a + (amount * b);
+        // Direction from fish towards rod
+        Vector2 currentDirectionTowardsRod = (polePosition - fishCurrentPosition).normalized;
+        Vector2 pullForce = currentDirectionTowardsRod * onClickAmount;
 
-
-        Vector3 dirTowardsGoal = (pulledTowards - transform.position).normalized;
-
-        Vector3 dirTowardsRod = (targetPos - transform.position).normalized;
-
-        currentGoalPosition = pulledTowards;
-
-        velocity += (dirTowardsGoal * 1.6f);
-  
-        lastPos = transform.position;
+        // Apply pull force to fish
+        fishVelocity += pullForce;
     }  
 
-    public void Caught() {
-        lastPulled = Time.fixedTime;
+    public void Hook() {
+        Vector2 fishCurrentPosition = gameObject.transform.position;
+
+        // Gets the direction towards the pole in a nomralized vector ex Vector3(1, 0)
+        directionTowardsPole = (polePosition - fishCurrentPosition).normalized;
+
+        // Gets target outside of camera area (hard coded magnitude in, get radius around camera view after)
+        targetAwayFromPole = -directionTowardsPole * (25);
+
+        // Direction towards target
+        directionTowardsTarget = (targetAwayFromPole - fishCurrentPosition).normalized;
+
+        isHooked = true;
     }
 
     public void Escape() {
-        isClicked = false;
+        isHooked = false;
 
         GameObject FishingLine = GameObject.Find("FishingLine");
         FishingLine.GetComponent<FishingLineController>().target = null;

@@ -82,7 +82,7 @@ public class Flock : MonoBehaviour
         while(i < agents.Count){
             Transform agent = agents[i].transform;
 
-            if(!agents[i].isClicked){
+            if(!agents[i].isHooked){
                 List<Transform> context = GetNearbyObjects(agents[i]);
                 Vector3 view = mainCam.WorldToViewportPoint(agent.position);
                 if(view.x < 1&&view.y < 1&&view.x > 0&&view.y > 0){
@@ -113,7 +113,7 @@ public class Flock : MonoBehaviour
                     agents.RemoveAt(i);
             }
             }
-            else if (agents[i].isClicked){
+            else if (agents[i].isHooked){
                 Vector2 move = new Vector2(0,0);
             }
             i++;

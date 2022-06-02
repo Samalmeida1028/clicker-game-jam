@@ -26,16 +26,14 @@ public class Click : MonoBehaviour
             if (hit!= null && IsFish(hit)) {
                 // We hit a fish
                 if (currentFish != null) {
-                    currentFish.GetComponent<FlockAgent>().isClicked = false;
                     this.GetComponent<FishingLineController>().target = null;
                 }
 
                 Transform fish = hit.transform;
 
                 if (currentFish == fish) { currentFish = null; return; }
-
-                fish.GetComponent<FlockAgent>().isClicked = true;
-                fish.GetComponent<FlockAgent>().Caught();
+                
+                fish.GetComponent<FlockAgent>().Hook();
 
                 this.GetComponent<FishingLineController>().target = fish;
 
@@ -48,7 +46,7 @@ public class Click : MonoBehaviour
         }
         
         if (currentFish != null) {
-            if (currentFish.GetComponent<FlockAgent>().isClicked == false) {
+            if (currentFish.GetComponent<FlockAgent>().isHooked == false) {
                 currentFish = null;
             }
         }
