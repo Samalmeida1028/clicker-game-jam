@@ -54,7 +54,7 @@ MonoBehaviour:
   maximumSpeed: 5
   neighbourRadius: 1.7
   avoidRangeMult: 0.55
-  maxNeighbors: 10
+  maxNeighbors: 8
   updateNeighbors: 1
   count: 0
   radius: 10

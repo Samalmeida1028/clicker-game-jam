@@ -181,11 +181,11 @@ MonoBehaviour:
   activePool: []
   minFlockVal: 1
   maxFlockVal: 300
-  maxFlocks: 30
+  maxFlocks: 20
   maxFlockSize: 20
   mainCam: {fileID: 0}
   commonChance: 1
-  uncommonChance: 0.1
+  uncommonChance: 0.3
   rareChance: 0.05
 --- !u!1 &831343759
 GameObject:
