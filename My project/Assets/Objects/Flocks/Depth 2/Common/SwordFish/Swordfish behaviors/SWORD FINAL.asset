@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8130616f32cdee418153574cd1d9399, type: 3}
+  m_Name: SWORD FINAL
+  m_EditorClassIdentifier: 
+  behaviors:
+  - {fileID: 11400000, guid: 4be99967ab24bab45a2432c3f54c08d0, type: 2}
+  - {fileID: 11400000, guid: c3304f2154564ce4898c5f44a002bac5, type: 2}
+  - {fileID: 11400000, guid: f767e4515ccdc1b488f0c1b564db4b24, type: 2}
+  weights:
+  - 0.3
+  - 0.5
+  - 0.1

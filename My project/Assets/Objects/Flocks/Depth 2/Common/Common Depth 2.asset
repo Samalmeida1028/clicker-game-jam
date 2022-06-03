@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87ff3c6a47d8cf34da635d5ba371918d, type: 3}
-  m_Name: Uncommon
+  m_Name: Common Depth 2
   m_EditorClassIdentifier: 
-  spawnChance: 0.32
-  valueMult: 2
+  spawnChance: 1.7
+  valueMult: 1
   flockList:
-  - {fileID: 8177413681800379062, guid: 826eb1c946e372e4db9b7943d4fb49f9, type: 3}
-  - {fileID: 3444467989424762359, guid: 8699fa86b3efda5479b15919ede84969, type: 3}
-  - {fileID: 8712589239713089035, guid: e3ef31e573eb2a64ca5fbf2269b34661, type: 3}
+  - {fileID: 3444467989424762359, guid: 3eafa32b3e7c8184b881c79740c71069, type: 3}
+  - {fileID: 8177413681800379062, guid: e84d9121ba49c6741a784ce8332dbdc2, type: 3}
+  - {fileID: 7285368927172649957, guid: 153b369d5e04603438edab12d6efc92d, type: 3}
