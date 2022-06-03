@@ -7,7 +7,7 @@ public class Click : MonoBehaviour
     public Camera Camera;
     private FlockAgent currentFish;
     public float radius;
-    private float cps = 1.0f;
+    private float cps = 8.0f;
     public int numClicks = 0;
     public int numFishCaught = 0;
     public int numFishHooked = 0;

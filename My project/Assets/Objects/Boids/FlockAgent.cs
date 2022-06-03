@@ -31,9 +31,15 @@ public class FlockAgent : MonoBehaviour
     private Vector2 targetAwayFromPole;
     private Vector2 directionTowardsTarget;
 
+    SpriteRenderer fishSprite;
+
     private float fishStrength = 1.0f;
     private float maxSpeed = 8.0f;
     private float attackSpeed = 0.1f;
+    private Vector3 dampenVelocity = Vector3.zero;
+
+    private Vector2 movingPointA;
+    private Vector2 movingPointB;
 
     private float fishPull;
         
@@ -42,6 +48,7 @@ public class FlockAgent : MonoBehaviour
         agentCollider = GetComponent<Collider2D>();
         onScreen = false;
 
+        fishSprite = GetComponentInChildren(typeof(SpriteRenderer)) as SpriteRenderer;
 
         GameObject FishingLine = GameObject.Find("Weight");
         if (FishingLine != null) {
@@ -99,16 +106,33 @@ public class FlockAgent : MonoBehaviour
             isCaught = true;
             return;
         }
-        
+
+
         // Actual movement stuff
 
         // Gets the direction towards the pole in a nomralized vector ex Vector3(1, 0)
         directionTowardsPole = (polePosition - fishCurrentPosition).normalized;
 
+        // Rotate fish towards or away the fishing pole depending on where its moving towards
+        if(Vector3.Dot(fishVelocity, directionTowardsTarget) < 0) {
+            transform.up = Vector3.SmoothDamp(transform.position, (directionTowardsPole * 25), ref dampenVelocity, 0.1f);
+            //transform.up = directionTowardsPole * 25;
+        } else {
+            transform.up = Vector3.SmoothDamp(transform.position, (-directionTowardsPole * 25), ref dampenVelocity, 0.1f);
+
+            Vector2 c = Vector2.Perpendicular(directionTowardsTarget);
+
+            Debug.DrawLine(targetAwayFromPole, targetAwayFromPole + (c * 3), Color.red);
+            Debug.DrawLine(targetAwayFromPole, targetAwayFromPole + (-c * 3), Color.red);
+            Debug.DrawLine(fishCurrentPosition, targetAwayFromPole, Color.yellow);
+            //Debug.DrawLine(targetAwayFromPole, movingPointB * 2, Color.red);
+
+            //transform.up = -directionTowardsPole * 25;
+        }
+
         /*
         Debug.DrawLine(fishCurrentPosition, polePosition, Color.red);
         Debug.DrawLine(fishCurrentPosition, fishCurrentPosition + directionTowardsPole * 25, Color.yellow);
-        Debug.DrawLine(fishCurrentPosition, targetAwayFromPole, Color.green);
         */
 
         // Calculates fish pull force amount (INCLUDE RARITY WHEN ADDED)
@@ -145,7 +169,6 @@ public class FlockAgent : MonoBehaviour
     public void Hook() {
         Vector2 fishCurrentPosition = gameObject.transform.position;
 
-        
         // Gets the direction towards the pole in a nomralized vector ex Vector3(1, 0)
         directionTowardsPole = (polePosition - fishCurrentPosition).normalized;
 
@@ -154,6 +177,7 @@ public class FlockAgent : MonoBehaviour
         
         // Direction towards target
         directionTowardsTarget = (targetAwayFromPole - fishCurrentPosition).normalized;
+        transform.up = fishCurrentPosition + -directionTowardsPole * 25;
 
         isHooked = true;
     }

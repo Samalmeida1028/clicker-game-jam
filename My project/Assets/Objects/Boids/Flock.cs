@@ -126,7 +126,7 @@ public class Flock : MonoBehaviour
                 agents[i].onScreen = false;
             }
 
-            Debug.DrawLine(agents[i].transform.position,target,Color.green);
+            //Debug.DrawLine(agents[i].transform.position,target,Color.green);
             bool close = agentIsClose(agents[i], target, .1f);
             Vector2 offset;
 

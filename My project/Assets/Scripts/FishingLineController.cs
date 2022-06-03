@@ -48,7 +48,7 @@ public class FishingLineController : MonoBehaviour
     }
 
     private void Simulate() {
-        for (int i = 0; i < this.lineLength; i++) {
+        for (int i = 0; i < this.lineLength - 1; i++) {
             LineSegment firstSegment = this.lineSegments[i];
 
             Vector2 velocity = firstSegment.posNow - firstSegment.posOld;
