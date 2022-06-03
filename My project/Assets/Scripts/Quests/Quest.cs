@@ -12,23 +12,28 @@ public abstract class Quest : ScriptableObject
     public int rewardType;
     protected float levelModifier;
 
-    public bool checkCondition(int currValue){
-        return currValue==conditionValue;
+    public bool checkCondition(int currValue)
+    {
+        Debug.Log(this.GetType() + ": " + currValue + " / " + conditionValue);
+        return currValue == conditionValue;
     }
 
-    public double getPercentage(int currValue){
-        return (double)currValue/(double)conditionValue;
+    public double getPercentage(int currValue)
+    {
+        return (double)currValue / (double)conditionValue;
     }
 
     public enum questTypes
     {
         BaitQuest,
         HookQuest,
-        ReelQuest   
+        ReelQuest,
+        NullQuest
     }
 
-    protected int calculateConditionValue(int value){
-        int n = (int)Mathf.Ceil(value * Mathf.Pow(1+levelModifier,questLevel)); 
+    protected int calculateConditionValue(int value)
+    {
+        int n = (int)Mathf.Ceil(value * Mathf.Pow(1 + levelModifier, questLevel));
         if (n % 10 != 0)
             n = n + (10 - n % 10);
         return n;

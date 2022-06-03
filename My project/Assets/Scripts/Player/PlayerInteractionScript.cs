@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerInteractionScript : MonoBehaviour
 {
-    private float count = 0;
+    // private float count = 0;
     public int refreshRate = 10;
     public float interactionRadius = 1;
     public string interactableTag = "Interactable";
+
+    public KeyCode interactionKey;
 
     // Start is called before the first frame update
     void Start()
@@ -16,16 +18,27 @@ public class PlayerInteractionScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        count += Time.fixedDeltaTime;
+        // count += Time.fixedDeltaTime;
+        GameObject closestObj = null;
+        // if (count > (float)(1 / refreshRate))
+        // {
 
-        if (count > (float)(1 / refreshRate))
+        //     //TODO once more interactables, make interactable class wrapper
+        // }
+
+        if (Input.GetKeyDown(interactionKey))
         {
-            GameObject obj = FindClosestObj(interactableTag);
-            //TODO once more interactables, make interactable class wrapper
-            obj.GetComponent<QuestFactory>().setPlayer();
+            closestObj = FindClosestObj(interactableTag);
+            if (closestObj)
+            {
+                closestObj.GetComponent<QuestController>().interact(gameObject);
+            }
+
         }
+
+
     }
 
     public GameObject FindClosestObj(string type)

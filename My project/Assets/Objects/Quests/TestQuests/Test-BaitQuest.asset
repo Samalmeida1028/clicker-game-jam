@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questLevel: 1
   questType: 0
-  conditionValue: 0
+  conditionValue: 100
   rewardValue: 0
   rewardType: 0
-  poop: 10
