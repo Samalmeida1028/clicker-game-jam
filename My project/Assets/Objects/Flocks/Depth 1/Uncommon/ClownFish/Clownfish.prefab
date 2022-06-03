@@ -63,13 +63,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFlipped: 0
-  value: 0
+  value: 4
   size: 0
   speed: 0
   passed: 0
   maxPasses: 8
   passnum: 0
-  isClicked: 0
+  isHooked: 0
+  isCaught: 0
 --- !u!1 &5645497612865204382
 GameObject:
   m_ObjectHideFlags: 0
