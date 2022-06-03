@@ -8,6 +8,7 @@ public class Click : MonoBehaviour
     private FlockAgent currentFish;
     public float radius;
     private float cps = 1.0f;
+    public int numClicks = 0;
 
     private bool IsFish(Collider2D hitObject) {
         // Check if the object hit is a fish
@@ -17,9 +18,11 @@ public class Click : MonoBehaviour
         return true;
     }
 
-    void Update() {   
+    void Update() {
+        if(Input.GetMouseButtonDown(0)){
+        numClicks +=1;
         // Begin checking for mouse clicks on fishies
-        if(Input.GetMouseButtonDown(0) && !currentFish) {
+        if(!currentFish) {
             Vector3 mousePos = Camera.ScreenToWorldPoint( Input.mousePosition ); // Create a ray from the camera to the mouse pos
             Collider2D hit = Physics2D.OverlapCircle(mousePos, radius); // Look at this later but casts the ray
             
@@ -38,8 +41,9 @@ public class Click : MonoBehaviour
 
                 currentFish = fishTransform.GetComponent<FlockAgent>();
             }
-        } else if(Input.GetMouseButtonDown(0) && currentFish) {
+        } else if(currentFish) {
             currentFish.Pulled(cps);
+        }
         }
         
         if (currentFish != null) {

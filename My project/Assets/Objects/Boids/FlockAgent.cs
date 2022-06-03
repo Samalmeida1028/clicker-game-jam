@@ -14,7 +14,7 @@ public class FlockAgent : MonoBehaviour
     public int size;
     public int speed;
 
-    public bool passed;
+    public bool onScreen;
     public int maxPasses = 2;
     public int passnum = 0;
 
@@ -38,7 +38,7 @@ public class FlockAgent : MonoBehaviour
     void Start()
     {
         agentCollider = GetComponent<Collider2D>();
-        passed = false;
+        onScreen = false;
 
          GameObject FishingLine = GameObject.Find("Weight");
         if (FishingLine != null) {

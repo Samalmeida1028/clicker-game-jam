@@ -1907,7 +1907,7 @@
     "m_ShaderOutputName": "Edge",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": -0.009999999776482582,
+        "x": 0.03999999910593033,
         "y": 1.0,
         "z": 1.0,
         "w": 1.0
@@ -2717,7 +2717,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Scale",
     "m_StageCapability": 3,
-    "m_Value": 1.0299999713897706,
+    "m_Value": 0.6700000166893005,
     "m_DefaultValue": 10.0,
     "m_Labels": []
 }
@@ -2742,7 +2742,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "x": 1.6399999856948853,
+        "x": 0.3499999940395355,
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
@@ -3138,9 +3138,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1662.0,
-            "y": 683.0,
-            "width": 207.9998779296875,
+            "x": 1608.9998779296875,
+            "y": 972.9999389648438,
+            "width": 208.0,
             "height": 301.99993896484377
         }
     },
