@@ -11,7 +11,7 @@ public class Click : MonoBehaviour
     public int numClicks = 0;
     public int numFishCaught = 0;
     public int numFishHooked = 0;
-    public int fishValue;
+    public int fishValue = 0;
 
     private bool IsFish(Collider2D hitObject) {
         // Check if the object hit is a fish
