@@ -25,7 +25,7 @@ public class SceneManager : MonoBehaviour
             case 1:
             break;
             case 2:
-            break:
+            break;
         }
         
     }
