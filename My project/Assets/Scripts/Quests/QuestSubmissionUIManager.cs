@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class QuestSubmissionUIManager : MonoBehaviour
 {
 
     public GameObject questUI;
-    public Image hookButton;
-    public Image reelButton;
-    public Image baitButton;
+    public GameObject hookButton;
+    public TextMeshProUGUI hookText;
+    public GameObject reelButton;
+    public GameObject baitButton;
     public GameObject progressBar;
 
     void Start()
@@ -25,32 +27,37 @@ public class QuestSubmissionUIManager : MonoBehaviour
 
     //takes in list of quests
     //should also be changed to enable quest selection ui 
-    public void enableUI(int max, int currentVal, Quest.questTypes questType)
+    public void enableUI(int max, int currentVal, Quest currQuest)
     {
         questUI.SetActive(true);
+        Debug.Log("MAX: " + max);
+        Debug.Log("CUR: " + currentVal);
 
         progressBar.GetComponent<ProgressBar>().SetCurrentFill(currentVal, max);
 
-        bool hookButton = false;
-        bool reelButton = false;
-        bool baitButton = false;
+        TextMeshProUGUI text = null;
+        hookButton.SetActive(false);
+        reelButton.SetActive(false);
+        baitButton.SetActive(false);
 
-        if (questType.Equals(Quest.questTypes.HookQuest))
+        if (currQuest.questType.Equals(Quest.questTypes.HookQuest))
         {
-            hookButton = true;
+            hookButton.SetActive(true);
+            text = hookButton.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         }
-        else if (questType.Equals(Quest.questTypes.ReelQuest))
+        else if (currQuest.questType.Equals(Quest.questTypes.ReelQuest))
         {
-            reelButton = true;
+            reelButton.SetActive(true);
+            text = reelButton.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         }
-        else if (questType.Equals(Quest.questTypes.BaitQuest))
+        else if (currQuest.questType.Equals(Quest.questTypes.BaitQuest))
         {
-            baitButton = true;
+            baitButton.SetActive(true);
+            text = baitButton.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         }
-        else
-        {
 
-        }
+        text.SetText("Lvl " + currQuest.questLevel);
+
     }
 
     public void disableUI()

@@ -7,14 +7,15 @@ public class PlayerStatsController : MonoBehaviour
     public int baseReelPower = 1;
     public int baseFishValue = 1;
     public int baseNumFish = 1;
-    int baitLevel;
-    int hookLevel;
-    int reelLevel;
+    public int baitLevel;
+    public int hookLevel;
+    public int reelLevel;
     //change to int * multiplier of 10s
     public int totalFishCaught;
     public int totalFishHooked;
     public int totalClicks;
-    public int currentFishCaught;
+    public int totalFishMoney;
+    public int currentFishMoney;
 
     // Start is called before the first frame update
     void Start()
@@ -67,15 +68,20 @@ public class PlayerStatsController : MonoBehaviour
     public int addToFishCount(int fishCaught)
     {
         this.totalFishCaught += fishCaught;
-        this.currentFishCaught += fishCaught;
         return this.totalFishCaught;
     }
 
-    public int subtractFromCurrentFishCount(int fishSpent)
+    public int addToFishMoney(int fishValue)
     {
-        this.currentFishCaught -= fishSpent;
+        this.totalFishMoney += fishValue;
+        return this.totalFishMoney;
+    }
 
-        return this.currentFishCaught;
+    public int subtractFromCurrentFishMoney(int fishSpent)
+    {
+        this.currentFishMoney -= fishSpent;
+
+        return this.currentFishMoney;
     }
 
     public int addToTotalClicks(int numClicks)
