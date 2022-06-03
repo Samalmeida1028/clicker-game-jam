@@ -1,0 +1,2202 @@
+fileFormatVersion: 2
+guid: ad4f402db414e6445a6f001c8bd85656
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbccd859d34d1348abdc020a57353f0
+      internalID: 1828958473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 320
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a851c0eb2fb153441ac47e02966b903c
+      internalID: 1875266228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed42d57f251abc6428e480fcfdc2b78d
+      internalID: 534819089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7cd5e5e21b796843ae4062452aa6617
+      internalID: 1622404953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_4
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 314
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f73cbf1e206744c9583032665d296f
+      internalID: 1494498968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_5
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 314
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f186da97e6565bf41a212e3a81bad869
+      internalID: 1014163712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_6
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 314
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888c01c39b90d2f4bb257f49e13c1246
+      internalID: 1727876080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_7
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 276
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d907e92badd304f8eb8df1ff6f0ce7
+      internalID: -380535217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_8
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 306
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb3f3c8199c84148a23a4069ae21712
+      internalID: -1218897350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_9
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 298
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9687e6e580496d94e992eb5cb6403baf
+      internalID: -186287856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_10
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 298
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086b9a0b869ff0b4387dc1656da8858a
+      internalID: -1097034343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_11
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 298
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecadfdbff3f76384f87bc6e120298176
+      internalID: 527778416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 256
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd883249fbf910e4e9e48f4691fea7cf
+      internalID: 2093332172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 256
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8164d586bdfb17348a8d1435a9b1cfd7
+      internalID: 824899833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e4ce0650f11114fb69d258b4849b9a
+      internalID: 492035497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_15
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 256
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f52f8255c5deb40821d9047d9853fd
+      internalID: 471053740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_16
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 256
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02de309e7a09e8448f3d7bb7e124ef4
+      internalID: -886955173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 256
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa486bdf379f97140aae31e30d2b2f7f
+      internalID: 1968553824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_18
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 256
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2c61b022b22a774f9ad71c18d707576
+      internalID: -1428764734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_19
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 256
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d250d876e20104da94b4f210042e60
+      internalID: 1087686959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_20
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 247
+        width: 76
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733cec85702bc3648965a75f67c7bbe9
+      internalID: 1969044994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_21
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 282
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c937d8ba44973864b8a820e9d362fd6d
+      internalID: 1800320410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_22
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 282
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62192b170260ae143b7953874dc203c7
+      internalID: 1958440021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_23
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 282
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c7a77e73960f2448de3902859272b1
+      internalID: 1797226981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_24
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 226
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9432008bea8b63c4cb1e97e4163fb637
+      internalID: 246107750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_25
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 234
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49409d3ca2b2b8a4693de963a4d5a8eb
+      internalID: -121730550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_26
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 234
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627c087657ef2bd4286c368d6222aa5e
+      internalID: -562071137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_27
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 234
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d04d906975f7084c9403d27907ed5a1
+      internalID: -1925912841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_28
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 196
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c279f03c1f36864ba5241f6284d32df
+      internalID: 72469288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_29
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d604c8dbd43f4394589372eea5d7587d
+      internalID: 576615143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_30
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 208
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4270ddbbb293cc846ab95e729791a2d3
+      internalID: 285601320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cb72dcd231f8d488a791840397abbb
+      internalID: -431151084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_32
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 208
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522a6248be27c51408a545dcecc4aa25
+      internalID: -12688812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_33
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 208
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292592bd76bc9c24eb0edb61f98e2c96
+      internalID: -1242135116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_34
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 208
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5c8bb992669a34e9fee8869847216d
+      internalID: -1894288561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_35
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78fd292e3b5f384bb66f16eb9e7730e
+      internalID: -1776889178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_36
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 208
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31484917a06ac7042b923c1f89c27b9c
+      internalID: -1880331657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_37
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 218
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb4b650956c29a4a98f96eed88b2f8e
+      internalID: 1246711575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_38
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 218
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2180759559c5b4643a381e547b2c50f3
+      internalID: -1912651097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_39
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 218
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da792160d238d3846a6dc78f420ffdd9
+      internalID: -1833625298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_40
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 202
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3309affe6ab94fc4cbcef02e3abadb41
+      internalID: -843159826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_41
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 202
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd001653c2d4bb498186cc4192ca0ad
+      internalID: -447933439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_42
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 202
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a709d5757c68494c8499bdf1aabe014
+      internalID: -742026474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_43
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7c311f881676f4ea827b4d72a7ed0a
+      internalID: -1597684045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_44
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec4b0b777aa99a4fb381637b2c28064
+      internalID: -1972195493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_45
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5193a31be7631c45966bcfc4947c13b
+      internalID: 717973373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_46
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 145
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2c2673d599489469d7d1cf26814e7e
+      internalID: -46924151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_47
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73694a51fa54c6843aef43b55ce457d4
+      internalID: -874738546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_48
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e94390d3a7d53c47a17c02a99775565
+      internalID: -212437415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_49
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 144
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83412074c9204c74fad1752afe20a1db
+      internalID: 1138498928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_50
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accdb0f5b4407ea499ddb639b4cc79dd
+      internalID: 1773497911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_51
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 146
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b79bdd1e505eb4ba7623edac3a1f9d
+      internalID: -1241307566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_52
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 154
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0cedd31877141498003586ff48ff4c
+      internalID: 1838763696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_53
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 154
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab4f6dd9d5b0874d97da64d795fa33d
+      internalID: 9865360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_54
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 154
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4700cf211219ba4ea5bb0138db4345d
+      internalID: -279340131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_55
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 116
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d31a7c8ceac304f8d2f7ea27e8aa16
+      internalID: -1415685071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_56
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 138
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0268181eb501a6c44810ece5bdaa09b6
+      internalID: 756816932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_57
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 138
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7117ccab4a9214aab5c27d8b587f62
+      internalID: 1830735731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_58
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 138
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5220acd32b2d7cc4d86b19bbb6d9f898
+      internalID: -299497703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_59
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 122
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863df9a4abf95fa4ea35e673c2888416
+      internalID: 1752180408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_60
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 122
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcdf1956e1872e41a252ead011243fd
+      internalID: 1564896924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_61
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 122
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234959c459a3ea341af0bbb437259da3
+      internalID: -722848135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_62
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bd9244952e40b4e97aca87ec9d2932
+      internalID: -1432184203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_63
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e04304c80f476c448b17d7b0d9d3cd3
+      internalID: 1259241522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_64
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283cb1782fee0e54f98c2602ba88969d
+      internalID: -292570944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_65
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e12d8110627d0408e10df068d69bd2
+      internalID: 825796029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_66
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 96
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4391cbb3a1085c74d8eb2b9a4b745a2f
+      internalID: 851308571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_67
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc1aee6b2ad9fa49a9e392eed063b51
+      internalID: 1694475402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_68
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4fe9f65549b5142bbb18528106ae65
+      internalID: 1591938537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_69
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fe0827b26f4a04da8b0d9d1c353c64
+      internalID: -1696212513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_70
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553949c8d3fc95140adace2b8a0e631e
+      internalID: -1251752700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_71
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b8b1b960e63aa4ab17d538df8d7f03
+      internalID: 224629827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_72
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6629570945b6145938758dc85b38af
+      internalID: -1220487959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_73
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae51af07e7836d4e8c4d0083ca9b9f1
+      internalID: 1162710022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_74
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a5d3f9058d7dd47b4ce608ebfb577e
+      internalID: 1393265625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_75
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6223ea2f27d483b48a9e2d7e95b7936e
+      internalID: -885696723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_76
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3248b87ac45c72640b93be4f816c6959
+      internalID: -1297819861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_77
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d706bdb0a1a37a844be5b2a75fcac658
+      internalID: 29610690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_78
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0ca74870ba57048af34e7cee7ef076
+      internalID: 1222656092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_79
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8beb66630892104b9380eab95955b47
+      internalID: 953540785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_80
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 74
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96a5a114a9575e4aa392a9904d2de3e
+      internalID: -484612080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_81
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 74
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb1d01997d7fdc44bfd620dfb819265
+      internalID: 1599494911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_82
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 74
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01aa9a33c339916488201f07829bf63b
+      internalID: 465046220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_83
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 36
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d8f0755d1247e4ca0b556285eb99ff
+      internalID: 1272530160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_84
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 58
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0757f1d52566004893b9d12ce126905
+      internalID: -263004718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_85
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 58
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916251c6a665b814eaea0266df466712
+      internalID: -400966636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_86
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 58
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4caaa5f5743877448b0e7632e34ef7d
+      internalID: -2040779696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_87
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 24
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3eb71d1f2b30854fb238c2d59c9e6c6
+      internalID: -1331028190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_88
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 24
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ddfedeb6ed8058489275df9035c88fa
+      internalID: -194328290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_89
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 24
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3530b01593da4409e2d3b328b12bf6
+      internalID: -1416796625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_90
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 24
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc01906568035244e8e707a60a34f63f
+      internalID: 1208865356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_91
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 42
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3504139c49294a544b8e5ee09d0980fa
+      internalID: 612036622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_92
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 42
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3cdc607905949419d67743ac02802d
+      internalID: -1472858564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minifantasy_GuiPanelsAndSlotsYellow_93
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 42
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5553445e6abebe1498b99e3d0fee7ab3
+      internalID: 497335786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Minifantasy_GuiPanelsAndSlotsYellow_21: 1800320410
+      Minifantasy_GuiPanelsAndSlotsYellow_33: -1242135116
+      Minifantasy_GuiPanelsAndSlotsYellow_76: -1297819861
+      Minifantasy_GuiPanelsAndSlotsYellow_93: 497335786
+      Minifantasy_GuiPanelsAndSlotsYellow_92: -1472858564
+      Minifantasy_GuiPanelsAndSlotsYellow_51: -1241307566
+      Minifantasy_GuiPanelsAndSlotsYellow_25: -121730550
+      Minifantasy_GuiPanelsAndSlotsYellow_29: 576615143
+      Minifantasy_GuiPanelsAndSlotsYellow_56: 756816932
+      Minifantasy_GuiPanelsAndSlotsYellow_18: -1428764734
+      Minifantasy_GuiPanelsAndSlotsYellow_86: -2040779696
+      Minifantasy_GuiPanelsAndSlotsYellow_62: -1432184203
+      Minifantasy_GuiPanelsAndSlotsYellow_15: 471053740
+      Minifantasy_GuiPanelsAndSlotsYellow_9: -186287856
+      Minifantasy_GuiPanelsAndSlotsYellow_17: 1968553824
+      Minifantasy_GuiPanelsAndSlotsYellow_59: 1752180408
+      Minifantasy_GuiPanelsAndSlotsYellow_65: 825796029
+      Minifantasy_GuiPanelsAndSlotsYellow_87: -1331028190
+      Minifantasy_GuiPanelsAndSlotsYellow_88: -194328290
+      Minifantasy_GuiPanelsAndSlotsYellow_5: 1014163712
+      Minifantasy_GuiPanelsAndSlotsYellow_69: -1696212513
+      Minifantasy_GuiPanelsAndSlotsYellow_16: -886955173
+      Minifantasy_GuiPanelsAndSlotsYellow_22: 1958440021
+      Minifantasy_GuiPanelsAndSlotsYellow_57: 1830735731
+      Minifantasy_GuiPanelsAndSlotsYellow_12: 2093332172
+      Minifantasy_GuiPanelsAndSlotsYellow_7: -380535217
+      Minifantasy_GuiPanelsAndSlotsYellow_13: 824899833
+      Minifantasy_GuiPanelsAndSlotsYellow_72: -1220487959
+      Minifantasy_GuiPanelsAndSlotsYellow_43: -1597684045
+      Minifantasy_GuiPanelsAndSlotsYellow_40: -843159826
+      Minifantasy_GuiPanelsAndSlotsYellow_67: 1694475402
+      Minifantasy_GuiPanelsAndSlotsYellow_54: -279340131
+      Minifantasy_GuiPanelsAndSlotsYellow_64: -292570944
+      Minifantasy_GuiPanelsAndSlotsYellow_38: -1912651097
+      Minifantasy_GuiPanelsAndSlotsYellow_61: -722848135
+      Minifantasy_GuiPanelsAndSlotsYellow_8: -1218897350
+      Minifantasy_GuiPanelsAndSlotsYellow_11: 527778416
+      Minifantasy_GuiPanelsAndSlotsYellow_14: 492035497
+      Minifantasy_GuiPanelsAndSlotsYellow_27: -1925912841
+      Minifantasy_GuiPanelsAndSlotsYellow_1: 1875266228
+      Minifantasy_GuiPanelsAndSlotsYellow_20: 1969044994
+      Minifantasy_GuiPanelsAndSlotsYellow_58: -299497703
+      Minifantasy_GuiPanelsAndSlotsYellow_75: -885696723
+      Minifantasy_GuiPanelsAndSlotsYellow_60: 1564896924
+      Minifantasy_GuiPanelsAndSlotsYellow_81: 1599494911
+      Minifantasy_GuiPanelsAndSlotsYellow_66: 851308571
+      Minifantasy_GuiPanelsAndSlotsYellow_77: 29610690
+      Minifantasy_GuiPanelsAndSlotsYellow_23: 1797226981
+      Minifantasy_GuiPanelsAndSlotsYellow_3: 1622404953
+      Minifantasy_GuiPanelsAndSlotsYellow_52: 1838763696
+      Minifantasy_GuiPanelsAndSlotsYellow_36: -1880331657
+      Minifantasy_GuiPanelsAndSlotsYellow_37: 1246711575
+      Minifantasy_GuiPanelsAndSlotsYellow_46: -46924151
+      Minifantasy_GuiPanelsAndSlotsYellow_55: -1415685071
+      Minifantasy_GuiPanelsAndSlotsYellow_6: 1727876080
+      Minifantasy_GuiPanelsAndSlotsYellow_71: 224629827
+      Minifantasy_GuiPanelsAndSlotsYellow_85: -400966636
+      Minifantasy_GuiPanelsAndSlotsYellow_30: 285601320
+      Minifantasy_GuiPanelsAndSlotsYellow_32: -12688812
+      Minifantasy_GuiPanelsAndSlotsYellow_84: -263004718
+      Minifantasy_GuiPanelsAndSlotsYellow_90: 1208865356
+      Minifantasy_GuiPanelsAndSlotsYellow_26: -562071137
+      Minifantasy_GuiPanelsAndSlotsYellow_44: -1972195493
+      Minifantasy_GuiPanelsAndSlotsYellow_82: 465046220
+      Minifantasy_GuiPanelsAndSlotsYellow_91: 612036622
+      Minifantasy_GuiPanelsAndSlotsYellow_10: -1097034343
+      Minifantasy_GuiPanelsAndSlotsYellow_19: 1087686959
+      Minifantasy_GuiPanelsAndSlotsYellow_63: 1259241522
+      Minifantasy_GuiPanelsAndSlotsYellow_0: 1828958473
+      Minifantasy_GuiPanelsAndSlotsYellow_41: -447933439
+      Minifantasy_GuiPanelsAndSlotsYellow_74: 1393265625
+      Minifantasy_GuiPanelsAndSlotsYellow_28: 72469288
+      Minifantasy_GuiPanelsAndSlotsYellow_24: 246107750
+      Minifantasy_GuiPanelsAndSlotsYellow_34: -1894288561
+      Minifantasy_GuiPanelsAndSlotsYellow_68: 1591938537
+      Minifantasy_GuiPanelsAndSlotsYellow_35: -1776889178
+      Minifantasy_GuiPanelsAndSlotsYellow_42: -742026474
+      Minifantasy_GuiPanelsAndSlotsYellow_48: -212437415
+      Minifantasy_GuiPanelsAndSlotsYellow_47: -874738546
+      Minifantasy_GuiPanelsAndSlotsYellow_89: -1416796625
+      Minifantasy_GuiPanelsAndSlotsYellow_53: 9865360
+      Minifantasy_GuiPanelsAndSlotsYellow_70: -1251752700
+      Minifantasy_GuiPanelsAndSlotsYellow_79: 953540785
+      Minifantasy_GuiPanelsAndSlotsYellow_80: -484612080
+      Minifantasy_GuiPanelsAndSlotsYellow_49: 1138498928
+      Minifantasy_GuiPanelsAndSlotsYellow_2: 534819089
+      Minifantasy_GuiPanelsAndSlotsYellow_78: 1222656092
+      Minifantasy_GuiPanelsAndSlotsYellow_50: 1773497911
+      Minifantasy_GuiPanelsAndSlotsYellow_31: -431151084
+      Minifantasy_GuiPanelsAndSlotsYellow_4: 1494498968
+      Minifantasy_GuiPanelsAndSlotsYellow_45: 717973373
+      Minifantasy_GuiPanelsAndSlotsYellow_39: -1833625298
+      Minifantasy_GuiPanelsAndSlotsYellow_83: 1272530160
+      Minifantasy_GuiPanelsAndSlotsYellow_73: 1162710022
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
