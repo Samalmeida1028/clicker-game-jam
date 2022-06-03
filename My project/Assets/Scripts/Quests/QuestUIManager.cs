@@ -26,7 +26,7 @@ public class QuestUIManager : MonoBehaviour
 
     //takes in list of quests
     //should also be changed to enable quest selection ui 
-    public void enableUI()
+    public void enableUI(int max, int currentVal, Quest.questTypes questType)
     {
         questUI.SetActive(true);
     }
@@ -51,6 +51,7 @@ public class QuestUIManager : MonoBehaviour
         {
             return Quest.questTypes.NullQuest;
         }
+
     }
 
     public void setHookActive()
@@ -83,9 +84,13 @@ public class QuestUIManager : MonoBehaviour
         reelButton.GetComponent<Button>().interactable = false;
     }
 
-    public void confirmSelection()
+    public void resetButtons()
     {
-
+        this.baitActive = false;
+        this.reelActive = false;
+        this.hookActive = false;
+        hookButton.GetComponent<Button>().interactable = true;
+        baitButton.GetComponent<Button>().interactable = true;
+        reelButton.GetComponent<Button>().interactable = true;
     }
-
 }

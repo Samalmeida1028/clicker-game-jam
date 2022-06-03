@@ -24,10 +24,20 @@ public class QuestTracker : MonoBehaviour
         {
             if (questCompleted == false)
             {
-                questCompleted = this.currQuest.checkCondition(getCurrVal());
+                questCompleted = this.currQuest.checkCondition(getCurrVal() - initialQuestVal);
             }
         }
 
+    }
+
+    public int getQuestMax()
+    {
+        return currQuest.conditionValue;
+    }
+
+    public int getQuestValue()
+    {
+        return getCurrVal() - initialQuestVal;
     }
 
     public void setCurrentQuest(Quest newQuest)
@@ -80,5 +90,10 @@ public class QuestTracker : MonoBehaviour
     public bool isCompleted()
     {
         return questCompleted;
+    }
+
+    public Quest.questTypes GetQuestType()
+    {
+        return this.currQuest.questType;
     }
 }
