@@ -46,6 +46,8 @@ public class Click : MonoBehaviour
             if (currentFish.isCaught) {
                 currentFish.Catch();
                 currentFish = null;
+            } else if (!currentFish.isHooked) {
+                currentFish = null;
             }
         }
     }
