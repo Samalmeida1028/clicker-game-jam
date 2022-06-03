@@ -156,7 +156,7 @@ RectTransform:
   m_Children:
   - {fileID: 1034436985}
   m_Father: {fileID: 530016694}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -209,7 +209,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1034436984}
         m_TargetAssemblyTypeName: DepthChange, Assembly-CSharp
-        m_MethodName: checkDepth
+        m_MethodName: DepthIncrease
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -221,7 +221,19 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1034436984}
         m_TargetAssemblyTypeName: DepthChange, Assembly-CSharp
-        m_MethodName: DepthIncrease
+        m_MethodName: checkDepth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 827771738}
+        m_TargetAssemblyTypeName: DepthChange, Assembly-CSharp
+        m_MethodName: checkDepth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -391,7 +403,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530016694}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &530016690
 GameObject:
@@ -485,6 +497,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 604527102}
   - {fileID: 448918948}
   - {fileID: 2064543188}
   - {fileID: 53039261}
@@ -508,7 +521,7 @@ GameObject:
   - component: {fileID: 574192670}
   - component: {fileID: 574192669}
   m_Layer: 0
-  m_Name: 33451E 1
+  m_Name: Seaweed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -613,9 +626,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 827771737}
-  - {fileID: 604527102}
   m_Father: {fileID: 530016694}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -669,6 +681,30 @@ MonoBehaviour:
       - m_Target: {fileID: 827771738}
         m_TargetAssemblyTypeName: DepthChange, Assembly-CSharp
         m_MethodName: DepthDecrease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 827771738}
+        m_TargetAssemblyTypeName: DepthChange, Assembly-CSharp
+        m_MethodName: checkDepth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1034436984}
+        m_TargetAssemblyTypeName: DepthChange, Assembly-CSharp
+        m_MethodName: checkDepth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -747,12 +783,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 602820399}
-  m_RootOrder: 1
+  m_Father: {fileID: 530016694}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1195, y: 352}
+  m_AnchoredPosition: {x: -832, y: 384}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604527103
@@ -876,7 +912,7 @@ GameObject:
   - component: {fileID: 827771738}
   - component: {fileID: 827771739}
   m_Layer: 5
-  m_Name: ButtonObject
+  m_Name: Decrease
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,7 +978,7 @@ GameObject:
   - component: {fileID: 831343761}
   - component: {fileID: 831343760}
   m_Layer: 0
-  m_Name: 3840x2160-light-sky-blue-solid-color-background (1)
+  m_Name: ForeGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1084,7 +1120,7 @@ GameObject:
   - component: {fileID: 979242302}
   - component: {fileID: 979242301}
   m_Layer: 0
-  m_Name: 3840x2160-light-sky-blue-solid-color-background
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1169,7 +1205,7 @@ GameObject:
   - component: {fileID: 1034436984}
   - component: {fileID: 1034436986}
   m_Layer: 0
-  m_Name: ButtonObject
+  m_Name: Increase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1843,7 +1879,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 530016694}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

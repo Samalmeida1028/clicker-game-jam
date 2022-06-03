@@ -8,7 +8,6 @@ public class DepthChange : MonoBehaviour
 {
     public Spawner spawner;
     int depth= 0;
-    bool isClicked = false;
     public TextMeshProUGUI text;
 
     
@@ -19,7 +18,6 @@ public class DepthChange : MonoBehaviour
     }
 
     public void DepthIncrease(){
-        isClicked = true;
         depth = spawner.Depth;
         spawner.Depth+=1;
         if(depth != spawner.Depth){
@@ -29,7 +27,6 @@ public class DepthChange : MonoBehaviour
         text.text = depth.ToString();
     }
         public void DepthDecrease(){
-        isClicked = true;
         depth = spawner.Depth;
         spawner.Depth-=1;
         if(depth != spawner.Depth){

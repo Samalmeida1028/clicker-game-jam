@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
     public int maxFlocks = 20;
     public int maxFlockSize = 70;
     public Camera mainCam;
-    const int MAXDEPTH = 1;
+    public int MAXDEPTH = 0;
     int depth = 0;
     public int Depth
     {
