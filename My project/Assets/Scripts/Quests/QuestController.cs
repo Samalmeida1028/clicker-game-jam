@@ -48,9 +48,11 @@ public class QuestController : MonoBehaviour
         }
     }
 
+    //Attached to confirm button on quest ui
     public void chooseQuest()
     {
         Quest.questTypes newQuestType = questUI.disableUI();
+        questUI.resetButtons();
 
         if (!newQuestType.Equals(Quest.questTypes.NullQuest))
         {
