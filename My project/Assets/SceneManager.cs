@@ -29,4 +29,10 @@ public class SceneManager : MonoBehaviour
         }
         
     }
+
+    void changeScene(int globalIntensity, int ambientIntensity, Color backgroundColor, Color waveColor, bool isSeaweed){
+        SceneLight.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = globalIntensity;
+
+
+    }
 }
