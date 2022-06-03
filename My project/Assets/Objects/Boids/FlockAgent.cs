@@ -23,7 +23,7 @@ public class FlockAgent : MonoBehaviour
     
     private float lastPulled;
 
-    private Camera camera;
+    Camera camera;
     private Vector2 polePosition;
     private Vector2 fishVelocity;
     private Vector2 fishForce;

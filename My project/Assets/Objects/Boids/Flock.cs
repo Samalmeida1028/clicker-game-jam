@@ -105,11 +105,6 @@ public class Flock : MonoBehaviour
 
     void FixedUpdate()
     {
-        maxNeighbors = maxNeighbors;
-        maximumSpeed = maximumSpeed;
-        neighbourRadius = neighbourRadius;
-        avoidRangeMult = avoidRangeMult;
-        driveFactor = driveFactor;
         count += Time.fixedDeltaTime;
         int i = 0;
         while (i < agents.Count&&!flockIsClose)
