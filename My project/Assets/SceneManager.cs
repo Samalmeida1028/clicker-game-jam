@@ -19,6 +19,14 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        switch(Spawner.gameObject.GetComponent<Spawner>().Depth){
+            case 0:
+            break;
+            case 1:
+            break;
+            case 2:
+            break:
+        }
         
     }
 }
