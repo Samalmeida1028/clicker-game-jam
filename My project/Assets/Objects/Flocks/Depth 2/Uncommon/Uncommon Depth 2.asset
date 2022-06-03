@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ff3c6a47d8cf34da635d5ba371918d, type: 3}
+  m_Name: Uncommon Depth 2
+  m_EditorClassIdentifier: 
+  spawnChance: 1.2
+  valueMult: 4
+  flockList:
+  - {fileID: 198911118581993287, guid: 6f27e4ccb180ee042886b6ee6c09bea9, type: 3}
+  - {fileID: 6192619501925113856, guid: fd0a75a5bb2db2041a0a9492be142b37, type: 3}

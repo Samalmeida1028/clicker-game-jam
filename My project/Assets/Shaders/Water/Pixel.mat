@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Pixel
-  m_Shader: {fileID: -6465566751694194690, guid: fb41a069f34d94b44b01ff867f82c0db, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: cd2fb8f85e4da7e48a20d6645acbc4b8, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 01679faadf3cd14408d6da331ef68037, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -33,6 +33,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 4d0db3ec9af035749824699dad88ebaf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_00d722a745b749a29d208847a8feb3a3_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 01679faadf3cd14408d6da331ef68037, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -52,9 +60,13 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     - _Num: 1
+    - _Pixelate: 1.5
+    - _strength: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Direction: {r: 0, g: 0, b: 0, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Pixelation: {r: 8, g: 4.5, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _Resolution: {r: 1920, g: 1080, b: 0, a: 0}

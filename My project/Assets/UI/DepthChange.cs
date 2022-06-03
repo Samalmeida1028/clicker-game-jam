@@ -14,14 +14,8 @@ public class DepthChange : MonoBehaviour
     
     void Start(){
         spawner = GameObject.FindWithTag("Spawner").GetComponent<Spawner>();
-        gameObject.GetComponent<ChangeSprite>().setSprite1();
         text = GameObject.FindWithTag("Depth").GetComponent<TextMeshProUGUI>();
         text.text = depth.ToString();
-    }
-    void FixedUpdate(){
-        if(isClicked){
-        checkDepth();
-        }
     }
 
     public void DepthIncrease(){
@@ -45,7 +39,7 @@ public class DepthChange : MonoBehaviour
         text.text = depth.ToString();
     }
 
-    void checkDepth(){
+    public void checkDepth(){
         if(depth != spawner.Depth){
         gameObject.GetComponent<ChangeSprite>().setSprite1();
         }
