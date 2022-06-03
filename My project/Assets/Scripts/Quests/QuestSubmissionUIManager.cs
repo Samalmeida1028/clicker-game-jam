@@ -25,9 +25,32 @@ public class QuestSubmissionUIManager : MonoBehaviour
 
     //takes in list of quests
     //should also be changed to enable quest selection ui 
-    public void enableUI()
+    public void enableUI(int max, int currentVal, Quest.questTypes questType)
     {
         questUI.SetActive(true);
+
+        progressBar.GetComponent<ProgressBar>().SetCurrentFill(currentVal, max);
+
+        bool hookButton = false;
+        bool reelButton = false;
+        bool baitButton = false;
+
+        if (questType.Equals(Quest.questTypes.HookQuest))
+        {
+            hookButton = true;
+        }
+        else if (questType.Equals(Quest.questTypes.ReelQuest))
+        {
+            reelButton = true;
+        }
+        else if (questType.Equals(Quest.questTypes.BaitQuest))
+        {
+            baitButton = true;
+        }
+        else
+        {
+
+        }
     }
 
     public void disableUI()

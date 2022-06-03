@@ -26,7 +26,7 @@ public class QuestUIManager : MonoBehaviour
 
     //takes in list of quests
     //should also be changed to enable quest selection ui 
-    public void enableUI(int max, int currentVal, Quest.questTypes questType)
+    public void enableUI()
     {
         questUI.SetActive(true);
     }
