@@ -30,21 +30,27 @@ public class StatHandler : MonoBehaviour
 
     GameObject spawner;
 
-    public TextMeshProUGUI fishText;
+    TextMeshProUGUI fishText;
     PlayerStatsController stats;
+    QuestTracker quest;
+
+    ProgressBar progressBar;
     
 
     void Awake(){
+        progressBar = GameObject.FindWithTag("Progress Bar").GetComponent<ProgressBar>();
         spawner = GameObject.FindWithTag("Spawner");
         player = GameObject.FindWithTag("Player");
+        stats = player.GetComponent<PlayerStatsController>();
+        quest = player.GetComponent<QuestTracker>();
         fishText = GameObject.FindWithTag("FishUI").GetComponent<TMPro.TextMeshProUGUI>();
         UpdateStatsFromPlayer();
         fishText.text = currentFishMoney.ToString();
         spawner.GetComponent<Spawner>().baitPower = baitPower;
+        UpdateProgressBar();
     }
 
     public void UpdateStatsFromPlayer(){
-        stats = player.GetComponent<PlayerStatsController>();
         numFishMult = stats.getNumFishMulti();
         totalFishHooked = stats.getTotalFishHooked();
         totalClicks = stats.getTotalClicks();
@@ -55,6 +61,14 @@ public class StatHandler : MonoBehaviour
         reelPower = stats.getReelPower();
         baitPower = stats.getBaitLevel();
 
+    }
+    public void UpdateProgressBar(){
+        if(quest.currQuest){
+            progressBar.SetCurrentFill(quest.getQuestValue(),quest.getQuestMax());
+        }
+        else{
+            progressBar.SetCurrentFill(10,100);
+        }
     }
 
     // void UpdatePlayerStats(){

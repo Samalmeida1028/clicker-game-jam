@@ -10,6 +10,7 @@ TagManager:
   - UI
   - FishUI
   - Weight
+  - Progress Bar
   layers:
   - Default
   - TransparentFX

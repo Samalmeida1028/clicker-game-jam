@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnChance: 1.7
   valueMult: 5
-  rarity: 1
+  rarity: 2
   minAgentVal: 70
   maxAgentVal: 300
   flockList:

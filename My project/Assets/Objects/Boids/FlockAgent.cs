@@ -31,7 +31,7 @@ public class FlockAgent : MonoBehaviour
     private Vector2 targetAwayFromPole;
     private Vector2 directionTowardsTarget;
 
-    private float fishStrength = 1.0f;
+    private float fishStrength = .8f;
     private float maxSpeed = 8.0f;
     private float attackSpeed = 0.1f;
     public float catchThreshold = .5f;
@@ -112,7 +112,7 @@ public class FlockAgent : MonoBehaviour
         */
 
         // Calculates fish pull force amount (INCLUDE RARITY WHEN ADDED)
-        fishPull = fishStrength * ((float)value/(float)agentFlock.agents.Count);
+        fishPull = fishStrength * (((float)value/(float)agentFlock.maxAgentVal)*agentFlock.rarity*agentFlock.rarity);
         fishForce = directionTowardsTarget * fishPull;
 
         // Apply Velocity
