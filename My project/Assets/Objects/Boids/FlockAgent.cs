@@ -46,7 +46,6 @@ public class FlockAgent : MonoBehaviour
         GameObject FishingLine = GameObject.Find("Weight");
         if (FishingLine != null) {
             polePosition = FishingLine.transform.position;
-            Debug.Log("Found");
         }
 
         camera = Camera.main;
@@ -121,7 +120,6 @@ public class FlockAgent : MonoBehaviour
         if (lastPulled == null || Time.fixedTime - lastPulled > attackSpeed) {
             // Pull
             fishVelocity += fishForce;
-            Debug.Log("Pull");
             if (fishVelocity.magnitude > maxSpeed) {
                 Debug.Log("Max Speed Reached");
                 Vector2 maxVelocityVector = fishVelocity.normalized * maxSpeed;

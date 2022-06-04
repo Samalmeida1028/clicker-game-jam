@@ -338,7 +338,7 @@ MonoBehaviour:
   maxFlocks: 20
   maxFlockSize: 20
   mainCam: {fileID: 0}
-  MAXDEPTH: 0
+  MAXDEPTH: 1
 --- !u!1 &448918945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831343759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.68, y: -0.71, z: 0.12077683}
+  m_LocalPosition: {x: 2.59, y: 0.1, z: 0.12077683}
   m_LocalScale: {x: 33.986805, y: 36.683876, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1187,7 +1187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979242300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.86, y: -5.347, z: 0}
+  m_LocalPosition: {x: 2.54, y: 0.08, z: 0}
   m_LocalScale: {x: 34.059383, y: 36.619484, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

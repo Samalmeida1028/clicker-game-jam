@@ -14,8 +14,8 @@ public class Click : MonoBehaviour
     public int numFishHooked = 0;
     public int fishValue = 0;
 
-    void OnAwake(){
-            stats = gameObject.GetComponent<StatHandler>();
+    void Start(){
+        stats = gameObject.GetComponent<StatHandler>();
     }
 
     private bool IsFish(Collider2D hitObject) {
@@ -59,6 +59,8 @@ public class Click : MonoBehaviour
             if (currentFish.isCaught) {
                 numFishCaught++;
                 fishValue+=currentFish.value;
+                stats.totalFishVal += currentFish.value;
+                stats.UpdateStatsFromPlayer(); //CHANGE THIS LATER DUMBY
                 currentFish.Catch();
                 currentFish = null;
             } else if (!currentFish.isHooked) {
