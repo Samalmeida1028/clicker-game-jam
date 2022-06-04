@@ -15,6 +15,8 @@ public class PlayerStatsController : MonoBehaviour
     public int totalFishHooked;
     public int totalClicks;
     public int currentFishCaught;
+    public int totalMoney;
+    public int currentMoney;
 
     // Start is called before the first frame update
     void Start()

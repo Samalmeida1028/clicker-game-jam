@@ -9,5 +9,23 @@ public class StatHandler : MonoBehaviour
     int totalClicks;
     int totalFishHooked;
     int totalFishCaught;
-    
+
+    void Start(){
+        player = GameObject.FindWithTag("Player");
+        UpdateStatsFromPlayer();
+    }
+
+    void UpdateStatsFromPlayer(){
+        stats = player.GetComponent<PlayerStatsController>();
+        stats.totalFishCaught = totalFishCaught;
+        stats.totalFishHooked = total
+        stats.totalClicks = total
+        stats.currentFishCaught = total
+
+    }
+
+    void UpdatePlayerStats(){
+
+    }
+
 }
