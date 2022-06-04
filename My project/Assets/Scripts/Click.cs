@@ -59,8 +59,7 @@ public class Click : MonoBehaviour
             if (currentFish.isCaught) {
                 numFishCaught++;
                 fishValue+=currentFish.value;
-                stats.totalFishVal += currentFish.value;
-                stats.setTotalVal(currentFish.value); //CHANGE THIS LATER DUMBY
+                stats.setTotalVal(currentFish.value);
                 currentFish.Catch();
                 currentFish = null;
             } else if (!currentFish.isHooked) {
