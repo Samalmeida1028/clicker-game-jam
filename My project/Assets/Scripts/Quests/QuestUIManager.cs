@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class QuestUIManager : MonoBehaviour
 {
 
@@ -24,11 +25,41 @@ public class QuestUIManager : MonoBehaviour
 
     }
 
+
+
     //takes in list of quests
     //should also be changed to enable quest selection ui 
-    public void enableUI()
+    public void enableUI(Quest[] quests)
     {
         questUI.SetActive(true);
+
+        TextMeshProUGUI text = null;
+        hookButton.SetActive(false);
+        reelButton.SetActive(false);
+        baitButton.SetActive(false);
+
+        foreach (Quest quest in quests)
+        {
+            if (quest.questType.Equals(Quest.questTypes.HookQuest))
+            {
+                hookButton.SetActive(true);
+                text = hookButton.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+            }
+            else if (quest.questType.Equals(Quest.questTypes.ReelQuest))
+            {
+                reelButton.SetActive(true);
+                text = reelButton.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+            }
+            else if (quest.questType.Equals(Quest.questTypes.BaitQuest))
+            {
+                baitButton.SetActive(true);
+                text = baitButton.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+            }
+
+            text.SetText("Lvl " + quest.questLevel);
+        }
+
+
     }
 
     public Quest.questTypes disableUI()
@@ -93,4 +124,6 @@ public class QuestUIManager : MonoBehaviour
         baitButton.GetComponent<Button>().interactable = true;
         reelButton.GetComponent<Button>().interactable = true;
     }
+
+
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class QuestController : MonoBehaviour
 {
     public QuestUIManager questUI;
+    public QuestSubmissionUIManager questSubmissionUI;
     public QuestTracker questTracker;
     public GameObject player;
     void Start()
@@ -22,15 +23,18 @@ public class QuestController : MonoBehaviour
     {
         this.player = player;
         questTracker = player.GetComponent<QuestTracker>();
-
+        PlayerStatsController playerStats = player.GetComponent<PlayerStatsController>();
         bool activeQuest = questTracker.hasActiveQuest();
         //should enable quest submission ui when active quest
-        questUI.enableUI();
+
         if (activeQuest)
         {
             Debug.Log("YO ACTIVE QUEST");
             Debug.Log(questTracker.currQuest);
             Quest currQuest = questTracker.currQuest;
+            Debug.Log("MAX: " + questTracker.getQuestMax());
+            Debug.Log("CUR: " + questTracker.getQuestValue());
+            questSubmissionUI.enableUI(questTracker.getQuestMax(), questTracker.getQuestValue(), currQuest);
             if (questTracker.isCompleted())
             {
                 Debug.Log("YO COMPLETED QUEST");
@@ -38,13 +42,19 @@ public class QuestController : MonoBehaviour
         }
         else
         {
-            // questUI.enableUI();
+
+            Quest[] quests = new Quest[3];
+            int i = 0;
             foreach (Quest.questTypes questType in System.Enum.GetValues(typeof(Quest.questTypes)))
             {
-                getQuest(player, questType);
+                if (!questType.Equals(Quest.questTypes.NullQuest))
+                {
+                    quests[i] = getQuest(player, questType);
+                    i++;
+                }
             }
 
-
+            questUI.enableUI(quests);
         }
     }
 

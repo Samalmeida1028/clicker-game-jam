@@ -238,6 +238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1119603063270423477}
+  - component: {fileID: 4790764398003173020}
   m_Layer: 0
   m_Name: Progress Bar
   m_TagString: Untagged
@@ -262,3 +263,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4790764398003173020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7992267354266344703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa23d07d08c06c04989d125d325d1606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max: 0
+  cur: 0
+  mask: {fileID: 4441732965436941066}
