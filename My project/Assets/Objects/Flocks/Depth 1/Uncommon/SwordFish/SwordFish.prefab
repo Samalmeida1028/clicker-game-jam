@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 7752416730146946408}
   - component: {fileID: 4880358788217908443}
   - component: {fileID: 3967070088788732366}
-  - component: {fileID: -6652125063091847331}
   m_Layer: 0
   m_Name: SwordFish
   m_TagString: Untagged
@@ -158,23 +157,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFlipped: 0
-  value: 0
+  value: 4
   size: 0
   speed: 0
   passed: 0
   maxPasses: 5
   passnum: 0
-  isClicked: 0
---- !u!114 &-6652125063091847331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6725905784320328259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd3e7549fe014fa44a48db98df2238c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fishType: {fileID: 0}
+  isHooked: 0
+  isCaught: 0
