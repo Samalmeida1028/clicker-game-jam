@@ -11,8 +11,12 @@ public class FishSoundManager : MonoBehaviour
     void Start()
     {
         AudioSrce = this.GetComponent<AudioSource>();
-        AudioClip stage1 = Resources.Load<AudioClip>("Audio/BackgroundMusic/");
-        backgroundMusic = Resources.LoadAll<AudioClip>("Audio/BackgroundMusic");
+        AudioClip stage0 = Resources.Load<AudioClip>("Audio/BackgroundMusic/stage0");
+        backgroundMusic.Add(stage0);
+        AudioClip stage0 = Resources.Load<AudioClip>("Audio/BackgroundMusic/stage1");
+        backgroundMusic.Add(stage1);
+        AudioClip stage0 = Resources.Load<AudioClip>("Audio/BackgroundMusic/stage2");
+        backgroundMusic.Add(stage2);
     }
 
     public void playMusic(AudioClip music){

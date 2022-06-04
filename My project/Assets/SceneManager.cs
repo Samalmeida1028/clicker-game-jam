@@ -11,6 +11,7 @@ public class SceneManager : MonoBehaviour
     public GameObject background;
     public GameObject waves;
     public GameObject Seaweed;
+    public GameObject SoundManag;
 
     void Update()
     {
