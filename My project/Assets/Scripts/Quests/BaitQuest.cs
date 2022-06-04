@@ -9,8 +9,8 @@ public class BaitQuest : Quest
     {
         this.questLevel = questLevel;
         this.questType = questTypes.BaitQuest;
-        this.levelModifier = .8F;
-        this.conditionValue = calculateConditionValue(100);
+        this.levelModifier = 1F;
+        this.conditionValue = calculateConditionValue(10);
         this.units = "Fish Caught";
     }
 

@@ -34,9 +34,9 @@ public abstract class Quest : ScriptableObject
 
     protected int calculateConditionValue(int value)
     {
-        int n = (int)Mathf.Ceil(value * Mathf.Pow(1 + levelModifier, questLevel));
-        if (n % 10 != 0)
-            n = n + (10 - n % 10);
+        int n = (int)Mathf.Ceil(value + (value * ((questLevel - 1) * levelModifier)));
+        if (n % 5 != 0)
+            n = n + (5 - n % 5);
         return n;
     }
 }

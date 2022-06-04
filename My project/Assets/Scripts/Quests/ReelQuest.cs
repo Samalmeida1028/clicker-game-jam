@@ -9,8 +9,8 @@ public class ReelQuest : Quest
     {
         this.questLevel = questLevel;
         this.questType = questTypes.ReelQuest;
-        this.levelModifier = .8F;
-        this.conditionValue = calculateConditionValue(100);
+        this.levelModifier = 2F;
+        this.conditionValue = calculateConditionValue(25);
         this.units = "Clicks";
     }
 }
