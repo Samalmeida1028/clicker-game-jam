@@ -8,5 +8,6 @@ public class FlockList : ScriptableObject
     [Range(0,10)]
     public float spawnChance;
     public int valueMult;
+    public int rarity;
     public List<Flock> flockList;
 }

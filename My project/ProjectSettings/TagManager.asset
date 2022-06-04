@@ -8,6 +8,7 @@ TagManager:
   - Depth
   - Interactable
   - UI
+  - FishUI
   layers:
   - Default
   - TransparentFX

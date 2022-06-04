@@ -85,6 +85,7 @@ public class Spawner : MonoBehaviour
             b++;
             int j = Random.Range(0,FlockPool[i].flockList.Count);
             p = Instantiate(FlockPool[i].flockList[j]);
+            p.rarity = FlockPool[i].rarity;
             p.createByValue(value*FlockPool[i].valueMult,maxFlockSize);
             flocks.Add(p);
         }

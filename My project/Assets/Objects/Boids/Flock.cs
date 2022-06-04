@@ -36,6 +36,10 @@ public class Flock : MonoBehaviour
     [Range(1, 1000)]
     public int updateNeighbors;
 
+    public int rarity;
+
+
+
     public float count = 0;
 
     public float radius = 10f;
@@ -81,7 +85,7 @@ public class Flock : MonoBehaviour
         squareMaxSpeed = maximumSpeed * maximumSpeed;
         squareNeighborRadius = neighbourRadius * neighbourRadius;
         squareAvoidanceRadius =
-            squareNeighborRadius * avoidRangeMult * avoidRangeMult;
+        squareNeighborRadius * avoidRangeMult * avoidRangeMult;
         mainCam = Camera.main;
     }
 

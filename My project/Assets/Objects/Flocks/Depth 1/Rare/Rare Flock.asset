@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnChance: 0.06
   valueMult: 4
+  rarity: 3
   flockList:
   - {fileID: 5859590071188473983, guid: 8b0c477f16adf044e914b355be27b693, type: 3}
