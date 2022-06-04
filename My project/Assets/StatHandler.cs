@@ -6,7 +6,7 @@ using TMPro;
 public class StatHandler : MonoBehaviour
 {
     GameObject player;
-    public int totalFishVal = 0;
+    int totalFishVal = 0;
     int totalClicks;
     int totalFishHooked;
     int totalFishCaught;
@@ -25,7 +25,6 @@ public class StatHandler : MonoBehaviour
     //     totalFishHooked = stats.totalFishHooked;
     //     totalClicks = stats.totalClicks;
     //     totalFishCaught = stats.currentFishCaught;
-        fishText.text = totalFishVal.ToString();
     }
 
     // void UpdatePlayerStats(){
@@ -35,5 +34,10 @@ public class StatHandler : MonoBehaviour
     //     stats.totalClicks = totalClicks;
     //     stats.currentFishCaught = totalFishCaught;
     // }
+
+    public void setTotalVal(int val){
+        totalFishVal += val;
+        fishText.text = totalFishVal.ToString();
+    }
 
 }
