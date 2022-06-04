@@ -13,6 +13,7 @@ public class Click : MonoBehaviour
     public int numFishCaught = 0;
     public int numFishHooked = 0;
     public int fishValue = 0;
+    public GameObject soundManager;
 
     void Start(){
         stats = gameObject.GetComponent<StatHandler>();
@@ -57,6 +58,7 @@ public class Click : MonoBehaviour
         
         if (currentFish != null) {
             if (currentFish.isCaught) {
+                soundManager.GetComponent<FishSoundManager>().playOnce(soundManager.GetComponent<FishSoundManager>().soundEffects[0]);
                 numFishCaught++;
                 fishValue+=currentFish.value;
                 stats.setTotalVal(currentFish.value); 

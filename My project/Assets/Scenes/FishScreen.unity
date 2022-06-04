@@ -1064,6 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawner: {fileID: 369969618}
+  SoundManager: {fileID: 1022906766}
   SceneLight: {fileID: 1557408576}
   AmbientLights:
   - {fileID: 1492220992}
@@ -1303,6 +1304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4d86cea8485bc4883b79b7615a41e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  song: 0
   soundEffects: []
   backgroundMusic: []
 --- !u!4 &1022906769
@@ -1810,6 +1812,7 @@ MonoBehaviour:
   numFishCaught: 0
   numFishHooked: 0
   fishValue: 0
+  soundManager: {fileID: 1022906766}
 --- !u!114 &1416281882
 MonoBehaviour:
   m_ObjectHideFlags: 0
