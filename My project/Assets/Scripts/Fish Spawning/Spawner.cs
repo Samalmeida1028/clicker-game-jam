@@ -10,9 +10,10 @@ public class Spawner : MonoBehaviour
     public int minFlockVal, maxFlockVal;
     public int maxFlocks = 20;
     public int maxFlockSize = 70;
+    public int agentNum;
     public Camera mainCam;
     public int MAXDEPTH = 0;
-    int depth = 0;
+    public int depth = 0;
     public int Depth
     {
         get{return depth;}
@@ -34,7 +35,9 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         int i = 0;
+        int tempAgentCount = 0;
         while(i < activePool.Count){
+            tempAgentCount += activePool[i].agents.Count;
             if(activePool[i].isClose()){    // Checks each flock to see if it reached it's target
             Vector2 target = createTarget(activePool[i].wasInside(), activePool[i].target); //created a new target using createTarget();
             activePool[i].setTarget(target); //sets that target to be the flocks new target
@@ -49,6 +52,7 @@ public class Spawner : MonoBehaviour
             activePool.AddRange(newFlocks);
 
         }
+        agentNum = tempAgentCount;
         
     }
 
@@ -86,7 +90,7 @@ public class Spawner : MonoBehaviour
             int j = Random.Range(0,FlockPool[i].flockList.Count);
             p = Instantiate(FlockPool[i].flockList[j]);
             p.rarity = FlockPool[i].rarity;
-            p.createByValue(value*FlockPool[i].valueMult,maxFlockSize);
+            p.createByValue(value*FlockPool[i].valueMult*p.rarity,maxFlockSize);
             flocks.Add(p);
         }
         }
