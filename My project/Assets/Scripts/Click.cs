@@ -6,12 +6,17 @@ public class Click : MonoBehaviour
 {
     public Camera Camera;
     private FlockAgent currentFish;
+    StatHandler stats;
     public float radius;
     private float cps = 8.0f;
     public int numClicks = 0;
     public int numFishCaught = 0;
     public int numFishHooked = 0;
-    public int fishValue;
+    public int fishValue = 0;
+
+    void Start(){
+        stats = gameObject.GetComponent<StatHandler>();
+    }
 
     private bool IsFish(Collider2D hitObject) {
         // Check if the object hit is a fish
@@ -54,6 +59,8 @@ public class Click : MonoBehaviour
             if (currentFish.isCaught) {
                 numFishCaught++;
                 fishValue+=currentFish.value;
+                stats.totalFishVal += currentFish.value;
+                stats.UpdateStatsFromPlayer(); //CHANGE THIS LATER DUMBY
                 currentFish.Catch();
                 currentFish = null;
             } else if (!currentFish.isHooked) {
