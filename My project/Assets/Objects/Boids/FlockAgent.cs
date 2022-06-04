@@ -31,16 +31,19 @@ public class FlockAgent : MonoBehaviour
     private Vector2 targetAwayFromPole;
     private Vector2 directionTowardsTarget;
 
-    public float fishStrength = 1.0f;
-    public float maxSpeed = 4.0f;
-    public float attackSpeed = 0.4f;
+    private float fishStrength = 1.0f;
+    private float maxSpeed = 8.0f;
+    private float attackSpeed = 0.1f;
 
+    private float fishPull;
+        
     void Start()
     {
         agentCollider = GetComponent<Collider2D>();
         onScreen = false;
 
-         GameObject FishingLine = GameObject.Find("Weight");
+
+        GameObject FishingLine = GameObject.Find("Weight");
         if (FishingLine != null) {
             polePosition = FishingLine.transform.position;
             Debug.Log("Found");
@@ -87,8 +90,8 @@ public class FlockAgent : MonoBehaviour
         // Check if fish is within camera view, if it isnt it escaped
         Vector2 view = camera.WorldToViewportPoint(fishCurrentPosition);
         if (view.x > 1.1 || view.y > 1.1 || view.y < -0.1 || view.x < -0.1) {
-            //Escape();
-            //return;
+            Escape();
+            return;
         }
 
         // Check if fish is caught
@@ -98,10 +101,19 @@ public class FlockAgent : MonoBehaviour
         }
         
         // Actual movement stuff
+
+        // Gets the direction towards the pole in a nomralized vector ex Vector3(1, 0)
+        directionTowardsPole = (polePosition - fishCurrentPosition).normalized;
+
+        /*
         Debug.DrawLine(fishCurrentPosition, polePosition, Color.red);
+        Debug.DrawLine(fishCurrentPosition, fishCurrentPosition + directionTowardsPole * 25, Color.yellow);
         Debug.DrawLine(fishCurrentPosition, targetAwayFromPole, Color.green);
-        // The opposite direction of the pole (Direction opposite of getting caught zone so fish swims away)
-        fishForce = directionTowardsTarget * fishStrength;
+        */
+
+        // Calculates fish pull force amount (INCLUDE RARITY WHEN ADDED)
+        fishPull = fishStrength * ((float)value/(float)agentFlock.agents.Count);
+        fishForce = directionTowardsTarget * fishPull;
 
         // Apply Velocity
         gameObject.transform.position += (Vector3)fishVelocity * Time.deltaTime;
@@ -109,8 +121,9 @@ public class FlockAgent : MonoBehaviour
         if (lastPulled == null || Time.fixedTime - lastPulled > attackSpeed) {
             // Pull
             fishVelocity += fishForce;
-            
+            Debug.Log("Pull");
             if (fishVelocity.magnitude > maxSpeed) {
+                Debug.Log("Max Speed Reached");
                 Vector2 maxVelocityVector = fishVelocity.normalized * maxSpeed;
                 fishVelocity = maxVelocityVector;
             }
@@ -123,8 +136,7 @@ public class FlockAgent : MonoBehaviour
         Vector2 fishCurrentPosition = gameObject.transform.position;
 
         // Direction from fish towards rod
-        Vector2 currentDirectionTowardsRod = (polePosition - fishCurrentPosition).normalized;
-        Vector2 pullForce = currentDirectionTowardsRod * onClickAmount;
+        Vector2 pullForce = directionTowardsPole * onClickAmount;
 
         // Apply pull force to fish
         fishVelocity += pullForce;
@@ -133,11 +145,12 @@ public class FlockAgent : MonoBehaviour
     public void Hook() {
         Vector2 fishCurrentPosition = gameObject.transform.position;
 
+        
         // Gets the direction towards the pole in a nomralized vector ex Vector3(1, 0)
         directionTowardsPole = (polePosition - fishCurrentPosition).normalized;
 
         // Gets target outside of camera area (hard coded magnitude in, get radius around camera view after)
-        targetAwayFromPole = -directionTowardsPole * (25);
+        targetAwayFromPole = polePosition + -directionTowardsPole * (25);
         
         // Direction towards target
         directionTowardsTarget = (targetAwayFromPole - fishCurrentPosition).normalized;

@@ -61,6 +61,8 @@ public class Click : MonoBehaviour
                 fishValue+=currentFish.value;
                 currentFish.Catch();
                 currentFish = null;
+            } else if (!currentFish.isHooked) {
+                currentFish = null;
             }
         }
     }
