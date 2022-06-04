@@ -9,10 +9,10 @@ public class QuestSubmissionUIManager : MonoBehaviour
 
     public GameObject questUI;
     public GameObject hookButton;
-    public TextMeshProUGUI hookText;
     public GameObject reelButton;
     public GameObject baitButton;
     public GameObject progressBar;
+    public GameObject submitButton;
 
     void Start()
     {
@@ -27,13 +27,10 @@ public class QuestSubmissionUIManager : MonoBehaviour
 
     //takes in list of quests
     //should also be changed to enable quest selection ui 
-    public void enableUI(int max, int currentVal, Quest currQuest)
+    public void enableUI(int max, int currentVal, Quest currQuest, bool submit)
     {
-        questUI.SetActive(true);
-        Debug.Log("MAX: " + max);
-        Debug.Log("CUR: " + currentVal);
 
-        progressBar.GetComponent<ProgressBar>().SetCurrentFill(currentVal, max);
+        progressBar.GetComponent<ProgressBar>().SetCurrentFill(currentVal, max, currQuest.units);
 
         TextMeshProUGUI text = null;
         hookButton.SetActive(false);
@@ -57,6 +54,17 @@ public class QuestSubmissionUIManager : MonoBehaviour
         }
 
         text.SetText("Lvl " + currQuest.questLevel);
+
+        questUI.SetActive(true);
+
+        if (!submit)
+        {
+            submitButton.GetComponent<Button>().interactable = (false);
+        }
+        else
+        {
+            submitButton.GetComponent<Button>().interactable = (true);
+        }
 
     }
 

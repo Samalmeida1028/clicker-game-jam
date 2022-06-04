@@ -10,12 +10,13 @@ public abstract class Quest : ScriptableObject
     public int conditionValue;
     public int rewardValue;
     public int rewardType;
+    public string units;
     protected float levelModifier;
 
     public bool checkCondition(int currValue)
     {
         Debug.Log(this.GetType() + ": " + currValue + " / " + conditionValue);
-        return currValue == conditionValue;
+        return currValue >= conditionValue;
     }
 
     public double getPercentage(int currValue)

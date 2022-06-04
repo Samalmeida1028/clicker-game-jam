@@ -7,10 +7,12 @@ public class HookQuest : Quest
 {
 
 
-    public HookQuest(int questLevel){
-        this.questLevel=questLevel;
-        this.questType=questTypes.HookQuest;
-        this.levelModifier=.8F;
+    public HookQuest(int questLevel)
+    {
+        this.questLevel = questLevel;
+        this.questType = questTypes.HookQuest;
+        this.levelModifier = .8F;
         this.conditionValue = calculateConditionValue(100);
+        this.units = "Fish Hooked";
     }
 }

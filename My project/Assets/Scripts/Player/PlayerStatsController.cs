@@ -7,9 +7,9 @@ public class PlayerStatsController : MonoBehaviour
     public int baseReelPower = 1;
     public int baseFishValue = 1;
     public int baseNumFish = 1;
-    public int baitLevel;
-    public int hookLevel;
-    public int reelLevel;
+    public int baitLevel = 1;
+    public int hookLevel = 1;
+    public int reelLevel = 1;
     //change to int * multiplier of 10s
     public int totalFishCaught;
     public int totalFishHooked;
@@ -47,7 +47,7 @@ public class PlayerStatsController : MonoBehaviour
     public int getMaxDepthLevel()
     {
         //Unlock new depth level after upgrading each one to level 3
-        return (baitLevel / 3 + hookLevel / 3 + reelLevel / 3) / 3;
+        return Mathf.Min(1 + (baitLevel + hookLevel + reelLevel) / 9, 3);
     }
 
     public float getReelPower()
@@ -128,5 +128,23 @@ public class PlayerStatsController : MonoBehaviour
     public int getBaitLevel()
     {
         return this.baitLevel;
+    }
+
+    public void upgradeLevel(Quest.questTypes questType)
+    {
+        if (questType.Equals(Quest.questTypes.BaitQuest))
+        {
+            this.baitLevel++;
+        }
+        else if (questType.Equals(Quest.questTypes.HookQuest))
+        {
+            //This is where the player's # of hooked fish data will go
+            this.hookLevel++;
+        }
+        else if (questType.Equals(Quest.questTypes.ReelQuest))
+        {
+            //This is where the player's # of clicks data will go
+            this.reelLevel++;
+        }
     }
 }

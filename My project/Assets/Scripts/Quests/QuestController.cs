@@ -34,11 +34,7 @@ public class QuestController : MonoBehaviour
             Quest currQuest = questTracker.currQuest;
             Debug.Log("MAX: " + questTracker.getQuestMax());
             Debug.Log("CUR: " + questTracker.getQuestValue());
-            questSubmissionUI.enableUI(questTracker.getQuestMax(), questTracker.getQuestValue(), currQuest);
-            if (questTracker.isCompleted())
-            {
-                Debug.Log("YO COMPLETED QUEST");
-            }
+            questSubmissionUI.enableUI(questTracker.getQuestMax(), questTracker.getQuestValue(), currQuest, questTracker.isCompleted());
         }
         else
         {
@@ -54,7 +50,7 @@ public class QuestController : MonoBehaviour
                 }
             }
 
-            questUI.enableUI(quests);
+            questUI.enableUI(quests, playerStats.getMaxDepthLevel());
         }
     }
 
@@ -70,7 +66,22 @@ public class QuestController : MonoBehaviour
             questTracker.setCurrentQuest(newQuest);
         }
 
+        interact(this.player);
     }
+
+    public void exitQuestUI()
+    {
+        questSubmissionUI.disableUI();
+    }
+
+    public void submitQuest()
+    {
+        questSubmissionUI.disableUI();
+        questTracker.removeCurrentQuest();
+        interact(this.player);
+    }
+
+
 
     public Quest getQuest(GameObject player, Quest.questTypes questType)
     {
