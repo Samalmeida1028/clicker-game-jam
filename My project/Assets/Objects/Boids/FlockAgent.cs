@@ -34,6 +34,7 @@ public class FlockAgent : MonoBehaviour
     private float fishStrength = 1.0f;
     private float maxSpeed = 8.0f;
     private float attackSpeed = 0.1f;
+    public float catchThreshold = .5f;
 
     private float fishPull;
         
@@ -43,7 +44,7 @@ public class FlockAgent : MonoBehaviour
         onScreen = false;
 
 
-        GameObject FishingLine = GameObject.Find("Weight");
+        GameObject FishingLine = GameObject.FindWithTag("Weight");
         if (FishingLine != null) {
             polePosition = FishingLine.transform.position;
         }
@@ -94,7 +95,7 @@ public class FlockAgent : MonoBehaviour
         }
 
         // Check if fish is caught
-        if ((polePosition - fishCurrentPosition).magnitude < 0.1) {
+        if ((polePosition - fishCurrentPosition).magnitude < catchThreshold) {
             isCaught = true;
             return;
         }

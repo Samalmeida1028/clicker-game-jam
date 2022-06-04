@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - UI
   - FishUI
+  - Weight
   layers:
   - Default
   - TransparentFX

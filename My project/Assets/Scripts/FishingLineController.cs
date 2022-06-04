@@ -12,6 +12,7 @@ public class FishingLineController : MonoBehaviour
     public Transform origin;
     public Transform target;
     public Vector2 gravity = new Vector2(0f, -1f);
+    GameObject pole;
 
     public struct LineSegment {
         public Vector2 posNow;
