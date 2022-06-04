@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Angler Flock
   m_EditorClassIdentifier: 
   spawnChance: 2.1
-  valueMult: 4
-  rarity: 5
+  valueMult: 10
+  rarity: 3
+  minAgentVal: 30000
+  maxAgentVal: 100000
   flockList:
   - {fileID: 5382423386844727517, guid: 1e576d68374f92c4486d6d46e8809e79, type: 3}

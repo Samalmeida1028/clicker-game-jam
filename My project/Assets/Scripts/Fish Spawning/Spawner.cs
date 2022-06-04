@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     public int maxFlocks = 20;
     public int maxFlockSize = 70;
     public int agentNum;
+    public int baitPower;
     public Camera mainCam;
     public int MAXDEPTH = 0;
     public int depth = 0;
@@ -24,6 +25,7 @@ public class Spawner : MonoBehaviour
             }
         }
     }
+
 
     void Start()
     {
@@ -82,18 +84,28 @@ public class Spawner : MonoBehaviour
         int b = 0;
         while(b < numflocks){
         int i = Random.Range(0,FlockPool.Count);
+        int depthsqr = (depth+1)*(depth+1)*(depth+1);
         Flock p;
-        int value = Random.Range(minFlockVal, maxFlockVal);
         float pick = Random.Range(0.0f,1.0f) + depth;
+
         if(depth<FlockPool[i].spawnChance&&pick<FlockPool[i].spawnChance&&FlockPool[i].spawnChance<depth+1){
             b++;
             int j = Random.Range(0,FlockPool[i].flockList.Count);
             p = Instantiate(FlockPool[i].flockList[j]);
+            p.minAgentVal = FlockPool[i].minAgentVal;
+            p.maxAgentVal = FlockPool[i].maxAgentVal;
             p.rarity = FlockPool[i].rarity;
-            p.createByValue(value*FlockPool[i].valueMult*p.rarity,maxFlockSize);
+            int maxFlockVal = depthsqr*FlockPool[i].valueMult*FlockPool[i].rarity*baitPower*baitPower;
+
+            int minFlockVal = 1+maxFlockVal/4;
+
+            int value = Random.Range(1, baitPower);
+            maxFlockVal *= value;
+            p.createByValue(minFlockVal,maxFlockVal,maxFlockSize);//add agent min and max value
             flocks.Add(p);
         }
         }
+
         return flocks;
     }
 

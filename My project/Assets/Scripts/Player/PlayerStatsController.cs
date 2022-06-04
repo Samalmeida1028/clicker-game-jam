@@ -29,6 +29,15 @@ public class PlayerStatsController : MonoBehaviour
 
     }
 
+    public int getTotalFishMoney()
+    {
+        return this.totalFishMoney;
+    }
+
+    public int getCurrentFishMoney(){
+        return this.currentFishMoney;
+    }
+
     public int getTotalFishCaught()
     {
         return this.totalFishCaught;
@@ -74,6 +83,7 @@ public class PlayerStatsController : MonoBehaviour
     public int addToFishMoney(int fishValue)
     {
         this.totalFishMoney += fishValue;
+        this.currentFishMoney += fishValue;
         return this.totalFishMoney;
     }
 

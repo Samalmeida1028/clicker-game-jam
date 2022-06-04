@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Uncommon Depth 2
   m_EditorClassIdentifier: 
   spawnChance: 1.2
-  valueMult: 4
-  rarity: 3
+  valueMult: 5
+  rarity: 2
+  minAgentVal: 500
+  maxAgentVal: 1500
   flockList:
   - {fileID: 198911118581993287, guid: 6f27e4ccb180ee042886b6ee6c09bea9, type: 3}
   - {fileID: 6192619501925113856, guid: fd0a75a5bb2db2041a0a9492be142b37, type: 3}

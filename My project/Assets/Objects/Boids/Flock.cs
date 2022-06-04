@@ -89,7 +89,7 @@ public class Flock : MonoBehaviour
         mainCam = Camera.main;
     }
 
-    public void createByValue(int maxvalue, int maxFlockSize)
+    public void createByValue(int minvalue, int maxvalue, int maxFlockSize)
     {
         while (flockvalue < maxvalue && agents.Count < maxFlockSize)
         {
@@ -99,7 +99,7 @@ public class Flock : MonoBehaviour
                 Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
                 transform);
             newagent.Initialize(this);
-            newagent.setValue (minAgentVal, maxAgentVal);
+            newagent.setValue(minAgentVal, maxAgentVal*rarity);
             newagent.name = "Agent " + flockvalue;
             agents.Add (newagent);
             flockvalue += newagent.value;
@@ -197,6 +197,8 @@ public class Flock : MonoBehaviour
         }
     }
 
+
+
     List<Transform> GetNearbyObjects(FlockAgent agent)
     {
         List<Transform> context = new List<Transform>();
@@ -212,6 +214,7 @@ public class Flock : MonoBehaviour
         }
         return context;
     }
+
 
     public Vector2 targetOff(FlockAgent agent, Vector2 targetPos)
     {
@@ -242,7 +245,6 @@ public class Flock : MonoBehaviour
             .5f);
     }
 
-
     public bool agentIsClose(FlockAgent agent, Vector2 targetPos, float threshold)
     {
         Vector2 pos = (Vector2) agent.transform.position;
@@ -255,6 +257,7 @@ public class Flock : MonoBehaviour
 
         return false;
     }
+
 
 
     public void setCenter(Vector2 center1)

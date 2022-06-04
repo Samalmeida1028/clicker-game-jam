@@ -70,7 +70,7 @@ public class FlockAgent : MonoBehaviour
     }
 
     public void setValue(int min, int max){
-        value = Random.Range(min,max);
+        value = Random.Range(min+1,max);
         speed = value/2;
         size = value;
         gameObject.transform.localScale *=Mathf.Sqrt((float)(value))/Mathf.Sqrt((max));

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ff3c6a47d8cf34da635d5ba371918d, type: 3}
   m_Name: Common Depth 3
   m_EditorClassIdentifier: 
-  spawnChance: 2.6
-  valueMult: 5
+  spawnChance: 2.62
+  valueMult: 10
   rarity: 2
+  minAgentVal: 1600
+  maxAgentVal: 15000
   flockList:
   - {fileID: 3806194793313684790, guid: 7395005304f483f45b863c12bb48dc3e, type: 3}

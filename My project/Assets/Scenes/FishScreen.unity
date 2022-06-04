@@ -324,10 +324,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63b6aa3931a7d73498b0a37eda1fca85, type: 2}
   activePool: []
   minFlockVal: 1
-  maxFlockVal: 300
+  maxFlockVal: 10
   maxFlocks: 20
   maxFlockSize: 20
   agentNum: 0
+  baitPower: 0
   mainCam: {fileID: 0}
   MAXDEPTH: 2
   depth: 0
@@ -1811,7 +1812,6 @@ MonoBehaviour:
   numClicks: 0
   numFishCaught: 0
   numFishHooked: 0
-  fishValue: 0
   soundManager: {fileID: 1022906766}
 --- !u!114 &1416281882
 MonoBehaviour:
@@ -2130,6 +2130,75 @@ Transform:
   m_Father: {fileID: 1416281879}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1826289988
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.453
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.245
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592337, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592339, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592347, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: baitLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592347, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: totalFishMoney
+      value: 106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592347, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: currentFishMoney
+      value: 34
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
 --- !u!1 &2064543187
 GameObject:
   m_ObjectHideFlags: 0
