@@ -14,7 +14,7 @@ public class FlockAgent : MonoBehaviour
     public int size;
     public int speed;
 
-    public bool passed;
+    public bool onScreen;
     public int maxPasses = 2;
     public int passnum = 0;
 
@@ -23,7 +23,7 @@ public class FlockAgent : MonoBehaviour
     
     private float lastPulled;
 
-    private Camera camera;
+    Camera camera;
     private Vector2 polePosition;
     private Vector2 fishVelocity;
     private Vector2 fishForce;
@@ -40,13 +40,12 @@ public class FlockAgent : MonoBehaviour
     void Start()
     {
         agentCollider = GetComponent<Collider2D>();
-        passed = false;
+        onScreen = false;
 
 
         GameObject FishingLine = GameObject.Find("Weight");
         if (FishingLine != null) {
             polePosition = FishingLine.transform.position;
-            Debug.Log("Found");
         }
 
         camera = Camera.main;
@@ -71,7 +70,7 @@ public class FlockAgent : MonoBehaviour
     }
 
     public void setValue(int min, int max){
-        value = Random.Range(min,max);
+        value = Random.Range(min+1,max);
         speed = value/2;
         size = value;
         gameObject.transform.localScale *=Mathf.Sqrt((float)(value))/Mathf.Sqrt((max));
@@ -121,7 +120,6 @@ public class FlockAgent : MonoBehaviour
         if (lastPulled == null || Time.fixedTime - lastPulled > attackSpeed) {
             // Pull
             fishVelocity += fishForce;
-            Debug.Log("Pull");
             if (fishVelocity.magnitude > maxSpeed) {
                 Debug.Log("Max Speed Reached");
                 Vector2 maxVelocityVector = fishVelocity.normalized * maxSpeed;

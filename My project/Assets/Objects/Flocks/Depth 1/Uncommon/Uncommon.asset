@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ff3c6a47d8cf34da635d5ba371918d, type: 3}
   m_Name: Uncommon
   m_EditorClassIdentifier: 
-  spawnChance: 1.3
-  valueMult: 2
+  spawnChance: 0.32
+  valueMult: 1
+  rarity: 2
+  minAgentVal: 20
+  maxAgentVal: 70
   flockList:
   - {fileID: 8177413681800379062, guid: 826eb1c946e372e4db9b7943d4fb49f9, type: 3}
   - {fileID: 3444467989424762359, guid: 8699fa86b3efda5479b15919ede84969, type: 3}

@@ -19,6 +19,7 @@ public class ChangeSprite : MonoBehaviour
     public void setSprite1(){
         objectSprite.sprite = defaultSprite1;
     }
+    
     public void setSprite2(){
         objectSprite.sprite = sprite2;
     }
