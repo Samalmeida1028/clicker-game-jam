@@ -46,11 +46,13 @@ public class StatHandler : MonoBehaviour
     public void UpdateStatsFromPlayer(){
         stats = player.GetComponent<PlayerStatsController>();
         numFishMult = stats.getNumFishMulti();
-        reelPower = stats.getReelPower();
         totalFishHooked = stats.getTotalFishHooked();
         totalClicks = stats.getTotalClicks();
         totalFishCaught = stats.getTotalFishCaught();
         currentFishMoney = stats.getCurrentFishMoney();
+
+
+        reelPower = stats.getReelPower();
         baitPower = stats.getBaitLevel();
 
     }

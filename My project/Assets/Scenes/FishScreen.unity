@@ -2190,6 +2190,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1486525082710592347, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: hookLevel
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592347, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
+      propertyPath: reelLevel
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486525082710592347, guid: c8e0cfbf73ceaa04bac63c0e4888ba5d, type: 3}
       propertyPath: totalFishMoney
       value: 106
       objectReference: {fileID: 0}

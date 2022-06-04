@@ -8,7 +8,7 @@ public class Click : MonoBehaviour
     private FlockAgent currentFish;
     StatHandler stats;
     public float radius;
-    private float cps = 1.0f;
+    private float cps = 12.0f;
     public int numClicks = 0;
     public int numFishCaught = 0;
     public int numFishHooked = 0;
