@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questLevel: 1
   questType: 1
-  conditionValue: 0
+  conditionValue: 10
   rewardValue: 0
   rewardType: 0
+  units: Fish Hooks

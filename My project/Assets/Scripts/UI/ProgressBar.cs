@@ -35,7 +35,7 @@ public class ProgressBar : MonoBehaviour
     //     mask.fillAmount = fillAmount;
     // }
 
-    public void SetCurrentFill(int currentVal, int maxVal, string units)
+    public void SetCurrentFill(int currentVal, int maxVal, string units = "")
     {
         this.max = maxVal;
         this.cur = currentVal;

@@ -64,10 +64,10 @@ public class StatHandler : MonoBehaviour
     }
     public void UpdateProgressBar(){
         if(quest.currQuest){
-            progressBar.SetCurrentFill(quest.getQuestValue(),quest.getQuestMax());
+            progressBar.SetCurrentFill(quest.getQuestValue(),quest.getQuestMax(), quest.currQuest.units);
         }
         else{
-            progressBar.SetCurrentFill(10,100);
+            progressBar.gameObject.SetActive(false);
         }
     }
 
@@ -88,15 +88,18 @@ public class StatHandler : MonoBehaviour
     public void addTotalClicks(){
         totalClicks++;
         stats.addToTotalClicks(1);
+        UpdateProgressBar();
     }
     public void addTotalCaught(){
         totalFishCaught++;
         stats.addToFishCount(1);
+        UpdateProgressBar();
     }
 
     public void addTotalFishHooked(){
         totalFishHooked++;
         stats.addToFishHooked(1);
+        UpdateProgressBar();
     }
 
 }
