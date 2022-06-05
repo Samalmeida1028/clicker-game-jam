@@ -27,7 +27,7 @@ public class SceneManager : MonoBehaviour
             ColorUtility.TryParseHtmlString("#0D3D41", out BG);
             ColorUtility.TryParseHtmlString("#37C0AE", out FG);
             ColorUtility.TryParseHtmlString("#0D3D41", out GL);
-            ColorUtility.TryParseHtmlString("#00D0FF", out AL);
+            ColorUtility.TryParseHtmlString("#80D0EE", out AL);
             changeScene(.23f,2.65f,BG,FG,GL,AL,true,1);
             break;
 
@@ -35,8 +35,8 @@ public class SceneManager : MonoBehaviour
             ColorUtility.TryParseHtmlString("#0D3D41", out BG);
             ColorUtility.TryParseHtmlString("#37C0AE", out FG);
             ColorUtility.TryParseHtmlString("#0D3D41", out GL);
-            ColorUtility.TryParseHtmlString("00D0FF", out AL);
-            changeScene(.23f,1.65f,BG,FG,GL,AL,false,2);
+            ColorUtility.TryParseHtmlString("00B0FF", out AL);
+            changeScene(.15f,1.85f,BG,FG,GL,AL,false,2);
             break;
 
 
