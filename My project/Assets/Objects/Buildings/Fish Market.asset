@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Fish Market
   m_EditorClassIdentifier: 
   baseFishPerTick: 5
-  tickDelay: 1.5
+  tickDelay: 2
   buildingName: Fish Market
-  price: 3
+  basePrice: 100

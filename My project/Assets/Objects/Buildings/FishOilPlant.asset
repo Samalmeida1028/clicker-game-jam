@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77822ee4b6eff74a8454c42ad4582df, type: 3}
   m_Name: FishOilPlant
   m_EditorClassIdentifier: 
-  baseFishPerTick: 10
-  tickDelay: 3
+  baseFishPerTick: 50
+  tickDelay: 2
   buildingName: Fish Oil Plant
-  price: 5
+  basePrice: 1000

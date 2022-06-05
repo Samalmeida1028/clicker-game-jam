@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-[ExecuteInEditMode()]
-
 public class BuildingScreen : MonoBehaviour
 {
     public GameObject UI;
@@ -22,8 +20,8 @@ public class BuildingScreen : MonoBehaviour
     private BuildingController controller;
 
     void Update() {
-        if ((player.transform.position - gameObject.transform.position).magnitude <= 2 ){ UI.SetActive(true); }
-        else { UI.SetActive(false); }
+        //if ((player.transform.position - gameObject.transform.position).magnitude <= 2 ){ UI.SetActive(true); }
+       // else { UI.SetActive(false); }
 
         titleText.SetText(controller.building.buildingName);
         quantityText.SetText("Owned: " + controller.buildingQuantity);
@@ -32,7 +30,7 @@ public class BuildingScreen : MonoBehaviour
     }
 
     void Start() {
-        UI.SetActive(false);
+        UI.SetActive(true);
         controller = gameObject.GetComponent<BuildingController>();
         player = GameObject.FindWithTag("Player");
 
