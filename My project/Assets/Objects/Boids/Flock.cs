@@ -91,7 +91,6 @@ public class Flock : MonoBehaviour
 
     public void createByValue(int minvalue, int maxvalue, int maxFlockSize)
     {
-        maxAgentVal = maxvalue;
         while (flockvalue < maxvalue && agents.Count < maxFlockSize)
         {
             FlockAgent newagent =

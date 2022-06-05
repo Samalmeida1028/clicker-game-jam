@@ -28,6 +28,9 @@ public class StatHandler : MonoBehaviour
     int baitPower;
     public float BaitPower {get{return baitPower;}}
 
+    int hookPower;
+    public float HookPower {get{return hookPower;}}
+
     GameObject spawner;
 
     TextMeshProUGUI fishText;
@@ -46,6 +49,7 @@ public class StatHandler : MonoBehaviour
         fishText = GameObject.FindWithTag("FishUI").GetComponent<TMPro.TextMeshProUGUI>();
         UpdateStatsFromPlayer();
         fishText.text = currentFishMoney.ToString();
+        Debug.Log(baitPower);
         spawner.GetComponent<Spawner>().baitPower = baitPower;
         UpdateProgressBar();
     }
@@ -60,6 +64,7 @@ public class StatHandler : MonoBehaviour
 
         reelPower = stats.getReelPower();
         baitPower = stats.getBaitLevel();
+
 
     }
     public void UpdateProgressBar(){
