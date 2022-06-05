@@ -44,6 +44,7 @@ public class StatHandler : MonoBehaviour
         progressBar = GameObject.FindWithTag("Progress Bar").GetComponent<ProgressBar>();
         spawner = GameObject.FindWithTag("Spawner");
         player = GameObject.FindWithTag("Player");
+        player.GetComponent<PlayerMovementController>().canMove = false;
         stats = player.GetComponent<PlayerStatsController>();
         quest = player.GetComponent<QuestTracker>();
         fishText = GameObject.FindWithTag("FishUI").GetComponent<TMPro.TextMeshProUGUI>();

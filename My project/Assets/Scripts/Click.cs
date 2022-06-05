@@ -37,6 +37,7 @@ public class Click : MonoBehaviour
             
             if (hit!= null && IsFish(hit)) {
                 stats.addTotalFishHooked();
+                soundManager.GetComponent<FishSoundManager>().playOnce(soundManager.GetComponent<FishSoundManager>().soundEffects[1]);
                 // We hit a fish
                 if (currentFish != null) {
                     GetComponent<FishingLineController>().target = null;
@@ -64,6 +65,7 @@ public class Click : MonoBehaviour
                 currentFish.Catch();
                 currentFish = null;
             } else if (!currentFish.isHooked) {
+                soundManager.GetComponent<FishSoundManager>().playOnce(soundManager.GetComponent<FishSoundManager>().soundEffects[2]);
                 currentFish = null;
             }
         }

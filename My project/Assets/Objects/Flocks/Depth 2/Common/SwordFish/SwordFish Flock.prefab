@@ -51,11 +51,12 @@ MonoBehaviour:
   startingCount: 250
   AgentDensity: 0.08
   driveFactor: 6.6
-  maximumSpeed: 17.2
+  maximumSpeed: 14.3
   neighbourRadius: 2.3
   avoidRangeMult: 0.5
   maxNeighbors: 10
   updateNeighbors: 1
+  rarity: 0
   count: 0
   radius: 10
   respawnTime: 30

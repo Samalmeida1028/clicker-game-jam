@@ -9,7 +9,7 @@ public class PlayerMovementController : MonoBehaviour
     float MoveDirectionY = 0;
     float MoveDirectionX = 0;
     public float PlayerSpeed = 5;
-    public bool canMove = true;
+    public bool canMove;
 
     void Start(){
         RB = gameObject.GetComponent<Rigidbody2D>();

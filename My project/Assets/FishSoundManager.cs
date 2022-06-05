@@ -19,8 +19,13 @@ public class FishSoundManager : MonoBehaviour
         backgroundMusic.Add(stage1);
         AudioClip stage2 = Resources.Load<AudioClip>("Audio/BackgroundMusic/stage2");
         backgroundMusic.Add(stage2);
+
         AudioClip catchEffect = Resources.Load<AudioClip>("Audio/SoundEffects/catch");
         soundEffects.Add(catchEffect);
+        AudioClip hookEffect = Resources.Load<AudioClip>("Audio/SoundEffects/hook");
+        soundEffects.Add(hookEffect);
+        AudioClip escapeEffect = Resources.Load<AudioClip>("Audio/SoundEffects/escape");
+        soundEffects.Add(escapeEffect);
     }
 
     public void playMusic(AudioClip music, int songnum){
