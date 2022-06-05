@@ -10,6 +10,8 @@ public class QuestUIManager : MonoBehaviour
     public GameObject hookButton;
     public GameObject reelButton;
     public GameObject baitButton;
+    public TextMeshProUGUI depthLvlText;
+    public TextMeshProUGUI depthUpgradeText;
 
     public bool hookActive = false;
     public bool baitActive = false;
@@ -29,7 +31,7 @@ public class QuestUIManager : MonoBehaviour
 
     //takes in list of quests
     //should also be changed to enable quest selection ui 
-    public void enableUI(Quest[] quests)
+    public void enableUI(Quest[] quests, int depthLvl)
     {
         questUI.SetActive(true);
 
@@ -37,6 +39,8 @@ public class QuestUIManager : MonoBehaviour
         hookButton.SetActive(false);
         reelButton.SetActive(false);
         baitButton.SetActive(false);
+
+        int totalLvl = 0;
 
         foreach (Quest quest in quests)
         {
@@ -57,7 +61,19 @@ public class QuestUIManager : MonoBehaviour
             }
 
             text.SetText("Lvl " + quest.questLevel);
+            totalLvl += quest.questLevel;
         }
+
+        depthLvlText.SetText("Lvl " + depthLvl);
+        if (depthLvl < 3)
+        {
+            depthUpgradeText.SetText("Next lvl in " + (9 - (totalLvl % 9)) + " upgrades");
+        }
+        else
+        {
+            depthUpgradeText.SetText("Max depth reached!");
+        }
+
 
 
     }

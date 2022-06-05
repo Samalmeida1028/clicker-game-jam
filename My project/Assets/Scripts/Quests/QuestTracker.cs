@@ -49,9 +49,11 @@ public class QuestTracker : MonoBehaviour
 
     public void removeCurrentQuest()
     {
+        playerStats.upgradeLevel(currQuest.questType);
         this.currQuest = null;
         this.questCompleted = false;
         this.initialQuestVal = 0;
+
     }
 
     public bool hasActiveQuest()
