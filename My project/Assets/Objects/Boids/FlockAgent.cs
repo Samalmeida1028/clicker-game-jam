@@ -30,6 +30,7 @@ public class FlockAgent : MonoBehaviour
     private Vector2 directionTowardsPole;
     private Vector2 targetAwayFromPole;
     private Vector2 directionTowardsTarget;
+    private Vector3 dampenVelocity;
 
     private float fishStrength = .8f;
     private float maxSpeed = 8.0f;
@@ -104,6 +105,24 @@ public class FlockAgent : MonoBehaviour
 
         // Gets the direction towards the pole in a nomralized vector ex Vector3(1, 0)
         directionTowardsPole = (polePosition - fishCurrentPosition).normalized;
+
+
+        // Rotate fish towards or away the fishing pole depending on where its moving towards
+        if(Vector3.Dot(fishVelocity, directionTowardsTarget) < 0) {
+            transform.up = Vector3.SmoothDamp(transform.position, (directionTowardsPole * 25), ref dampenVelocity, 0.1f);
+            //transform.up = directionTowardsPole * 25;
+        } else {
+            transform.up = Vector3.SmoothDamp(transform.position, (-directionTowardsPole * 25), ref dampenVelocity, 0.1f);
+
+            Vector2 c = Vector2.Perpendicular(directionTowardsTarget);
+
+            Debug.DrawLine(targetAwayFromPole, targetAwayFromPole + (c * 3), Color.red);
+            Debug.DrawLine(targetAwayFromPole, targetAwayFromPole + (-c * 3), Color.red);
+            Debug.DrawLine(fishCurrentPosition, targetAwayFromPole, Color.yellow);
+            //Debug.DrawLine(targetAwayFromPole, movingPointB * 2, Color.red);
+
+            //transform.up = -directionTowardsPole * 25;
+        }
 
         /*
         Debug.DrawLine(fishCurrentPosition, polePosition, Color.red);
