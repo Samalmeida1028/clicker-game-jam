@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7900365390662059374}
   - component: {fileID: 198911118581993287}
   m_Layer: 0
-  m_Name: Dolphin Flock
+  m_Name: Salmon Flock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,18 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7052808d8ffb05f4a8eb44f4ca196c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlockName: 
+  FlockName: Salmon Flock
   agentPrefab: {fileID: 7632081481369108981, guid: dfe70939746d55f4da87ee6f96e85436, type: 3}
   agents: []
   behavior: {fileID: 11400000, guid: c2e14e07cd6aa3748aa17703f46019a7, type: 2}
   startingCount: 250
   AgentDensity: 0.08
   driveFactor: 20.9
-  maximumSpeed: 29.8
+  maximumSpeed: 20.3
   neighbourRadius: 2.28
   avoidRangeMult: 1
   maxNeighbors: 14
   updateNeighbors: 1
+  rarity: 0
   count: 0
   radius: 10
   respawnTime: 10
