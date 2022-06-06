@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/IslandScreen.unity
+    guid: 5614df53127504a0f95885249a9c7f0c
+  - enabled: 1
     path: Assets/Scenes/FishScreen.unity
     guid: c1e7319277a988047a5eb26947add47c
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/IslandScreen.unity
-    guid: 5614df53127504a0f95885249a9c7f0c
   m_configObjects: {}
