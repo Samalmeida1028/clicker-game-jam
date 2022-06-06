@@ -9,7 +9,7 @@ public class FishSoundManager : MonoBehaviour
     [SerializeField]public List<AudioClip> soundEffects = new List<AudioClip>();
     [SerializeField]public List<AudioClip> backgroundMusic = new List<AudioClip>();
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         AudioSrce = this.GetComponent<AudioSource>();
         AudioSrce.loop = true;
@@ -19,6 +19,9 @@ public class FishSoundManager : MonoBehaviour
         backgroundMusic.Add(stage1);
         AudioClip stage2 = Resources.Load<AudioClip>("Audio/BackgroundMusic/stage2");
         backgroundMusic.Add(stage2);
+        AudioClip island = Resources.Load<AudioClip>("Audio/BackgroundMusic/island");
+        backgroundMusic.Add(island);
+        
 
         AudioClip catchEffect = Resources.Load<AudioClip>("Audio/SoundEffects/catch");
         soundEffects.Add(catchEffect);
