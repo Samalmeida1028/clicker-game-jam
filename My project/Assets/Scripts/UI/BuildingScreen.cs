@@ -13,7 +13,10 @@ public class BuildingScreen : MonoBehaviour
     public TextMeshProUGUI currentFishText;
     public TextMeshProUGUI buildingPrice;
 
-    public Button purchase;
+    public Button purchase1;
+    public Button purchase10;
+    public Button purchase100;
+
     public Button collect;
 
     private GameObject player;
@@ -34,7 +37,22 @@ public class BuildingScreen : MonoBehaviour
         controller = gameObject.GetComponent<BuildingController>();
         player = GameObject.FindWithTag("Player");
 
-        purchase.onClick.AddListener(controller.purchase);
+        purchase1.onClick.AddListener(purchaseOne);
+        purchase10.onClick.AddListener(purchaseTen);
+        purchase100.onClick.AddListener(purchaseHundead);
+
         collect.onClick.AddListener(controller.collect);
+    }
+
+    void purchaseOne() {
+        controller.purchase(1);
+    }
+
+    void purchaseTen() {
+        controller.purchase(10);
+    }
+
+    void purchaseHundead() {
+        controller.purchase(100);
     }
 }

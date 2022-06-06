@@ -415,7 +415,9 @@ MonoBehaviour:
   quantityText: {fileID: 660400604145430671}
   currentFishText: {fileID: 3359632538639352718}
   buildingPrice: {fileID: 3141573344867705614}
-  purchase: {fileID: 4185159492876580203}
+  purchase1: {fileID: 0}
+  purchase10: {fileID: 0}
+  purchase100: {fileID: 0}
   collect: {fileID: 6458791793565229105}
 --- !u!1 &916099364721580856
 GameObject:
@@ -559,7 +561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buy x1
+  m_text: Buy x10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1883,7 +1885,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Buy x1
+  m_text: 'Buy x100
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
