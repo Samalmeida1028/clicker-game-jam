@@ -15,7 +15,9 @@ public class DepthChangeButton : MonoBehaviour
         spawner = GameObject.FindWithTag("Spawner").GetComponent<Spawner>();
         text = GameObject.FindWithTag("Depth").GetComponent<TextMeshProUGUI>();
         text.text = depth.ToString();
+        checkMaxDepth();
     }
+
     public void DepthDecrease(){
         depth = spawner.Depth;
         if(depth != 0){
@@ -23,12 +25,7 @@ public class DepthChangeButton : MonoBehaviour
         }
         spawner.Depth-=1;
         depth = spawner.Depth;
-        if(depth != 0){
-        gameObject.GetComponent<ChangeSprite>().setSprite1();
-        }
-        else{
-        gameObject.GetComponent<ChangeSprite>().setSprite2(); 
-        }
+        checkMinDepth();
         text.text = depth.ToString();
     }
     public void DepthIncrease(){
@@ -37,20 +34,28 @@ public class DepthChangeButton : MonoBehaviour
         spawner.refresh();
         }
         spawner.Depth+=1;
+        checkMaxDepth();
         depth = spawner.Depth;
+        text.text = depth.ToString();
+    }
+
+    public void checkMaxDepth(){
         if(depth != spawner.MAXDEPTH){
         gameObject.GetComponent<ChangeSprite>().setSprite1();
         }
         else{
         gameObject.GetComponent<ChangeSprite>().setSprite2(); 
         }
-        text.text = depth.ToString();
     }
 
-    public void resetDefault(){
+        public void checkMinDepth(){
+        if(depth != 0){
         gameObject.GetComponent<ChangeSprite>().setSprite1();
+        }
+        else{
+        gameObject.GetComponent<ChangeSprite>().setSprite2(); 
+        }
     }
-
 
 
 }
