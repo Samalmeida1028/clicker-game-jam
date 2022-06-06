@@ -15,7 +15,6 @@ public abstract class Quest : ScriptableObject
 
     public bool checkCondition(int currValue)
     {
-        Debug.Log(this.GetType() + ": " + currValue + " / " + conditionValue);
         return currValue >= conditionValue;
     }
 

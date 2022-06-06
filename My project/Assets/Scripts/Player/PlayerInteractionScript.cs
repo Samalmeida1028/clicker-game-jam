@@ -32,7 +32,7 @@ public class PlayerInteractionScript : MonoBehaviour
         {
             closestObj = FindClosestObj(interactableTag);
 
-            if (closestObj.GetComponent<QuestController>() != null)
+            if (closestObj && closestObj.GetComponent<QuestController>())
             {
                 closestObj.GetComponent<QuestController>().interact(gameObject);
 
@@ -54,7 +54,6 @@ public class PlayerInteractionScript : MonoBehaviour
 
         foreach (Collider2D collider2D in colliders)
         {
-            collider2D.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 
             if (collider2D.gameObject.tag.Equals(type))
             {
@@ -70,10 +69,6 @@ public class PlayerInteractionScript : MonoBehaviour
                     closestObj = collider2D.gameObject;
                     minDist = offset;
 
-                }
-                else
-                {
-                    collider2D.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
                 }
 
             }
