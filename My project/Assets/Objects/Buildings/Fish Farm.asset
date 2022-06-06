@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77822ee4b6eff74a8454c42ad4582df, type: 3}
   m_Name: Fish Farm
   m_EditorClassIdentifier: 
-  baseFishPerTick: 1
+  baseFishPerTick: 5
   tickDelay: 1
   buildingName: Fish Farm
-  basePrice: 15
+  basePrice: 50

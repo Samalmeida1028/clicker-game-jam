@@ -29,7 +29,6 @@ public class Click : MonoBehaviour
 
     void Update() {
         if(Input.GetMouseButtonDown(0)){
-        stats.addTotalClicks();
         // Begin checking for mouse clicks on fishies
         if(!currentFish) {
             Vector3 mousePos = Camera.ScreenToWorldPoint( Input.mousePosition ); // Create a ray from the camera to the mouse pos
@@ -54,6 +53,7 @@ public class Click : MonoBehaviour
             }
         } else if(currentFish) {
             currentFish.Pulled(cps);
+            stats.addTotalClicks();
         }
         }
         

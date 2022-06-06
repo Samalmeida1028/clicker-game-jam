@@ -21,7 +21,6 @@ public class PlayerOnPier : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("player entered pier");
         image.enabled = true;
 
         button.enabled = true;
@@ -32,7 +31,6 @@ public class PlayerOnPier : MonoBehaviour
     // Update is called once per frame
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("player exited pier");
         image.enabled = false;
 
         button.enabled = false;

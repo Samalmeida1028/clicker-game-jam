@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77822ee4b6eff74a8454c42ad4582df, type: 3}
   m_Name: FIsh Boat
   m_EditorClassIdentifier: 
-  baseFishPerTick: 0
-  tickDelay: 0
-  buildingName: 
-  basePrice: 0
+  baseFishPerTick: 1
+  tickDelay: 1
+  buildingName: Fishing Boat
+  basePrice: 15

@@ -15,4 +15,4 @@ MonoBehaviour:
   baseFishPerTick: 5
   tickDelay: 2
   buildingName: Fish Market
-  basePrice: 100
+  basePrice: 1000

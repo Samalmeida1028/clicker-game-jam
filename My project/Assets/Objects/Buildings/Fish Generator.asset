@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77822ee4b6eff74a8454c42ad4582df, type: 3}
   m_Name: Fish Generator
   m_EditorClassIdentifier: 
-  baseFishPerTick: 0
-  tickDelay: 0
-  buildingName: 
-  basePrice: 0
+  baseFishPerTick: 10000
+  tickDelay: 1
+  buildingName: Generator
+  basePrice: 1000000

@@ -267,6 +267,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -186.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3834111957656387880, guid: d0a55811b561a254ea3de82830543929, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029194057717792306, guid: d0a55811b561a254ea3de82830543929, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029194058215547569, guid: d0a55811b561a254ea3de82830543929, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029194058288821346, guid: d0a55811b561a254ea3de82830543929, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6029194058288821372, guid: d0a55811b561a254ea3de82830543929, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -306,6 +322,10 @@ PrefabInstance:
     - target: {fileID: 6029194058288821372, guid: d0a55811b561a254ea3de82830543929, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6029194058838338512, guid: d0a55811b561a254ea3de82830543929, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6029194058838338514, guid: d0a55811b561a254ea3de82830543929, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -422,6 +442,10 @@ PrefabInstance:
     - target: {fileID: 7410581771369593167, guid: d0a55811b561a254ea3de82830543929, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 161.38684
+      objectReference: {fileID: 0}
+    - target: {fileID: 8524231539474442044, guid: d0a55811b561a254ea3de82830543929, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0a55811b561a254ea3de82830543929, type: 3}
