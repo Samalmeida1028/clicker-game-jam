@@ -78,12 +78,7 @@ public class PlayerInteractionScript : MonoBehaviour
 
             }
         }
-        if (closestObj)
-        {
-            Debug.DrawLine(gameObject.transform.position, closestObj.transform.position);
-            Debug.Log(closestObj.transform.position);
-            closestObj.GetComponent<SpriteRenderer>().color = Color.green;
-        }
+
         return closestObj;
 
     }
