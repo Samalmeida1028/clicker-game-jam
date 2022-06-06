@@ -54,7 +54,6 @@ public class PlayerInteractionScript : MonoBehaviour
 
         foreach (Collider2D collider2D in colliders)
         {
-            collider2D.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 
             if (collider2D.gameObject.tag.Equals(type))
             {
@@ -71,10 +70,7 @@ public class PlayerInteractionScript : MonoBehaviour
                     minDist = offset;
 
                 }
-                else
-                {
-                    collider2D.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-                }
+
 
             }
         }
