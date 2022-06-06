@@ -9,7 +9,7 @@ public class ChangeSprite : MonoBehaviour
     public Sprite sprite2;
     public Image objectSprite;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         objectSprite = gameObject.GetComponentInParent<Image>();
         objectSprite.sprite = defaultSprite1;
