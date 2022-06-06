@@ -10,49 +10,53 @@ public class PlayerMovementController : MonoBehaviour
     float MoveDirectionX = 0;
     public float PlayerSpeed = 5;
     public bool canMove;
+    public bool isMoving;
 
-    void Start(){
+    public Vector2 movement;
+    void Start()
+    {
         RB = gameObject.GetComponent<Rigidbody2D>();
         RB.freezeRotation = true;
     }
-    
-    void FixedUpdate(){
+
+    void FixedUpdate()
+    {
         if (canMove)
         {
-            if ((Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.S)))
-            {
-                Debug.Log("Step A");
-                MoveDirectionY = Input.GetKey(KeyCode.W) ? 1 : -1;
-                // Gobly_Animation.SetBool("isntStill", true);
-            }
-            else
-            {
-                MoveDirectionY = 0;
-            }
+            RB.velocity = movement * PlayerSpeed;
+        }
 
-            if ((Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.D)))
+    }
+
+    void Update()
+    {
+        if (canMove)
+        {
+            float xAxis = Input.GetAxisRaw("Horizontal");
+            float yAxis = Input.GetAxisRaw("Vertical");
+
+            //Check for player keyboard input
+            checkInput(xAxis, yAxis);
+
+
+            //Check if player is moving
+            if (yAxis != 0 || xAxis != 0)
             {
-                MoveDirectionX = Input.GetKey(KeyCode.D) ? 1 : -1;
-                // Gobly_Animation.SetFloat("X Direction", MoveDirectionX);
-                // Gobly_Animation.SetBool("isntStill", true);
+                isMoving = true;
             }
             else
             {
-                MoveDirectionX = 0;
-            }
-            
-            // Apply Movement
-            float speed = PlayerSpeed;
-            if (!(MoveDirectionX != 0 && MoveDirectionY != 0))
-            {
-                RB.AddForce(new Vector2((MoveDirectionX) * speed, (MoveDirectionY) * speed));
-            }
-            else
-            {
-                float DiagPlayerSpeed = Mathf.Sqrt(2 * (Mathf.Pow(speed, 2.0f)));
-                RB.AddForce(new Vector2((MoveDirectionX) * DiagPlayerSpeed / 1.9f, (MoveDirectionY) * DiagPlayerSpeed / 1.9f));
+                isMoving = false;
             }
         }
+
+
+
     }
-    
+
+    void checkInput(float xAxis, float yAxis)
+    {
+        // Normalized just makes the max vector length 1 so diagonal movement isnt faster than vertical or horizontal
+        movement = new Vector2(xAxis, yAxis).normalized;
+    }
 }
