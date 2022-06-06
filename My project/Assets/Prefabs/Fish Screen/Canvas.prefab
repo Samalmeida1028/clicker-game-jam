@@ -701,8 +701,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 6029194058326702647}
-        m_TargetAssemblyTypeName: DepthChange, Assembly-CSharp
-        m_MethodName: resetDefault
+        m_TargetAssemblyTypeName: DepthChangeButton, Assembly-CSharp
+        m_MethodName: DepthDecrease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6029194058326702647}
+        m_TargetAssemblyTypeName: DepthChangeButton, Assembly-CSharp
+        m_MethodName: checkMaxDepth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -978,8 +990,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 6029194058529501206}
-        m_TargetAssemblyTypeName: DepthChange, Assembly-CSharp
-        m_MethodName: resetDefault
+        m_TargetAssemblyTypeName: DepthChangeButton, Assembly-CSharp
+        m_MethodName: DepthIncrease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6029194058529501206}
+        m_TargetAssemblyTypeName: DepthChangeButton, Assembly-CSharp
+        m_MethodName: checkMinDepth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

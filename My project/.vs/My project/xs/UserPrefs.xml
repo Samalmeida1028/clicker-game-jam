@@ -1,7 +1,11 @@
 ﻿<Properties StartupConfiguration="{32C3BDE6-E125-3128-82C1-25D0441455A3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Fish Spawning/Spawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EScene.cs">
     <Files>
       <File FileName="Assets/Scripts/Fish Spawning/Spawner.cs" Line="14" Column="1" />
+      <File FileName="Assets/GoFishingDELETELATER.cs" Line="10" Column="6" />
+      <File FileName="Assets/PlayerOnPier.cs" Line="10" Column="42" />
+      <File FileName="Assets/FollowPlayer.cs" Line="18" Column="6" />
+      <File FileName="Assets/EScene.cs" Line="9" Column="72" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,10 +13,9 @@
           <Node name="My project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Fish Spawning" expanded="True">
-                  <Node name="Spawner.cs" selected="True" />
-                </Node>
+                <Node name="Fish Spawning" expanded="True" />
               </Node>
+              <Node name="EScene.cs" selected="True" />
             </Node>
           </Node>
         </State>
