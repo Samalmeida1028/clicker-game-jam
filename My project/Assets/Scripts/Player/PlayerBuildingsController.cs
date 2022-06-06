@@ -42,17 +42,17 @@ public class PlayerBuildingsController : MonoBehaviour
         building.clearFishToCollect();
     }
 
-    public void purchaseBuilding(Building building) {
+    public void purchaseBuilding(Building building, int amount) {
         // If the player doesn't own the building yet create a new one and set its quantity to one
         if (!buildings.ContainsKey(building.buildingName)) {
             PlayerBuilding newBuilding = new PlayerBuilding(building);
-            newBuilding.addQuantity(1);
+            newBuilding.addQuantity(amount);
             buildings.Add(building.buildingName, newBuilding);
             return;
         }
 
         // If the player already owns the building, just increaes its quantity
-        buildings[building.buildingName].addQuantity(1);
+        buildings[building.buildingName].addQuantity(amount);
     }
 
 }

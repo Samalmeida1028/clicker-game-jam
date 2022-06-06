@@ -26,6 +26,7 @@ public class BuildingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerBuldingsController == null) { return; }
         PlayerBuilding playerBuilding = playerBuldingsController.getBuilding(building.buildingName);
 
         if (playerBuilding == null) { return; }
@@ -52,13 +53,14 @@ public class BuildingController : MonoBehaviour
         }
     }
 
-    public void purchase() {
+    public void purchase(int amount) {
         PlayerStatsController playerStats = player.GetComponent<PlayerStatsController>();
         
-        if (playerStats.getCurrentFishMoney() < (int)currentPrice) { Debug.Log("Cannot Afford"); return; }
+        if (playerStats.getCurrentFishMoney() < ((int)currentPrice) * amount) { Debug.Log("Cannot Afford"); return; }
 
-        playerStats.subtractFromCurrentFishMoney((int)currentPrice);
-        player.GetComponent<PlayerBuildingsController>().purchaseBuilding(building);
+
+        playerStats.subtractFromCurrentFishMoney((int)currentPrice * amount);
+        player.GetComponent<PlayerBuildingsController>().purchaseBuilding(building, amount);
     }
 
     public void collect() {
