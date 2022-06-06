@@ -38,8 +38,6 @@ public class BuildingScreen : MonoBehaviour
         player = GameObject.FindWithTag("Player");
 
         purchase1.onClick.AddListener(purchaseOne);
-        purchase10.onClick.AddListener(purchaseTen);
-        purchase100.onClick.AddListener(purchaseHundead);
 
         collect.onClick.AddListener(controller.collect);
     }
