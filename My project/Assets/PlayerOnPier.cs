@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerOnPier : MonoBehaviour
 {
     // Start is called before the first frame update
-    void OnTriggerEnter()
+    void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("player entered pier");
     }
 
     // Update is called once per frame
-    void OnTriggerExit()
+    void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("player entered pier");
     }
