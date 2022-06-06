@@ -36,6 +36,7 @@ public class BuildingScreen : MonoBehaviour
         UI.SetActive(false);
         controller = gameObject.GetComponent<BuildingController>();
         player = GameObject.FindWithTag("Player");
+        //purchase1 = GameObject.FindWithTag("Purchase1").GetComponent<Button>(); //FIX FOR ETHAN??? IDK IT FIXES THE NULL REFERENCE BUT STILL DOESNT WORK
 
         purchase1.onClick.AddListener(purchaseOne);
 

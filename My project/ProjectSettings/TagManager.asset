@@ -11,11 +11,12 @@ TagManager:
   - FishUI
   - Weight
   - Progress Bar
+  - Purchase1
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Sprites
   - Water
   - UI
   - 
