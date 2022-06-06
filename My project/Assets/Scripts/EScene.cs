@@ -6,6 +6,6 @@ public class EScene : MonoBehaviour
 {
     
     public void LIslandScen(){
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("Island");
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("IslandScreen");
     }
 }
