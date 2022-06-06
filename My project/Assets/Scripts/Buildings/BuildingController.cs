@@ -25,8 +25,9 @@ public class BuildingController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         PlayerBuilding playerBuilding = playerBuldingsController.getBuilding(building.buildingName);
+
         if (playerBuilding == null) { return; }
         
         fishToCollect = playerBuilding.getFishToCollect();
