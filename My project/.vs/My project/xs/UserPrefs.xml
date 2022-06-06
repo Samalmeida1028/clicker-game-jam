@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{32C3BDE6-E125-3128-82C1-25D0441455A3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerOnPier.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Materials/Minifantasy_Userinterface_Assets/Menus/Buttons/_16x16pxSlicedAssets.txt">
     <Files>
       <File FileName="Assets/Scripts/Fish Spawning/Spawner.cs" Line="14" Column="1" />
       <File FileName="Assets/GoFishingDELETELATER.cs" Line="10" Column="6" />
@@ -7,15 +7,24 @@
       <File FileName="Assets/FollowPlayer.cs" Line="18" Column="6" />
       <File FileName="Assets/EScene.cs" Line="9" Column="75" />
       <File FileName="Assets/Scripts/PlayerOnPier.cs" Line="1" Column="1" />
+      <File FileName="Assets/Materials/Minifantasy_Userinterface_Assets/Menus/Buttons/_16x16pxSlicedAssets.txt" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="My project" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Materials" expanded="True">
+                <Node name="Minifantasy_Userinterface_Assets" expanded="True">
+                  <Node name="Menus" expanded="True">
+                    <Node name="Buttons" expanded="True">
+                      <Node name="_16x16pxSlicedAssets.txt" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
               <Node name="Scripts" expanded="True">
                 <Node name="Fish Spawning" expanded="True" />
-                <Node name="PlayerOnPier.cs" selected="True" />
               </Node>
             </Node>
           </Node>
